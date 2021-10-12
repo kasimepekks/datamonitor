@@ -1,0 +1,711 @@
+2021-07-29 09:35:58,520 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 09:35:58,538 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 09:35:58,542 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 09:35:58,546 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 09:36:04,827 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 我是日志信息
+2021-07-29 09:36:05,083 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 我是日志信息
+2021-07-29 09:43:45,379 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.Net.Sockets.SocketException (10013): 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-07-29 09:44:13,334 [1] FATAL Microsoft.AspNetCore.Server.Kestrel - Unable to start Kestrel.
+System.Net.Sockets.SocketException (10013): 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.<>c__DisplayClass21_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.ListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.AnyIPListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IServerAddressesFeature addresses, KestrelServerOptions serverOptions, ILogger logger, Func`2 createBinding)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2021-07-29 09:45:59,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:801
+2021-07-29 09:45:59,235 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 09:45:59,236 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2021-07-29 09:45:59,237 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch\bin\Debug\netcoreapp3.1
+2021-07-29 09:46:39,761 [11] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:39,938 [16] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:39,941 [11] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:39,944 [18] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:39,962 [18] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:39,972 [17] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 09:46:40,033 [8] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-07-29 10:01:36,545 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 10:01:36,563 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 10:01:36,568 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 10:01:36,572 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 10:01:47,168 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-07-29 10:01:47,419 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-07-29 10:01:49,215 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-07-29 10:01:49,479 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-07-29 10:01:52,946 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了处理ACC里程的页面
+2021-07-29 10:01:53,049 [27] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了处理ACC里程的页面
+2021-07-29 10:02:45,143 [22] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-07-29 10:02:45,473 [30] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-07-29 14:47:34,712 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 14:47:34,725 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 14:47:34,729 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 14:47:34,733 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 14:47:43,576 [18] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-07-29 14:47:44,196 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-07-29 14:48:33,326 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 14:48:33,339 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 14:48:33,343 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 14:48:33,347 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 14:48:42,032 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:48:42,119 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:09,828 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:09,904 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:12,172 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:12,256 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:13,011 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:13,157 [29] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:18,502 [29] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:18,571 [25] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:19,485 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:49:19,556 [22] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:50:51,873 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 14:50:51,892 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 14:50:51,897 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 14:50:51,901 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 14:50:58,253 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:50:58,350 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 14:51:07,727 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-07-29 14:51:07,970 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-07-29 15:35:22,192 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 15:35:22,205 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 15:35:22,209 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 15:35:22,213 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 15:35:28,513 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:35:28,633 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:35:29,746 [12] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 15:35:29,794 [12] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 15:35:29,800 [12] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 15:35:29,808 [12] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 15:35:29,811 [12] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 15:35:29,815 [12] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 15:35:29,816 [12] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 15:35:29,817 [12] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 15:35:29,828 [12] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:35:29,831 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:35:30,052 [12] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.FormatException: '?' can only be specified for Day-of-Month or Day-of-Week.
+   at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronExpression..ctor(String cronExpression)
+   at Quartz.CronExpression.ValidateExpression(String cronExpression)
+   at Quartz.CronScheduleBuilder.CronSchedule(String cronExpression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:35:38,345 [15] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:35:38,345 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:35:38,407 [15] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.FormatException: '?' can only be specified for Day-of-Month or Day-of-Week.
+   at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronExpression..ctor(String cronExpression)
+   at Quartz.CronExpression.ValidateExpression(String cronExpression)
+   at Quartz.CronScheduleBuilder.CronSchedule(String cronExpression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:36:05,986 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:36:29,286 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:36:54,999 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:37:18,354 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:37:46,948 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:38:16,606 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:38:41,901 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:39:07,542 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:39:34,448 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:40:03,534 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:40:32,358 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:41:01,966 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:41:28,865 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:41:58,431 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:42:15,997 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 15:42:16,011 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 15:42:16,015 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 15:42:16,018 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 15:42:22,195 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:42:22,294 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:42:24,058 [7] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 15:42:24,101 [7] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 15:42:24,108 [7] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 15:42:24,118 [7] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 15:42:24,121 [7] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 15:42:24,126 [7] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 15:42:24,128 [7] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 15:42:24,129 [7] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 15:42:24,137 [7] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:42:24,141 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:42:24,183 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 15:42:25,009 [13] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 15:42:25,015 [13] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 15:42:25,064 [13] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 15:42:25,066 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:42:50,505 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:43:14,405 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:43:41,208 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:44:04,989 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:44:17,910 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:44:17,910 [20] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:44:18,026 [20] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:44:25,820 [9] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:44:25,821 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:44:25,869 [9] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:44:55,571 [13] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:50:25,677 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 15:50:25,690 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 15:50:25,694 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 15:50:25,697 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 15:50:32,352 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:50:32,438 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 15:50:33,565 [8] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 15:50:33,606 [8] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 15:50:33,612 [8] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 15:50:33,620 [8] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 15:50:33,623 [8] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 15:50:33,627 [8] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 15:50:33,628 [8] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 15:50:33,630 [8] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 15:50:33,637 [8] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:50:33,641 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:50:33,675 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 15:50:35,004 [9] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 15:50:35,011 [9] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 15:50:35,072 [9] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 15:50:35,075 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:51:01,957 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:51:29,054 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:51:58,514 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:52:27,774 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:52:55,061 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:53:23,708 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:53:53,353 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:54:17,788 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:54:44,208 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:55:09,900 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:55:39,652 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:56:05,811 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:56:43,702 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:56:43,704 [32] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:57:13,701 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:57:58,676 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:58:10,241 [32] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:58:22,770 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:58:50,427 [33] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:58:50,427 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:58:50,488 [33] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:59:10,789 [26] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:59:10,789 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:59:10,844 [26] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:59:12,170 [26] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at Quartz.Simpl.RAMJobStore.GetTriggersForJobInternal(JobKey jobKey)
+   at Quartz.Simpl.RAMJobStore.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StopQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:59:18,296 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 15:59:18,297 [26] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 15:59:18,366 [26] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'group.job', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJobInternal(IJobDetail newJob, Boolean replaceExisting)
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StartQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 15:59:43,361 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:00:09,545 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:01:58,486 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 16:01:58,500 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 16:01:58,504 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 16:01:58,509 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 16:02:06,785 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:02:06,901 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:02:07,751 [9] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 16:02:07,795 [9] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 16:02:07,802 [9] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 16:02:07,812 [9] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 16:02:07,814 [9] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 16:02:07,818 [9] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 16:02:07,820 [9] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 16:02:07,822 [9] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 16:02:07,829 [9] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 16:02:07,832 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:02:07,874 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 16:02:10,007 [12] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 16:02:10,013 [12] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 16:02:10,073 [12] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 16:02:10,076 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:02:37,690 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:03:06,228 [19] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at Quartz.Simpl.RAMJobStore.GetTriggersForJobInternal(JobKey jobKey)
+   at Quartz.Simpl.RAMJobStore.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StopQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 16:03:07,451 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:03:12,786 [4] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 'key')
+   at System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   at System.Collections.Generic.Dictionary`2.TryGetValue(TKey key, TValue& value)
+   at Quartz.Simpl.RAMJobStore.GetTriggersForJobInternal(JobKey jobKey)
+   at Quartz.Simpl.RAMJobStore.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at Quartz.Core.QuartzScheduler.PauseJob(JobKey jobKey, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.ADF0979.QuartzforuploadmysqlController.StopQuartz() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Controllers\ADF0979\QuartzforuploadmysqlController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 16:03:33,371 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:03:58,033 [12] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:06:20,005 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 16:06:20,022 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 16:06:20,026 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 16:06:20,030 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 16:06:59,876 [18] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:07:00,024 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:07:00,661 [4] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 16:07:00,704 [4] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 16:07:00,711 [4] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 16:07:00,719 [4] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 16:07:00,721 [4] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 16:07:00,725 [4] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 16:07:00,727 [4] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 16:07:00,728 [4] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 16:07:00,735 [4] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 16:07:00,739 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:07:00,772 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 16:07:00,780 [9] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 16:07:00,784 [9] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 16:07:00,834 [9] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 16:07:00,836 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:07:57,008 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:08:08,568 [27] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 16:08:08,568 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:08:08,572 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 16:08:10,000 [9] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 16:08:10,003 [9] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 16:08:10,006 [9] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 16:08:10,008 [9] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:10:14,310 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-07-29 16:10:14,321 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-07-29 16:10:14,325 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-07-29 16:10:14,328 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-07-29 16:10:20,669 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:10:20,780 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了定时处理数据的页面
+2021-07-29 16:10:21,615 [4] INFO  Quartz.Impl.StdSchedulerFactory - Default Quartz.NET properties loaded from embedded resource file
+2021-07-29 16:10:21,654 [4] DEBUG Quartz.Simpl.TaskSchedulingThreadPool - TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2021-07-29 16:10:21,661 [4] INFO  Quartz.Core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-07-29 16:10:21,668 [4] INFO  Quartz.Core.QuartzScheduler - Quartz Scheduler v.3.3.2.0 created.
+2021-07-29 16:10:21,671 [4] INFO  Quartz.Simpl.RAMJobStore - RAMJobStore initialized.
+2021-07-29 16:10:21,675 [4] INFO  Quartz.Core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v3.3.2.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-07-29 16:10:21,677 [4] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized
+2021-07-29 16:10:21,678 [4] INFO  Quartz.Impl.StdSchedulerFactory - Quartz scheduler version: 3.3.2.0
+2021-07-29 16:10:21,688 [4] INFO  Quartz.Core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-07-29 16:10:21,691 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:10:21,703 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 1 triggers
+2021-07-29 16:10:21,711 [8] DEBUG Quartz.Simpl.SimpleJobFactory - Producing instance of Job 'group.job', class=RLDA_VehicleData_Watch.Models.MyQuartzJob
+2021-07-29 16:10:21,716 [8] ERROR Quartz.Core.ErrorLogger - An error occurred instantiating job to be executed. job= 'group.job'
+Quartz.SchedulerException: Problem instantiating class 'RLDA_VehicleData_Watch.Models.MyQuartzJob: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')'
+ ---> System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   --- End of inner exception stack trace ---
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.InstantiateJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Simpl.PropertySettingJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)
+   at Quartz.Core.JobRunShell.Initialize(QuartzScheduler sched, CancellationToken cancellationToken) [See nested exception: System.ArgumentException: Cannot instantiate type which has no empty constructor (Parameter 'MyQuartzJob')
+   at Quartz.ExceptionHelper.ThrowArgumentException(String message, String paramName)
+   at Quartz.Util.ObjectUtils.InstantiateType[T](Type type)
+   at Quartz.Simpl.SimpleJobFactory.NewJob(TriggerFiredBundle bundle, IScheduler scheduler)]
+2021-07-29 16:10:21,770 [8] INFO  Quartz.Simpl.RAMJobStore - All triggers of Job group.job set to ERROR state.
+2021-07-29 16:10:21,773 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:10:49,733 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:11:15,358 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:11:44,283 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:12:08,211 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers
+2021-07-29 16:12:31,341 [8] DEBUG Quartz.Core.QuartzSchedulerThread - Batch acquisition of 0 triggers

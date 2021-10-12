@@ -1,0 +1,6 @@
+2021-09-16 14:27:35,199 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-16 14:27:35,215 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-16 14:27:35,219 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-16 14:27:35,222 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-16 14:28:01,635 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-16 14:28:02,094 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面

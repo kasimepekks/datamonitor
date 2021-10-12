@@ -1,0 +1,30 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "ConnectionStrings": {
+    "MySqlConnection": "server=localhost;user id=root;password=Mxz04122465;persistsecurityinfo=True;database=datawatch;SslMode=none"
+  },
+  "AllowedHosts": "*",
+  //配置是否开启自动定时计算功能
+  "AutoTimeJob": {
+    "StartTime": "2021-04-20", //这个是自动定时计算的指定开始日期
+
+    "AutoisRequired": "true", //这个是开启自动定时计算功能（移动硬盘的数据）
+    "autoinputpath": "F:/Taxi_EP22_2021/Original_Data/Input/",
+    "autoresultpath": "F:/Taxi_EP22_2021/Original_Data/Result//"
+  },
+  //配置是否开启每天定时计算功能
+  "DailyTimeJob": {
+    "DailyisRequired": "false", //这个是开启每天晚上的定时计算功能
+    "inputpath": "D:/JianGuoYun/我的坚果云/IVHM_data/input/",
+    "resultpath": "D:/JianGuoYun/我的坚果云/IVHM_data/result/",
+
+    "hour": "2",
+    "minute": "45"
+  }
+}

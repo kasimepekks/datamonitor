@@ -1,0 +1,367 @@
+2021-09-10 09:26:01,202 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 09:26:01,227 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 09:26:01,231 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 09:26:01,235 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 09:26:08,364 [12] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 09:26:08,649 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 09:35:31,064 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 09:35:31,092 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 09:35:31,097 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 09:35:31,127 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 09:35:36,977 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 09:35:37,416 [18] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:13:45,959 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 10:13:46,002 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 10:13:46,007 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 10:13:46,016 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 10:13:52,083 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:13:52,549 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:34:50,785 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 10:34:50,828 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 10:34:50,832 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 10:34:50,841 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 10:34:56,620 [5] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:34:57,102 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:40:21,476 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 10:40:21,499 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 10:40:21,504 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 10:40:21,528 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 10:40:27,532 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:40:27,963 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:47:46,493 [28] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:47:46,496 [25] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:47:47,183 [35] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:47:51,417 [36] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:47:56,736 [25] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:52:43,052 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 10:52:43,100 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 10:52:43,104 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 10:52:43,132 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 10:52:51,135 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:52:51,572 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:55:21,061 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 10:55:21,083 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 10:55:21,106 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 10:55:21,135 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 10:55:27,798 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 10:55:28,249 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:02:40,887 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:02:40,934 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:02:40,938 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:02:40,946 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:02:48,239 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:02:48,802 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:09:58,561 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:09:58,608 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:09:58,613 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:09:58,622 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:10:04,131 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:10:04,770 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:11:58,574 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:11:58,600 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:11:58,604 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:11:58,613 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:12:05,051 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:12:05,532 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:17:12,753 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:17:12,776 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:17:12,780 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:17:12,809 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:17:19,650 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:17:20,131 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:19:38,150 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:19:38,218 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:19:38,243 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:19:38,248 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:19:43,978 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:19:44,445 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:22:10,671 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:22:10,714 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:22:10,719 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:22:10,748 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:22:16,117 [5] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:22:16,543 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:23:14,218 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:23:14,266 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:23:14,271 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:23:14,296 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:23:20,591 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:23:21,027 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:26:05,708 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 12:26:05,733 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 12:26:05,758 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 12:26:05,788 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 12:26:11,049 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 12:26:11,492 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:43:05,580 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 13:43:05,602 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 13:43:05,607 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 13:43:05,636 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 13:43:12,091 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:43:12,544 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:47:46,075 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 13:47:46,098 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 13:47:46,122 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 13:47:46,151 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 13:47:52,301 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:47:52,972 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:52:32,496 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 13:52:32,545 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 13:52:32,550 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 13:52:32,560 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 13:52:41,535 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:52:42,531 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:56:19,359 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 13:56:19,397 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 13:56:19,421 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 13:56:19,430 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 13:56:27,354 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 13:56:28,172 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:02:04,643 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:02:04,686 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:02:04,690 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:02:04,698 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:02:10,990 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:02:11,523 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:04:09,763 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:04:09,805 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:04:09,830 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:04:09,861 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:04:15,903 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:04:16,324 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:04:18,140 [14] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:04:18,559 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:11:12,931 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:11:12,978 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:11:13,004 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:11:13,017 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:11:19,232 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:11:19,681 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:13:02,045 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:13:02,067 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:13:02,093 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:13:02,097 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:13:08,620 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:13:09,039 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:17:47,530 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:17:47,576 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:17:47,601 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:17:47,606 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:17:53,554 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:17:53,988 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:21:22,227 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:21:22,282 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:21:22,287 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:21:22,316 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:21:39,962 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:21:40,358 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:28:01,130 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:28:01,177 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:28:01,182 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:28:01,187 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:28:06,764 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:28:07,418 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:30:42,696 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:30:42,790 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:30:42,815 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:30:42,840 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:30:51,360 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:30:52,040 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:35:04,117 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:35:04,140 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:35:04,145 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:35:04,175 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:35:09,387 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:35:09,824 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:43:28,818 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:43:28,842 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:43:28,846 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:43:28,877 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:43:36,296 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:43:36,720 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:52:33,738 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:52:33,762 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:52:33,767 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:52:33,771 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:52:40,196 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:52:40,633 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:54:01,331 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:54:01,357 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:54:01,362 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:54:01,371 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:54:29,006 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:54:29,846 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:57:46,443 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 14:57:46,486 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 14:57:46,491 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 14:57:46,516 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 14:57:53,472 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 14:57:53,926 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:00:08,048 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:00:08,116 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:00:08,123 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:00:08,128 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:00:14,463 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:00:15,322 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:06:03,164 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:06:03,205 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:06:03,229 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:06:03,238 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:06:17,309 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:06:17,800 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:17:41,517 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:17:41,587 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:17:41,612 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:17:41,624 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:17:47,211 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:17:47,895 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:20:12,207 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:20:12,254 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:20:12,258 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:20:12,266 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:20:18,673 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:20:19,099 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:21:43,566 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:21:43,620 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:21:43,645 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:21:43,679 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:21:49,722 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:21:50,182 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:36:46,049 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:36:46,093 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:36:46,098 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:36:46,127 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:36:52,840 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:36:53,262 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:39:29,080 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 15:39:29,103 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 15:39:29,108 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 15:39:29,158 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 15:39:35,047 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 15:39:35,483 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:00:25,552 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 16:00:25,575 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 16:00:25,579 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 16:00:25,607 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 16:00:31,874 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:00:32,320 [14] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:03:39,965 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 16:03:40,015 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 16:03:40,020 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 16:03:40,024 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 16:03:46,225 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:03:46,662 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:07:37,227 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 16:07:37,274 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 16:07:37,303 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 16:07:37,326 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 16:07:45,022 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:07:45,447 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:12:48,719 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 16:12:48,743 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 16:12:48,748 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 16:12:48,752 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 16:13:23,328 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:13:23,787 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:18:12,344 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 16:18:12,366 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 16:18:12,370 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 16:18:12,375 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 16:18:34,138 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 16:18:34,623 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:26:05,434 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:26:05,494 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:26:05,498 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:26:05,528 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:26:11,690 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:26:12,131 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:28:31,144 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:28:31,166 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:28:31,170 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:28:31,177 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:28:38,357 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:28:38,765 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:33:33,466 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:33:33,488 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:33:33,492 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:33:33,495 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:33:39,331 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:33:39,722 [5] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:36:39,963 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:36:39,990 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:36:39,994 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:36:40,001 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:36:45,972 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:36:46,436 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:43:48,786 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:43:48,829 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:43:48,834 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:43:48,844 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:43:54,453 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:43:54,832 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:48:29,172 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:48:29,199 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:48:29,203 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:48:29,230 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:48:35,562 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:48:35,972 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:50:47,785 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:50:47,848 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:50:47,853 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:50:47,884 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:50:54,110 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:50:54,508 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:53:57,795 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:53:57,839 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:53:57,864 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:53:57,868 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:54:06,690 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:54:07,131 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:55:38,059 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:55:38,099 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:55:38,104 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:55:38,135 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:55:44,437 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:55:44,822 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:57:02,038 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 19:57:02,079 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 19:57:02,083 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 19:57:02,112 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 19:57:07,568 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 19:57:08,052 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:08:16,189 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 20:08:16,210 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 20:08:16,215 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 20:08:16,223 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 20:08:23,592 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:08:23,995 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:13:55,233 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 20:13:55,257 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 20:13:55,281 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 20:13:55,309 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 20:16:30,483 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:16:30,935 [14] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:30:33,759 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 20:30:33,782 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 20:30:33,786 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 20:30:33,816 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 20:30:39,283 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:30:39,968 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:35:20,586 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 20:35:20,656 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 20:35:20,661 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 20:35:20,673 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 20:35:25,859 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 20:35:26,299 [19] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 21:22:15,891 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 21:22:15,934 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 21:22:15,939 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 21:22:15,943 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 21:22:22,214 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 21:22:22,618 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 21:29:45,697 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-09-10 21:29:45,740 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-09-10 21:29:45,764 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-09-10 21:29:45,794 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-09-10 21:29:52,052 [5] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-09-10 21:29:52,469 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面

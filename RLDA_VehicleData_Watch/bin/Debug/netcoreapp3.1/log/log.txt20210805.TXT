@@ -1,0 +1,13 @@
+﻿
+2021-08-05 12:51:55,234 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-05 12:51:55,248 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-05 12:51:55,252 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-05 12:51:55,256 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-05 12:52:00,529 [11] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_20自动定时服务起始时间2021-08-05 12:52:00
+2021-08-05 13:03:19,960 [4] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_20里程计算自动定时服务终止时间2021-08-05 13:03:19
+2021-08-05 13:13:58,145 [4] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_20损伤计算自动定时服务终止时间2021-08-05 13:13:58
+2021-08-05 13:14:00,523 [4] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_21自动定时服务起始时间2021-08-05 13:14:00
+2021-08-05 13:42:40,811 [37] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_21里程计算自动定时服务终止时间2021-08-05 13:42:40
+2021-08-05 14:09:47,791 [37] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_21损伤计算自动定时服务终止时间2021-08-05 14:09:47
+2021-08-05 14:10:00,523 [92] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_22自动定时服务起始时间2021-08-05 14:10:00
+2021-08-05 14:19:16,161 [92] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_22里程计算自动定时服务终止时间2021-08-05 14:19:16

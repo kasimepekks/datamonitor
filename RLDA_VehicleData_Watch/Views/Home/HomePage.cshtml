@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "HomePage";
+    Layout = "_Layout_DisplayAll";
+}
+
+
+
+
+    @section Scripts{
+
+        <script>
+            layui.use(['element', 'layer', 'table', 'form'], function () {
+                var element = layui.element;
+                var hideorshow = false;
+                var $ = layui.jquery;
+                //$(".layui-nav-third-child").hide();
+                $(".third-class").on('click', function () {
+                    //$(".layui-nav-third-child").hide();
+                    if (!hideorshow) {
+                        $(this).next().show();
+                        hideorshow = true;
+                    }
+                    else {
+                        $(this).next().hide();
+                        hideorshow = false;
+                    }
+                });
+
+
+            })
+
+
+        </script>
+    }

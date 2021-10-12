@@ -1,0 +1,13 @@
+C:\Users\111\source\repos\IDAL\bin\Debug\netcoreapp3.1\IDAL.deps.json
+C:\Users\111\source\repos\IDAL\bin\Debug\netcoreapp3.1\IDAL.dll
+C:\Users\111\source\repos\IDAL\bin\Debug\netcoreapp3.1\IDAL.pdb
+C:\Users\111\source\repos\IDAL\bin\Debug\netcoreapp3.1\MysqlforDataWatch.dll
+C:\Users\111\source\repos\IDAL\bin\Debug\netcoreapp3.1\MysqlforDataWatch.pdb
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.AssemblyInfoInputs.cache
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.AssemblyInfo.cs
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.csproj.CoreCompileInputs.cache
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.csproj.CopyComplete
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.dll
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.pdb
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.csproj.AssemblyReference.cache
+C:\Users\111\source\repos\IDAL\obj\Debug\netcoreapp3.1\IDAL.GeneratedMSBuildEditorConfig.editorconfig

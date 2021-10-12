@@ -1,0 +1,13 @@
+C:\Users\111\source\repos\MysqlforDataWatch\bin\Release\netcoreapp3.1\MysqlforDataWatch.deps.json
+C:\Users\111\source\repos\MysqlforDataWatch\bin\Release\netcoreapp3.1\MysqlforDataWatch.runtimeconfig.json
+C:\Users\111\source\repos\MysqlforDataWatch\bin\Release\netcoreapp3.1\MysqlforDataWatch.runtimeconfig.dev.json
+C:\Users\111\source\repos\MysqlforDataWatch\bin\Release\netcoreapp3.1\MysqlforDataWatch.dll
+C:\Users\111\source\repos\MysqlforDataWatch\bin\Release\netcoreapp3.1\MysqlforDataWatch.pdb
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.AssemblyInfoInputs.cache
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.AssemblyInfo.cs
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.csproj.CoreCompileInputs.cache
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.dll
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.pdb
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.genruntimeconfig.cache
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.csproj.AssemblyReference.cache
+C:\Users\111\source\repos\MysqlforDataWatch\obj\Release\netcoreapp3.1\MysqlforDataWatch.GeneratedMSBuildEditorConfig.editorconfig

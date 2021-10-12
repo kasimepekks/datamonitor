@@ -1,0 +1,31 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+
+  //配置是否开启自动定时计算功能
+  "ADF0979": {
+
+    "VehicleID": "ADF0979", //这个是自动定时计算的指定车辆编号，要录入数据库的字段中
+    "Wheelbaselower": "2.4", //车辆的最小轴距，用于计算识别bump的参数
+    "Wheelbaseupper": "2.7", //车辆的最大轴距，用于计算识别bump的参数
+    "BmupZeroStandard": "2", //清零标准值，如果小于这个指的话都改为0
+    "AccValueGap": "2", //加速度值间隔标准，比较两个加速度值是否小于此参数
+    "AccTimeGap": "10", //加速度时间间隔标准，比较两个加速度的时刻点数是否小于此参数
+    "BumpTimeGap": "100", //经过Bump的点数
+
+    "BrakeZeroStandard": "0.5", //尽量不要改动
+    "BrakeLastingPoints": "100",//刹车持续点数
+
+    "SteeringZeroStandard": "10", //尽量不要改动
+    "SteeringLastingPoints": "100"//转向持续点数
+
+
+
+  }
+
+}

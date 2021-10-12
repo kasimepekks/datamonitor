@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_Layout";
+}
+
+@section Style{
+    <style type="text/css">
+        body {
+            background-image: url(/Pictures/bg.jpg);
+        }
+    </style>
+}
+<div class="page-header">
+    <h1 class="text-center">车辆平台监控系统 <span class="label label-info">V1.0</span></h1>
+</div>
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form name="Form" id="form">
+                <div class="form-group">
+                    <label for="user">用户名</label>
+                    <input type="text" class="form-control" id="user" placeholder="用户名" name="user">
+                </div>
+                <div class="form-group">
+                    <label for="Password">密码</label>
+                    <input type="password" class="form-control" id="Password" placeholder="密码" name="key">
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 记住我
+                    </label>
+                </div>
+                <button type="button" name="Loginbtn" id="Loginbtn" class="btn btn-primary btn-block">登录</button>
+            </form>
+        </div>
+    </div>
+    
+    </div>
+<br />
+<br />
+
+<footer style="text-align:center">
+    <p>&copy; @DateTime.Now.Year - 小辉的 ASP.NETCORE应用程序</p>
+</footer>
+
+
+@section Scripts{
+
+    <script>
+        $(function () {
+    $("#Loginbtn").click(function () {
+        //var url1 = "{:url('Home/index')}";
+        var x = document.forms["Form"]["user"].value;
+        if (x == "") {
+            alert("请填写用户名！");
+            return false;
+        }
+        var y = document.forms["Form"]["key"].value;
+        if (y == "") {
+            alert("密码为空！");
+            return false;
+        }
+        if (x != null && y != null) {
+            $.post("/Login/Login",
+                $('#form').serialize(),
+                  function (data) {
+                    if (data == "AdminSuceess" || data == "UserSuceess") {
+
+                        window.location.href = "@Url.Action("HomePage", "Home")";
+                    }
+                    else if (data == "Fail") {
+                        alert("密码不正确");
+                    }
+                });
+        }
+    });
+});
+
+        $(function () {
+            if (window != top) {
+                top.location.href = location.href;
+            }
+        });
+    </script>
+}
+
+

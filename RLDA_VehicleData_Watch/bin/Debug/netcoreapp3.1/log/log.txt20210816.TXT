@@ -1,0 +1,133 @@
+2021-08-16 10:02:10,129 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:02:10,146 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:02:10,150 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:02:10,155 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:02:40,390 [14] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:02:40,913 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:06:35,966 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:06:35,992 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:06:35,996 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:06:36,000 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:06:42,970 [12] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:06:43,492 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:17:14,782 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:17:14,799 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:17:14,804 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:17:14,808 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:17:20,002 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:17:20,501 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:39:24,386 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:39:24,435 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:39:24,440 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:39:24,446 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:40:05,023 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:40:05,039 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:40:05,043 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:40:05,048 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:40:10,312 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:40:10,854 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:45:00,373 [28] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_28自动定时服务起始时间2021-08-16 10:45:00
+2021-08-16 10:45:00,486 [27] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\Taxi_EP22_2021\Original_Data\Input\04_28'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\Tools\FileOperation\FileOperator.cs:line 51
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 27
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 29
+   at RLDA_VehicleData_Watch.Models.AutoCalCoravelJob.<>c__DisplayClass16_0.<Invoke>b__3() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Models\AutoCalCoravelJob.cs:line 64错误发生在2021-08-16 10-45-00
+2021-08-16 10:50:00,395 [28] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_29自动定时服务起始时间2021-08-16 10:50:00
+2021-08-16 10:50:00,424 [32] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\Taxi_EP22_2021\Original_Data\Input\04_29'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\Tools\FileOperation\FileOperator.cs:line 51
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 27
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 29
+   at RLDA_VehicleData_Watch.Models.AutoCalCoravelJob.<>c__DisplayClass16_0.<Invoke>b__3() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Models\AutoCalCoravelJob.cs:line 64错误发生在2021-08-16 10-50-00
+2021-08-16 10:52:20,515 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 10:52:20,531 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 10:52:20,535 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 10:52:20,540 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 10:52:27,161 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 10:52:27,700 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:17:17,679 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 12:17:17,699 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 12:17:17,710 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 12:17:17,714 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 12:17:46,670 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:17:47,535 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:26:49,887 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 12:26:49,908 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 12:26:49,913 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 12:26:49,937 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 12:26:55,371 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:26:57,008 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:39:27,668 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 12:39:27,705 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 12:39:27,731 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 12:39:27,736 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 12:40:00,993 [13] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_28自动定时服务起始时间2021-08-16 12:40:00
+2021-08-16 12:40:01,153 [4] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\Taxi_EP22_2021\Original_Data\Input\04_28'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\Tools\FileOperation\FileOperator.cs:line 51
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 27
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 29
+   at RLDA_VehicleData_Watch.Models.AutoCalCoravelJob.<>c__DisplayClass16_0.<Invoke>b__3() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Models\AutoCalCoravelJob.cs:line 64错误发生在2021-08-16 12-40-01
+2021-08-16 12:40:15,605 [13] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:40:16,139 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 12:45:00,975 [47] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_29自动定时服务起始时间2021-08-16 12:45:00
+2021-08-16 12:45:01,010 [33] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\Taxi_EP22_2021\Original_Data\Input\04_29'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\Tools\FileOperation\FileOperator.cs:line 51
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 27
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 29
+   at RLDA_VehicleData_Watch.Models.AutoCalCoravelJob.<>c__DisplayClass16_0.<Invoke>b__3() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Models\AutoCalCoravelJob.cs:line 64错误发生在2021-08-16 12-45-01
+2021-08-16 12:50:00,987 [45] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - 04_30自动定时服务起始时间2021-08-16 12:50:00
+2021-08-16 12:50:01,019 [42] INFO  RLDA_VehicleData_Watch.Models.AutoCalCoravelJob - System.IO.DirectoryNotFoundException: Could not find a part of the path 'F:\Taxi_EP22_2021\Original_Data\Input\04_30'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\Tools\FileOperation\FileOperator.cs:line 51
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 27
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadFilesForAnalysisDataAcc(String filepath) in C:\Users\111\source\repos\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 29
+   at RLDA_VehicleData_Watch.Models.AutoCalCoravelJob.<>c__DisplayClass16_0.<Invoke>b__3() in C:\Users\111\source\repos\RLDA_VehicleData_Watch\Models\AutoCalCoravelJob.cs:line 64错误发生在2021-08-16 12-50-01
+2021-08-16 13:19:39,453 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 13:19:39,493 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 13:19:39,499 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 13:19:39,504 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 13:19:47,271 [14] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:20:06,651 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:28:17,995 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 13:28:18,012 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 13:28:18,037 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 13:28:18,062 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 13:28:25,611 [5] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:28:26,842 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:39:24,486 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 13:39:24,503 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 13:39:24,528 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 13:39:24,534 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 13:39:32,070 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:39:37,356 [18] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:40:47,540 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:43:24,207 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 13:43:24,224 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 13:43:24,248 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 13:43:24,255 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 13:43:31,132 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:43:31,684 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:47:05,900 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 13:47:05,938 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 13:47:05,962 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 13:47:05,966 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 13:47:11,757 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 13:47:13,343 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 14:02:21,486 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 14:02:21,523 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 14:02:21,528 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 14:02:21,533 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2021-08-16 14:02:39,553 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 14:02:40,835 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
+2021-08-16 14:11:19,710 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-08-16 14:11:19,731 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-08-16 14:11:19,755 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-08-16 14:11:19,760 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch

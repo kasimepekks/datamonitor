@@ -1,0 +1,558 @@
+﻿
+@{
+    ViewData["Title"] = "Statics";
+}
+
+@*@section Style{
+
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layui/layui.js"></script>
+
+}*@
+<script type="text/html" id="toolbarhide">
+
+
+    <div class="layui-input-inline-sm">
+
+        <input type="checkbox" id="tabledisplay" class="layui-input-sm" lay-skin="switch" lay-filter="tabledisplay" title="开关" lay-text="显示|隐藏">
+    </div>
+
+</script>
+@*<div class="layui-fluid">
+    <div class="layui-row">
+        <div class="layui-col-md6">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="Start">监控开启/停止</button>
+
+            </div>
+
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-btn-container">
+                <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="StartUpload">开始读取</button>
+                <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-danger" id="StopUpload">停止读取</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+<table id="WatchTable" lay-filter="WatchTable" lay-even style="display:none"></table>
+
+
+<div class="layui-fluid">
+    @*<div class="layui-row">
+        <div class="layui-col-md4 layui-col-md-offset4">
+
+            <div id="container" style="width: 400px;height:300px;"></div>
+        </div>
+
+    </div>*@
+    <div class="layui-row">
+        <div class="layui-col-md4">
+
+            <div id="ACCFMRMMAX" style="width: 400px;height:400px;"></div>
+        </div>
+        <div class="layui-col-md4">
+
+            <div id="ACCFMRMMIN" style="width: 400px;height:400px;"></div>
+        </div>
+        <div class="layui-col-md4">
+
+            <div id="ACCFMRMRMS" style="width: 400px;height:400px;"></div>
+        </div>
+
+
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-md4">
+
+            <div id="ACCFWHLMAX" style="width: 400px;height:400px;"></div>
+        </div>
+        <div class="layui-col-md4">
+
+            <div id="ACCFWHLMIN" style="width: 400px;height:400px;"></div>
+        </div>
+        <div class="layui-col-md4">
+
+            <div id="ACCFWHLRMS" style="width: 400px;height:400px;"></div>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="~/Highcharts-8.2.2/code/highcharts.js"></script>
+<script src="~/Highcharts-8.2.2/code/highcharts-more.js"></script>
+<script src="~/Highcharts-8.2.2/code/modules/data.js"></script>
+<script src="~/Highcharts-8.2.2/code/modules/exporting.js"></script>
+@*<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>*@
+@section Scripts{
+
+    <script>
+      layui.use(['element', 'layer', 'table', 'form'], function () {
+            var form = layui.form;
+            var table = layui.table;
+            var $ = layui.jquery;
+          layer = layui.layer;
+          $(".layui-table-box").hide();
+            form.on('switch(tabledisplay)', function (data) {
+
+                if (data.elem.checked) {
+                    $(".layui-table-box").show();
+
+                }
+                else {
+                    $(".layui-table-box").hide()
+                };
+
+            });
+
+          
+
+          var connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+
+          //Disable send button until connection is established
+          //document.getElementById("StartUpload").disabled = true;
+
+          connection.on("ReloadData", function () {
+                var tableIns = table.render({
+                    done: function (res)
+                    {
+                       
+                        var array = res["data"];
+                     if (array.length > 0) {
+                        var filename = array[0]["time"];
+                        var ACCFMmax = [];
+                        var ACCRMmax = [];
+                        var ACCFMmin = [];
+                        var ACCRMmin = [];
+                        var ACCFMrms = [];
+                        var ACCRMrms = [];
+                        var ACCWHLLFmax = [];
+                        var ACCWHLRFmax = [];
+                        var ACCWHLLRmax = [];
+                        var ACCWHLRRmax = [];
+                        var ACCWHLLFmin = [];
+                        var ACCWHLRFmin = [];
+                        var ACCWHLLRmin = [];
+                        var ACCWHLRRmin = [];
+                        var ACCWHLLFrms = [];
+                        var ACCWHLRFrms = [];
+                        var ACCWHLLRrms = [];
+                        var ACCWHLRRrms = [];
+                         var Speed = [];
+
+
+
+                        for (var i in array) {
+
+                            if (array[i]["chantitle"] == "Acc_X_FM" || array[i]['chantitle'] == "Acc_Y_FM" || array[i]['chantitle'] == "Acc_Z_FM") {
+                                ACCFMmax.push(array[i]["max"]);
+                                ACCFMmin.push(array[i]["min"]);
+                                ACCFMrms.push(array[i]["rms"])
+                            }
+                            if (array[i]["chantitle"] == "Acc_X_RM" || array[i]['chantitle'] == "Acc_Y_RM" || array[i]['chantitle'] == "Acc_Z_RM") {
+                                ACCRMmax.push(array[i]["max"]);
+                                ACCRMmin.push(array[i]["min"]);
+                                ACCRMrms.push(array[i]["rms"])
+                            }
+
+                            if (array[i]["chantitle"] == "Acc_X_Whl_LF" || array[i]['chantitle'] == "Acc_Y_Whl_LF" || array[i]['chantitle'] == "Acc_Z_Whl_LF") {
+                                ACCWHLLFmax.push(array[i]["max"]);
+                                ACCWHLLFmin.push(array[i]["min"]);
+                                ACCWHLLFrms.push(array[i]["rms"])
+                            }
+                            if (array[i]["chantitle"] == "Acc_X_Whl_RF" || array[i]['chantitle'] == "Acc_Y_Whl_RF" || array[i]['chantitle'] == "Acc_Z_Whl_RF") {
+                                ACCWHLRFmax.push(array[i]["max"]);
+                                ACCWHLRFmin.push(array[i]["min"]);
+                                ACCWHLRFrms.push(array[i]["rms"])
+                            }
+                            if (array[i]["chantitle"] == "Acc_X_Whl_LR" || array[i]['chantitle'] == "Acc_Y_Whl_LR" || array[i]['chantitle'] == "Acc_Z_Whl_LR") {
+                                ACCWHLLRmax.push(array[i]["max"]);
+                                ACCWHLLRmin.push(array[i]["min"]);
+                                ACCWHLLRrms.push(array[i]["rms"])
+                            }
+                            if (array[i]["chantitle"] == "Acc_X_Whl_RR" || array[i]['chantitle'] == "Acc_Y_Whl_RR" || array[i]['chantitle'] == "Acc_Z_Whl_RR") {
+                                ACCWHLRRmax.push(array[i]["max"]);
+                                ACCWHLRRmin.push(array[i]["min"]);
+                                ACCWHLRRrms.push(array[i]["rms"])
+                            }
+                            if (array[i]["chantitle"] == "Speed") {
+                                Speed.push(array[i]["rms"]);
+                            }
+                         }
+                         //speed = Math.round(Speed[0]);
+
+
+                        Highcharts.chart('ACCFMRMMAX', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: '最大值',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'FM',
+                                data: eval(ACCFMmax)
+                            }, {
+                                name: 'RM',
+                                    data: eval(ACCRMmax)
+
+                                }]
+
+
+                        });
+
+                        Highcharts.chart('ACCFMRMMIN', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: '最小值',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'FM',
+                                data: eval(ACCFMmin)
+                            }, {
+                                name: 'RM',
+                                data: eval(ACCRMmin)
+
+                            }]
+                        });
+
+                        Highcharts.chart('ACCFMRMRMS', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: 'RMS',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'FM',
+                                data: eval(ACCFMrms)
+                            }, {
+                                name: 'RM',
+                                data: eval(ACCRMrms)
+
+                            }]
+                        });
+
+                        Highcharts.chart('ACCFWHLMAX', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: '最大值',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'LF',
+                                data: eval(ACCWHLLFmax)
+                            }, {
+                                name: 'RF',
+                                    data: eval(ACCWHLRFmax)
+
+                                }, {
+                                    name: 'LR',
+                                    data: eval(ACCWHLLRmax)
+                                }, {
+                                    name: 'RR',
+                                    data: eval(ACCWHLRRmax)}]
+                        });
+
+                        Highcharts.chart('ACCFWHLMIN', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: '最小值',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'LF',
+                                data: eval(ACCWHLLFmin)
+                            }, {
+                                name: 'RF',
+                                data: eval(ACCWHLRFmin)
+
+                            }, {
+                                name: 'LR',
+                                data: eval(ACCWHLLRmin)
+                            }, {
+                                name: 'RR',
+                                data: eval(ACCWHLRRmin)
+                            }]
+                        });
+
+                        Highcharts.chart('ACCFWHLRMS', {
+                            chart: {
+
+                                type: 'column',
+                                zoomType: 'x'
+                            },
+                            credits: {
+                                enabled: false // 禁用版权信息
+                            },
+                            title: {
+                                text: 'RMS',
+
+                            },
+                            subtitle: {
+                                text: filename,
+
+                            },
+
+                            xAxis: {
+                                categories: [
+                                    'X', 'Y', 'Z'
+                                ],
+
+                            },
+                            yAxis: {
+
+                                title: {
+                                    text: '加速度(g)'
+                                }
+                            },
+                            tooltip: {
+                                shared: true,
+                                pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.1f}</b><br/>'
+                            },
+                            plotOptions: {
+                                column: {
+                                    borderWidth: 0
+                                }
+                            },
+                            series: [{
+                                name: 'LF',
+                                data: eval(ACCWHLLFrms)
+                            }, {
+                                name: 'RF',
+                                data: eval(ACCWHLRFrms)
+
+                            }, {
+                                name: 'LR',
+                                data: eval(ACCWHLLRrms)
+                            }, {
+                                name: 'RR',
+                                data: eval(ACCWHLRRrms)
+                            }]
+                        });
+
+                        
+
+
+                        }
+                    },
+
+                    elem: '#WatchTable'
+                    , toolbar: '#toolbarhide'
+                    , url:'@Url.Action("WatchStatisticACCTable", "Watch")' //数据接口
+                    , loading: false
+                    //,refresh:false
+                    , even: true
+                    //,page: {
+                    //    layout: ['refresh']
+                    //}
+                    , size: 'sm'
+                    //, refresh: false
+                    , cols: [[ //表头
+
+                        { field: 'time', title: '文件名称' }
+
+                        , { field: 'chantitle', title: '通道' }
+                        , { field: 'max', title: '最大值' }
+                        , { field: 'min', title: '最小值' }
+                        , { field: 'rms', title: 'RMS' }
+
+                    ]]
+
+                });
+              $(".layui-table-box").hide();
+              $(".layui-icon-refresh").click();
+              
+
+          });
+
+          connection.start().then(function () {
+              layer.msg("已开始监视");
+              //document.getElementById("StartUpload").disabled = false;
+          }).catch(function (err) {
+              return console.error(err.toString());
+          });
+
+          //document.getElementById("StartUpload").addEventListener("click", function (event) {
+
+          //    startupload();
+          //    //connection.invoke("SendMessage").catch(function (err) {
+          //    //    return console.error(err.toString());
+          //    //});
+          //    event.preventDefault();
+
+          //});
+
+
+
+        });
+
+    </script>
+
+
+}

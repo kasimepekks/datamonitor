@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@section Style{
+
+    @*<link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layui/layui.js"></script>*@
+    <script src="~/lib/echarts/echarts.min.js"></script>
+    <script src="~/MYJS/ADF0979_VehicleStatic.js"></script>
+<style>
+    body {
+        text-align: center
+    } 
+</style>
+}
+<div class="layui-fluid">
+
+    @*<div class="layui-row">
+            <div class="layui-col-md6">
+                <div class="layui-btn-container">
+                    <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="StartWatching">监控开启/停止</button>
+
+                </div>
+
+            </div>
+            <div class="layui-col-md6">
+                <div class="layui-btn-container">
+                    <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" id="StartUpload">开始读取</button>
+                    <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-danger" id="StopUpload">停止读取</button>
+                </div>
+            </div>
+        </div>*@
+
+
+    @*<div class="layui-row">
+            <div class="layui-col-md8">
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>累积行驶里程<span id="distancetext"></span>公里</legend>
+                </fieldset>
+                <div class="layui-progress layui-progress-big" lay-showpercent="true" lay-filter="Distance">
+                    <div class="layui-progress-bar layui-bg-red" lay-percent="0%" style="width: 0%;"></div>
+                </div>
+                <br />
+                <br />
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>累积行驶损伤<span id="damagetext"></span></legend>
+                </fieldset>
+                <div class="layui-progress layui-progress-big" lay-showpercent="true" lay-filter="Damage">
+                    <div class="layui-progress-bar layui-bg-red" lay-percent="0%" style="width: 0%;"></div>
+                </div>
+            </div>
+            <div class="layui-col-md3 layui-col-sm-offset1">
+                <div id="vehicleinfo" style="text-align:center">
+
+                    <img src="~/Pictures/EI5.jpg" style="height:100%; width:100%;margin-top:22px" />
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <br />*@
+
+    <div class="layui-row">
+        <div class="layui-col-md4">
+            <div id="dischart" style="width: 500px;height:500px;"></div>
+
+        </div>
+
+        <div class="layui-col-md4">
+            <div id="speedchart" style="width: 500px;height:500px;"></div>
+
+        </div>
+        <div class="layui-col-md4">
+            <div id="brakechart" style="width: 500px;height:500px;"></div>
+
+        </div>
+    </div>
+    @*<div class="layui-row">
+        <div style="width: 600px; height: 400px; margin:0,auto">
+            <img src="~/Pictures/EI5.jpg" style="height:50%; width:50%" />
+
+        </div>
+
+
+    </div>*@
+
+</div>
+@*<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>*@
+
+
+@section Scripts{
+
+    <script>
+
+
+
+
+    </script>
+
+
+}

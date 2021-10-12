@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/layui/layui.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <style type="text/css">
+        .layui-icon {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .kit-side-fold {
+            text-align: center;
+        }
+        .layui-nav-third-child {
+            display: none;
+            position: absolute;
+            left: 105px;
+            top: 25px;
+            min-width: 100%;
+            line-height: 36px;
+            padding: 5px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,.12);
+            border: 1px solid #d2d2d2;
+            background-color: #fff;
+            z-index: 100;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+
+        .layui-nav .layui-nav-third-child a {
+            color: black;
+            
+        }
+
+            .layui-nav .layui-nav-third-child a:hover {
+                background-color: deepskyblue;
+                color: white;
+            }
+
+        .layui-nav-third-child li {
+            position: relative;
+        }
+
+        .layui-nav-third-child li {
+            background-color: transparent;
+            color: white;
+        }
+
+        .layui-nav .layui-nav-third-child li.layui-this a {
+            background-color: transparent;
+            color: white;
+        }
+
+        .layui-nav-third-child li:after {
+            display: none;
+        }
+
+     
+    </style>
+    @RenderSection("Style", required: false)
+</head>
+<body  style="overflow: scroll;overflow-x:hidden">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo" style="font-size: 20px;">车辆监控系统V1.0</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+                @*<li class="layui-nav-item">
+            <a href="">车辆状态</a>
+            <dl class="layui-nav-child">
+                <dd><a href="@Url.Action("Index", "ADF0979")">ADF0979</a></dd>
+
+            </dl>
+        </li>
+
+        <li class="layui-nav-item">
+            <a href="">输入统计</a>
+            <dl class="layui-nav-child">
+                <dd><a href="@Url.Action("StaticsACC", "ADF0979")">ADF0979</a></dd>
+
+            </dl>
+
+        </li>
+        <li class="layui-nav-item">
+            <a href="">输入信号</a>
+            <dl class="layui-nav-child">
+                <dd><a href="@Url.Action("RealTimeACC", "ADF0979")">ADF0979</a></dd>
+
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="">输出统计</a>
+            <dl class="layui-nav-child">
+                <dd><a href="#">ADF0979</a></dd>
+
+            </dl>
+        </li>
+        <li class="layui-nav-item">
+            <a href="">输出信号</a>
+            <dl class="layui-nav-child">
+                <dd><a href="#">ADF0979</a></dd>
+
+            </dl>
+        </li>*@
+                @*<li class="layui-nav-item">
+                    <a href="">设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="@Url.Action("CoravelJob", "ADF0979")">ADF0979</a></dd>
+
+                    </dl>
+                </li>*@
+                <li class="layui-nav-item">
+                    <a href="">监控车辆</a>
+                    <dl class="layui-nav-child" id="vehiclemonitor">
+                        @*<dd><a href="@Url.Action("DisplayAll", "ADF0979")">ADF0979</a></dd>*@
+
+                    </dl>
+                </li>
+
+                <li class="layui-nav-item">
+                    <a href="">数据计算</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" class="third-class">ADF0979</a>
+                            <ol class="layui-nav-third-child">
+                                <li><a href="@Url.Action("AddDistance", "ADF0979")">速度分布</a></li>
+                                <li><a href="@Url.Action("AddWFT", "ADF0979")">测量轮</a></li>
+
+                            </ol>
+
+                        </dd>
+                        @*<dd>
+                    <a href="@Url.Action("AddDistance", "ADF0979")" id="menu_three"> ADF0979</a>
+
+                </dd>*@
+
+                    </dl>
+                </li>
+                @*<li class="layui-nav-item">
+            <a href="">添加WFT数据</a>
+            <dl class="layui-nav-child">
+                <dd><a href="@Url.Action("AddWFT", "ADF0979")"> ADF0979</a></dd>
+
+            </dl>
+        </li>*@
+                <li class="layui-nav-item">
+                    <a href="">数据预测</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="@Url.Action("DataPrediction", "ADF0979")"> ADF0979</a></dd>
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">数据分析</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="@Url.Action("DataAnalysis", "ADF0979")"> ADF0979</a></dd>
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="loginfo">错误日志<span class="layui-badge layui-bg-red" id="warninginfo">0</span></a>
+
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img id="id" src="#" class="layui-nav-img">
+                        <span id="user"> </span>
+                    </a>
+
+                </li>
+                <li class="layui-nav-item"><a href="@Url.Action("Logout", "Login")">退出</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    @RenderBody()
+  
+<script>
+
+
+          var element = document.getElementById('id');
+        var span = document.getElementById('user');
+        if ("@ViewBag.User"=="Admin") {
+            element.src ="/Pictures/老板.png"
+            span.textContent = "Admin";
+        }
+        else {
+            element.src = "/Pictures/普通用户.png";
+            span.textContent = "User";
+    }
+
+    layui.use(['element'], function () {
+        var $ = layui.jquery;
+        $.ajax({
+            url: '@Url.Action("GetVehicleID", "Home")',
+            dataType: 'json',
+            type: 'post',
+            success: function (data) {
+
+                if (data.length > 0) {
+                    console.log(data);
+                    var vehicledl = document.getElementById("vehiclemonitor");
+
+                    for (var i = 0; i < data.length; i++) {
+                        var item = data[i];
+                        var dd = document.createElement("dd");
+                        vehicledl.appendChild(dd);
+                        a = document.createElement('a');
+                        a.href = "/" + item +"/DisPlayAll/";
+                        a.innerText = item;
+                        dd.appendChild(a);
+
+                    }
+                }
+
+
+
+                //重新渲染 固定写法
+            }
+        });
+    });
+
+</script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

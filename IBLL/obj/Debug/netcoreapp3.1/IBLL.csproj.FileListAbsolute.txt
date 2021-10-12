@@ -1,0 +1,13 @@
+C:\Users\111\source\repos\IBLL\bin\Debug\netcoreapp3.1\IBLL.deps.json
+C:\Users\111\source\repos\IBLL\bin\Debug\netcoreapp3.1\IBLL.dll
+C:\Users\111\source\repos\IBLL\bin\Debug\netcoreapp3.1\IBLL.pdb
+C:\Users\111\source\repos\IBLL\bin\Debug\netcoreapp3.1\MysqlforDataWatch.dll
+C:\Users\111\source\repos\IBLL\bin\Debug\netcoreapp3.1\MysqlforDataWatch.pdb
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.AssemblyInfoInputs.cache
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.AssemblyInfo.cs
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.csproj.CoreCompileInputs.cache
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.csproj.CopyComplete
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.dll
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.pdb
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.csproj.AssemblyReference.cache
+C:\Users\111\source\repos\IBLL\obj\Debug\netcoreapp3.1\IBLL.GeneratedMSBuildEditorConfig.editorconfig
