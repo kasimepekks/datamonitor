@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Aliyun.OSS.SDK.NetCore/2.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Http.Features/5.0.4": {
         "type": "package",
         "dependencies": {
@@ -376,6 +385,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
           "Zack.EFCore.Batch.MySQL.Pomelo": "1.4.9"
         },
@@ -390,6 +400,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Aliyun.OSS.SDK.NetCore": "2.13.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.4",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "MysqlforDataWatch": "1.0.0"
@@ -404,6 +415,20 @@
     }
   },
   "libraries": {
+    "Aliyun.OSS.SDK.NetCore/2.13.0": {
+      "sha512": "ElvJwTAdBqFmgb7K4PdxDXPFbOBCIUI5OvCOMfCoUoDL21aivtWMFUtU1v4Dxc2wcrN8XQdY1EKeGFhJK/zVyQ==",
+      "type": "package",
+      "path": "aliyun.oss.sdk.netcore/2.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
+        "aliyun.oss.sdk.netcore.nuspec",
+        "lib/netstandard2.0/Aliyun.OSS.Core.dll",
+        "lib/netstandard2.0/Aliyun.OSS.Core.pdb",
+        "lib/netstandard2.0/Aliyun.OSS.Core.xml"
+      ]
+    },
     "Microsoft.AspNetCore.Http.Features/5.0.4": {
       "sha512": "w4ffAN7/k9DvEGMvkA38iADqwqoEIiT7z4+KsdB6EUEZs7u/AAs46X0cEfoovYCPglw7EBXJO7MoafLdGw/2vQ==",
       "type": "package",
@@ -1089,11 +1114,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\111\\source\\repos\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1114,17 +1139,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
             }
           }
         }

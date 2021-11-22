@@ -30,7 +30,8 @@ namespace MysqlforDataWatch
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql("server=localhost;user id=root;password=Mxz04122465;database=datawatch", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
+                //optionsBuilder.UseMySql("server=localhost;user id=root;password=Mxz04122465;database=datawatch", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
+                optionsBuilder.UseMySql(MysqlConnectionConfiguration.mysqlconnection, new MySqlServerVersion(new Version(5, 7, 20)));
                 optionsBuilder.UseBatchEF_MySQLPomelo();
             }
         }

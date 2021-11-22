@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Aliyun.OSS.SDK.NetCore/2.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
+        }
+      },
       "Autofac/6.1.0": {
         "type": "package",
         "dependencies": {
@@ -845,6 +854,13 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration/3.1.5": {
@@ -2563,6 +2579,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
           "Zack.EFCore.Batch.MySQL.Pomelo": "1.4.9"
         },
@@ -2577,6 +2594,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Aliyun.OSS.SDK.NetCore": "2.13.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.4",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "MysqlforDataWatch": "1.0.0"
@@ -2591,6 +2609,20 @@
     }
   },
   "libraries": {
+    "Aliyun.OSS.SDK.NetCore/2.13.0": {
+      "sha512": "ElvJwTAdBqFmgb7K4PdxDXPFbOBCIUI5OvCOMfCoUoDL21aivtWMFUtU1v4Dxc2wcrN8XQdY1EKeGFhJK/zVyQ==",
+      "type": "package",
+      "path": "aliyun.oss.sdk.netcore/2.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
+        "aliyun.oss.sdk.netcore.nuspec",
+        "lib/netstandard2.0/Aliyun.OSS.Core.dll",
+        "lib/netstandard2.0/Aliyun.OSS.Core.pdb",
+        "lib/netstandard2.0/Aliyun.OSS.Core.xml"
+      ]
+    },
     "Autofac/6.1.0": {
       "sha512": "22aXncFDye08TsXHobcxAoZFBeaJ9nrAxGzk9YHLLaIkYO7aeAA0Sz7Mii9qsfB76S1gdhebqMv8QsnknJMT/w==",
       "type": "package",
@@ -3565,6 +3597,85 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {
+      "sha512": "1jHxWlSi6/ryWODk6SUjsZPHk/BdsucxqhIi1szEzwc84e8nvZWF45qRXcT2gWPISJ3Ybbyg2LsNG6yX8r7VuA==",
+      "type": "package",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.11.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.md",
+        "ThirdPartyNotices.txt",
+        "build/Container.props",
+        "build/Container.targets",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets",
+        "build/Rules/GeneralBrowseObject.xaml",
+        "build/Rules/cs-CZ/GeneralBrowseObject.xaml",
+        "build/Rules/de-DE/GeneralBrowseObject.xaml",
+        "build/Rules/es-ES/GeneralBrowseObject.xaml",
+        "build/Rules/fr-FR/GeneralBrowseObject.xaml",
+        "build/Rules/it-IT/GeneralBrowseObject.xaml",
+        "build/Rules/ja-JP/GeneralBrowseObject.xaml",
+        "build/Rules/ko-KR/GeneralBrowseObject.xaml",
+        "build/Rules/pl-PL/GeneralBrowseObject.xaml",
+        "build/Rules/pt-BR/GeneralBrowseObject.xaml",
+        "build/Rules/ru-RU/GeneralBrowseObject.xaml",
+        "build/Rules/tr-TR/GeneralBrowseObject.xaml",
+        "build/Rules/zh-CN/GeneralBrowseObject.xaml",
+        "build/Rules/zh-TW/GeneralBrowseObject.xaml",
+        "build/ToolsTarget.props",
+        "build/ToolsTarget.targets",
+        "icon.png",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Tasks.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/utils/KillProcess.exe",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.1.5": {
@@ -8033,6 +8144,7 @@
       "IBLL >= 1.0.0",
       "IDAL >= 1.0.0",
       "Microsoft.Extensions.Logging.Log4Net.AspNetCore >= 5.0.3",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.11.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "MysqlforDataWatch >= 1.0.0",
       "Pomelo.AspNetCore.TimedJob >= 2.0.0-rtm-10046",
@@ -8046,11 +8158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
+      "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
       "projectName": "RLDA_VehicleData_Watch",
-      "projectPath": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
+      "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
       "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\obj\\",
+      "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8071,23 +8183,23 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj"
+            "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
             }
           }
         }
@@ -8121,6 +8233,10 @@
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
             "target": "Package",
             "version": "[5.0.3, )"
+          },
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "target": "Package",
+            "version": "[1.11.1, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",

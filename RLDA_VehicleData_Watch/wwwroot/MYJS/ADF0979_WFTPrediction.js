@@ -41,7 +41,7 @@
             startdate = startenddate[0];
 
             enddate = startenddate[1];
-
+            
         }
 
 
@@ -62,7 +62,7 @@
                     startdate: startdate,
 
                     enddate: enddate,
-
+                    vehicleid="ADF0979"
                 },
                 success: function (data) {
                     //console.log(data);

@@ -39,7 +39,7 @@ namespace RLDA_VehicleData_Watch.Models
         private static Dictionary<string, double> vehiclecumdistance = new Dictionary<string, double>();//存储每个车的里程
 
 
-        readonly string datefile = FileOperator.DatetoName(DateTime.Now.ToString("MM-dd"));
+        readonly string datefile = FileOperator.DatetoName(DateTime.Now.ToString("MM-dd"));//日期文件夹名
         public MyInvocable(IStatistic_ACC_IBLL IStatistic_ACC_Service, IRealTime_ACC_IBLL IRealTime_ACC_Service, IStatistic_WFT_IBLL IStatistic_WFT_Service, IRealTime_WFT_IBLL IRealTime_WFT_Service, IHubContext<MyHub> hubContext, IConfiguration configuration,string vehicleID)
         {
             _IStatistic_ACC_Service = IStatistic_ACC_Service;

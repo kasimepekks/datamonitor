@@ -64,7 +64,7 @@ namespace DAL
 
              name = filename.Split('.')[0];
             //string starttime = name.Split('-')[1];
-            FileStream fs = new FileStream(filefullpath, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+            using FileStream fs = new FileStream(filefullpath, System.IO.FileMode.Open, System.IO.FileAccess.Read, FileShare.ReadWrite);
             StreamReader sr = new StreamReader(fs, encoding);
 
             string strLine = "";
@@ -82,7 +82,7 @@ namespace DAL
 
             //_DB.Database.ExecuteSqlRaw("TRUNCATE TABLE sh_adf0979_realtime_tempdata_acc");
             List<T> list = new List<T>();
-           //用一个泛型缓存来存储所有属性，提高性能
+            //用一个泛型缓存来存储所有属性，提高性能
             PropertyInfo[] props = ReadTimedomainCash<T>.GetProps();
 
             CompareInfo Compare = CultureInfo.InvariantCulture.CompareInfo;
@@ -94,36 +94,33 @@ namespace DAL
                 {
                     tableHead = strLine.Split(',');
                     IsFirst = false;
+                    //把csv里的列名里所有的下划线和空格去除，与我的类名保持一致
                     for (int i = 0; i < tableHead.Length; i++)
                     {
-                        var t= tableHead[i].Replace("_", "");
+                        var t = tableHead[i].Replace("_", "");
                         tableHead[i] = t.Replace(" ", "");
                     }
-                    //foreach (var item in tableHead)
-                    //{
-                    //    item.Replace("_", "");
-                    //    item.Trim();
-                    //}
+                    
                 }
                 else
                 {
 
                     aryLine = strLine.Split(',');
 
-              
+
                     T titem = new T();
 
-                                       
-                        //只要列名与类里的属性名一致就能提取出来
-                     foreach (var p in props)
-                     {
+
+                    //只要列名与类里的属性名一致就能提取出来，所以类的属性尽量全，只要包含csv里的列名，就可以读取
+                    foreach (var p in props)
+                    {
                         if (tableHead.ToList().IndexOf(p.Name) != -1)
                         {
                             p.SetValue(titem, Convert.ToDouble(aryLine[tableHead.ToList().IndexOf(p.Name)]));
                         }
-                                                   
-                     }
-                        
+
+                    }
+
                     list.Add(titem);
 
                 }
@@ -138,14 +135,15 @@ namespace DAL
             if (ReadTimedomainCash<T>.ACCorWFT())
             {
                 //把list<T>转为List<TempdataAccBase>父类，父类有速度，GPS和刹车
-                var ACCList =list.Cast<TempdataAccBase>();
+                var ACCList = list.Cast<TempdataAccBase>();
                 var somedatalist = ACCList.Where(a => a.Time == 0 || a.Time == 1 || a.Time == 2
-                    || a.Time == 3 || a.Time == 4 || a.Time == 5 || a.Time == 6 || a.Time == 7 || a.Time == 8 || a.Time == 9).Select(b => new {
-                      b.Brake,
-                      b.Speed,
-                      b.Lat,
-                      b.Lon
-                   }).ToList();
+                    || a.Time == 3 || a.Time == 4 || a.Time == 5 || a.Time == 6 || a.Time == 7 || a.Time == 8 || a.Time == ACCList.LastOrDefault().Time).Select(b => new
+                    {
+                        b.Brake,
+                        b.Speed,
+                        b.Lat,
+                        b.Lon
+                    }).ToList();
                 speed = somedatalist.Select(a => a.Speed).ToList();
                 brake = somedatalist.Select(a => a.Brake).ToList();
                 Lat = somedatalist.Select(a => a.Lat).ToList();
@@ -159,7 +157,8 @@ namespace DAL
                 Lon = null;
             }
             return list;
-            
+
+
         }
 
        public List<SatictisData> ReadOneCsvFileForStatistic(string filefullpath, string filename,out string name, out double sdistance)
@@ -168,7 +167,8 @@ namespace DAL
 
              name = filename.Split('.')[0];
 
-            FileStream fs = new FileStream(filefullpath, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+            using FileStream fs = new FileStream(filefullpath, System.IO.FileMode.Open, System.IO.FileAccess.Read, FileShare.ReadWrite);
+
             StreamReader sr = new StreamReader(fs, encoding);
             DataTable dt = new DataTable();
             string strLine = "";
@@ -176,7 +176,7 @@ namespace DAL
             string[] aryLine = null;
             string[] tableHead = null;
 
-            
+
             //标示列数
             int columnCount = 0;
             //标示是否是读取的第一行
@@ -209,7 +209,7 @@ namespace DAL
                         }
                         dt.Rows.Add(dr);
                     }
-                   
+
                 }
             }
 
@@ -219,7 +219,7 @@ namespace DAL
             fs.Dispose();
             if (aryLine != null && aryLine.Length > 0)
             {
-                //先删除表中所有数据再添加最新的数据并在前端显示，这样前端就能实时显示了
+               
                 List<SatictisData> List = new List<SatictisData>();
                 //_DB.Database.ExecuteSqlRaw("TRUNCATE TABLE sh_adf0979_satictis_tempdata_acc");
                 for (int l = 0; l < columnCount - 1; l++)
@@ -252,10 +252,11 @@ namespace DAL
                     List.Add(entity);
 
                 }
-                if (tableHead.Contains("Speed")){
+                if (tableHead.Contains("Speed"))
+                {
                     var speed = List.Where(a => a.Chantitle == "Speed").Select(a => a.Rms).ToList().FirstOrDefault();//选用speed的rms来作为计算里程的参数
                     sdistance = speed * 10 / 3600;
-                   
+
                 }
                 else
                 {
@@ -268,6 +269,7 @@ namespace DAL
                 sdistance = 0;
                 return null;
             }
+
 
         }
 

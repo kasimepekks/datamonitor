@@ -15,19 +15,16 @@ namespace BLL.SH_ADF0979BLL
         public AnalysisData_ACC_BLL(IAnalysisData_ACC_IDAL AnalysisData_ACC_DAL, DbContext DB)
         {
             this._AnalysisData_ACC_DAL = AnalysisData_ACC_DAL;
+            base.CurrentDal = AnalysisData_ACC_DAL;//构造函数把实例传入给basebll里的currentdal
+
+
             _DB = DB;
         }
         public override void SetCurrentDal()
         {
             base.CurrentDal = this._AnalysisData_ACC_DAL;
         }
-        /// <summary>
-        /// 执行添加distance字段并进行统计后存入数据库中
-        /// </summary>
-        //public bool ReadFilesForAnalysisDataAcc(string filepath)
-        //{
-        //  return  _AnalysisData_ACC_DAL.ReadFilesForAnalysisDataAcc(filepath);
-        //}
+       
 
         public bool ReadandMergeACCDataperHalfHour(string filepath)
         {

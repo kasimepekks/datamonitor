@@ -12,34 +12,34 @@ namespace BLL.SH_ADF0979BLL
     public class SpeedDistribution_ACC_BLL : BaseBLL<Speeddistribution>, ISpeedDistribution_ACC_IBLL
     {
         private readonly ISpeedDistribution_ACC_IDAL _ISpeedDistribution_ACC_DAL;
-        private readonly datawatchContext _DB;
-        public SpeedDistribution_ACC_BLL(ISpeedDistribution_ACC_IDAL ISpeedDistribution_ACC_DAL, datawatchContext DB)
+        //private readonly datawatchContext _DB;
+        public SpeedDistribution_ACC_BLL(ISpeedDistribution_ACC_IDAL ISpeedDistribution_ACC_DAL)
         {
             this._ISpeedDistribution_ACC_DAL = ISpeedDistribution_ACC_DAL;
-            _DB = DB;
+            //_DB = DB;
         }
         public override void SetCurrentDal()
         {
             base.CurrentDal = this._ISpeedDistribution_ACC_DAL;
         }
-        public void  ReadandMergeSpeedDistributionAcc(string filepath)
-        {
-            _ISpeedDistribution_ACC_DAL.ReadandMergeSpeedDistributionAcc(filepath);
-        }
+        //public void  ReadandMergeSpeedDistributionAcc(string filepath)
+        //{
+        //    _ISpeedDistribution_ACC_DAL.ReadandMergeSpeedDistributionAcc(filepath);
+        //}
         /// <summary>
         /// 统计速度的分布并发给前端
         /// </summary>
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistribution(DateTime sd, DateTime ed)
+        public IQueryable LoadSpeedDistribution(DateTime sd, DateTime ed, string vehicleid)
         {
             //var s1 = _DB.Set<ShAdf0979Speeddistribution>().Where(a => a.Datadate >= sd && a.Datadate <= ed).Select(a=>new {
             //    Time = sd + "-" + ed,
             //    ten=a._010
             //});
 
-            var speeddistributionlist = _DB.Speeddistribution.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed).GroupBy(x => new { }).Select(q => new
+            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new { }).Select(q => new
             {
                 Time = sd + "-" + ed,
                 sum0_10 = q.Sum(x => x._010),
@@ -70,9 +70,9 @@ namespace BLL.SH_ADF0979BLL
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistributionperday(DateTime sd, DateTime ed)
+        public IQueryable LoadSpeedDistributionperday(DateTime sd, DateTime ed, string vehicleid)
         {
-            var speeddistributionlist = _DB.Speeddistribution.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed).GroupBy(x => new
+            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new
             {
                 x.Datadate.Value.Year,
                 x.Datadate.Value.Month,
@@ -93,10 +93,10 @@ namespace BLL.SH_ADF0979BLL
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistributionperhour(DateTime sd, DateTime ed)
+        public IQueryable LoadSpeedDistributionperhour(DateTime sd, DateTime ed, string vehicleid)
         {
             //这里不考虑按每一天进行合并，而是合并相同时间段的数据，不区分哪一天
-            var speeddistributionlist = _DB.Speeddistribution.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed).GroupBy(x => 
+            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId== vehicleid).AsNoTracking().GroupBy(x => 
             x.Datadate.Value.Hour).Select(x => new
             {
                 Hour = x.Key,

@@ -7,6 +7,6 @@ namespace IDAL.SH_ADF0979IDAL
 {
    public interface ISpeedDistribution_ACC_IDAL : IBaseDAL<Speeddistribution>
     {
-        void ReadandMergeSpeedDistributionAcc(string filepath);
+        //void ReadandMergeSpeedDistributionAcc(string filepath);
     }
 }

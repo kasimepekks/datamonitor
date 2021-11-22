@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj": {}
+    "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\BLL\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,14 +32,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\DAL\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,17 +100,17 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
               }
             }
           }
@@ -149,14 +149,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj",
         "projectName": "IBLL",
-        "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\IBLL\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -177,8 +177,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               }
             }
           }
@@ -211,14 +211,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj",
         "projectName": "IDAL",
-        "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\IDAL\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -239,8 +239,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               }
             }
           }
@@ -273,14 +273,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "projectName": "MysqlforDataWatch",
-        "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -319,6 +319,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -347,14 +351,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
         "projectName": "RLDA_VehicleData_Watch",
-        "projectPath": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -375,23 +379,23 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\BLL\\BLL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\DAL\\DAL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IBLL\\IBLL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\IDAL\\IDAL.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
               }
             }
           }
@@ -426,6 +430,10 @@
               "target": "Package",
               "version": "[5.0.3, )"
             },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.11.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -457,14 +465,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\Tools\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -485,8 +493,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               }
             }
           }
@@ -501,6 +509,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Aliyun.OSS.SDK.NetCore": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.4, )"

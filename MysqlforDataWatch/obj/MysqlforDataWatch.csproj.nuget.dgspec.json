@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {}
+    "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "projectName": "MysqlforDataWatch",
-        "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,6 +47,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
             },

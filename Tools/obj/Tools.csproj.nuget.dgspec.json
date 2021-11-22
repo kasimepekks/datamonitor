@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {}
+    "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "projectName": "MysqlforDataWatch",
-        "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -78,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj": {
+    "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj",
+        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "C:\\Users\\111\\source\\repos\\Tools\\Tools.csproj",
+        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
         "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\Tools\\obj\\",
+        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,8 +110,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               }
             }
           }
@@ -122,6 +126,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Aliyun.OSS.SDK.NetCore": {
+              "target": "Package",
+              "version": "[2.13.0, )"
+            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.4, )"

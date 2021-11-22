@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/layui/css/layui.css" rel="stylesheet" />
+    
     <script src="~/layui/layui.js"></script>
-    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    @*<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>*@
     <style type="text/css">
         .layui-icon {
             font-size: 20px;
@@ -70,104 +71,46 @@
             <div class="layui-logo" style="font-size: 20px;">车辆监控系统V1.0</div>
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-left">
-                @*<li class="layui-nav-item">
-            <a href="">车辆状态</a>
-            <dl class="layui-nav-child">
-                <dd><a href="@Url.Action("Index", "ADF0979")">ADF0979</a></dd>
-
-            </dl>
-        </li>
-
-        <li class="layui-nav-item">
-            <a href="">输入统计</a>
-            <dl class="layui-nav-child">
-                <dd><a href="@Url.Action("StaticsACC", "ADF0979")">ADF0979</a></dd>
-
-            </dl>
-
-        </li>
-        <li class="layui-nav-item">
-            <a href="">输入信号</a>
-            <dl class="layui-nav-child">
-                <dd><a href="@Url.Action("RealTimeACC", "ADF0979")">ADF0979</a></dd>
-
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="">输出统计</a>
-            <dl class="layui-nav-child">
-                <dd><a href="#">ADF0979</a></dd>
-
-            </dl>
-        </li>
-        <li class="layui-nav-item">
-            <a href="">输出信号</a>
-            <dl class="layui-nav-child">
-                <dd><a href="#">ADF0979</a></dd>
-
-            </dl>
-        </li>*@
-                @*<li class="layui-nav-item">
-                    <a href="">设置</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="@Url.Action("CoravelJob", "ADF0979")">ADF0979</a></dd>
-
-                    </dl>
-                </li>*@
+               
+               
                 <li class="layui-nav-item">
                     <a href="">监控车辆</a>
                     <dl class="layui-nav-child" id="vehiclemonitor">
-                        @*<dd><a href="@Url.Action("DisplayAll", "ADF0979")">ADF0979</a></dd>*@
-
+                     
                     </dl>
                 </li>
 
                 <li class="layui-nav-item">
                     <a href="">数据计算</a>
-                    <dl class="layui-nav-child">
-                        <dd>
-                            <a href="javascript:;" class="third-class">ADF0979</a>
-                            <ol class="layui-nav-third-child">
-                                <li><a href="@Url.Action("AddDistance", "ADF0979")">速度分布</a></li>
-                                <li><a href="@Url.Action("AddWFT", "ADF0979")">测量轮</a></li>
-
-                            </ol>
-
-                        </dd>
-                        @*<dd>
-                    <a href="@Url.Action("AddDistance", "ADF0979")" id="menu_three"> ADF0979</a>
-
-                </dd>*@
+                    <dl class="layui-nav-child" id="dataimport">
 
                     </dl>
                 </li>
-                @*<li class="layui-nav-item">
-            <a href="">添加WFT数据</a>
-            <dl class="layui-nav-child">
-                <dd><a href="@Url.Action("AddWFT", "ADF0979")"> ADF0979</a></dd>
-
-            </dl>
-        </li>*@
+            
                 <li class="layui-nav-item">
                     <a href="">数据预测</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="@Url.Action("DataPrediction", "ADF0979")"> ADF0979</a></dd>
+                    <dl class="layui-nav-child" id="dataprediction">
+                      
 
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="">数据分析</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="@Url.Action("DataAnalysis", "ADF0979")"> ADF0979</a></dd>
+                    <dl class="layui-nav-child" id="dataanalysis">
+                        @*<dd><a href="@Url.Action("DataAnalysis", "ADF0979")"> ADF0979</a></dd>*@
 
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;" id="loginfo">错误日志<span class="layui-badge layui-bg-red" id="warninginfo">0</span></a>
-
-                </li>
+                
             </ul>
             <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="">设置</a>
+                    <dl class="layui-nav-child" id="vehiclesetup">
+                        <dd><a href="@Url.Action("VehicleSetup", "Home")">车辆设置</a></dd>
+
+                    </dl>
+                </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">
                         <img id="id" src="#" class="layui-nav-img">
@@ -198,6 +141,7 @@
             span.textContent = "User";
     }
 
+
     layui.use(['element'], function () {
         var $ = layui.jquery;
         $.ajax({
@@ -207,18 +151,49 @@
             success: function (data) {
 
                 if (data.length > 0) {
-                    console.log(data);
-                    var vehicledl = document.getElementById("vehiclemonitor");
-
+                    
+                    var vehicledl1 = document.getElementById("vehiclemonitor");
+                    var vehicledl2 = document.getElementById("dataimport");
+                    var vehicledl3 = document.getElementById("dataanalysis");
+                    var vehicledl4 = document.getElementById("dataprediction");
                     for (var i = 0; i < data.length; i++) {
                         var item = data[i];
-                        var dd = document.createElement("dd");
-                        vehicledl.appendChild(dd);
-                        a = document.createElement('a');
-                        a.href = "/" + item +"/DisPlayAll/";
-                        a.innerText = item;
-                        dd.appendChild(a);
+                        var dd1 = document.createElement("dd");
+                        var dd2 = document.createElement("dd");
+                        var dd3 = document.createElement("dd");
+                        var dd4 = document.createElement("dd");
+                        vehicledl1.appendChild(dd1);
+                        vehicledl2.appendChild(dd2);
+                        vehicledl3.appendChild(dd3);
+                        vehicledl4.appendChild(dd4);
+                        a1 = document.createElement('a');
+                        a2 = document.createElement('a');
 
+                        a3 = document.createElement('a');
+                        a4 = document.createElement('a');
+
+                        //a.href = "/" + item + "/DisPlayAll/";
+                        a1.href = "/Html/WatchHtml/" + item + ".html";
+                        a1.target = "_blank";
+
+                        a2.href = "/Html/ImportHtml/ImportData.html?id="+item;
+                        a2.target = "/Html/ImportHtml/ImportData.html?id=" + item;
+
+                        a3.href = "/Html/AnalysisHtml/Analysis.html?id=" + item;
+                        a3.target = "/Html/AnalysisHtml/Analysis.html?id=" + item;
+
+                        a4.href = "/Html/PredictionHtml/Prediction.html?id=" + item;
+                        a4.target = "/Html/PredictionHtml/Prediction.html?id=" + item;
+
+                        a1.innerText = item;
+                        a2.innerText = item;
+                        a3.innerText = item;
+                        a4.innerText = item;
+
+                        dd1.appendChild(a1);
+                        dd2.appendChild(a2);
+                        dd3.appendChild(a3);
+                        dd4.appendChild(a4);
                     }
                 }
 
@@ -227,6 +202,8 @@
                 //重新渲染 固定写法
             }
         });
+
+        
     });
 
 </script>

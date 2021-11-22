@@ -354,6 +354,7 @@
       },
       "MysqlforDataWatch/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
           "Zack.EFCore.Batch.MySQL.Pomelo": "1.4.9"
         },

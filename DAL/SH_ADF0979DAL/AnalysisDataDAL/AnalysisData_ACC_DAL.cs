@@ -6,10 +6,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using Tools;
 using Tools.AddDamage;
 using Tools.AddDistance;
+using Tools.Cash;
 using Tools.ListOperation;
 using Tools.ListOperation.BrakeListOperation;
 using Tools.ListOperation.SteeringListOperation;
@@ -42,6 +44,16 @@ namespace DAL.SH_ADF0979DAL
                 List<Brakerecognition> brakesqllist = new List<Brakerecognition>();
                 List<Streeringrecognition> steeringsqllist = new List<Streeringrecognition>();
 
+                //以下是获取了数据库每个表的id列，用于判断是否之前已经导入过相同的数据
+                var bumpmysqllist = _DB.Set<Bumprecognition>().Select(a => a.Id).ToList();
+                var brakemysqllist = _DB.Set<Brakerecognition>().Select(a => a.Id).ToList();
+                var steeringmysqllist = _DB.Set<Streeringrecognition>().Select(a => a.Id).ToList();
+                var speedmysqllist = _DB.Set<Speeddistribution>().Select(a => a.Id).ToList();
+                var accmysqllist = _DB.Set<SatictisAnalysisdataAcc>().Select(a => a.Id).ToList();
+
+                //PropertyInfo[] props = ReadTimedomainCash<RealtimeTempdataAcc>.GetProps();
+                bool Gyro_Zisexist = true;
+                bool Brakeisexist = true;
                 foreach (var file in filelist)
                 {
                     if (file.Length != 0)
@@ -78,7 +90,8 @@ namespace DAL.SH_ADF0979DAL
 
                         List<double> Gyro_Z_list = new List<double>();
                         List<double> Acc_Y_FM_list = new List<double>();
-                        bool Gyro_Zisexist = false;
+
+                       
 
                         brakelist.Add(0);//每次都在开始加一个0数据
                         Gyro_Z_list.Add(0);//每次都在开始加一个0数据
@@ -105,9 +118,19 @@ namespace DAL.SH_ADF0979DAL
                                 tableHead = strLine.Split(',');
                                 IsFirst = false;
                                 columnCount = tableHead.Length;
-                                if (tableHead.Contains("Gyro_Z"))
+                                for (int i = 0; i < tableHead.Length; i++)
                                 {
-                                    Gyro_Zisexist = true;
+                                    var t = tableHead[i].Replace("_", "");
+                                    tableHead[i] = t.Replace(" ", "");
+                                }
+
+                                if (!tableHead.Contains("GyroZ"))
+                                {
+                                    Gyro_Zisexist = false;
+                                }
+                                if (!tableHead.Contains("Brake"))
+                                {
+                                    Brakeisexist = false;
                                 }
                                 //创建列
                                 for (int i = 0; i < columnCount; i++)
@@ -119,21 +142,63 @@ namespace DAL.SH_ADF0979DAL
                             else
                             {
                                 aryLine = strLine.Split(',');
+                                if (tableHead.ToList().IndexOf("Speed") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    speedlist.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("Speed")]));
+                                }
+                                if (tableHead.ToList().IndexOf("Time") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    timelist.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("Time")]));
+                                }
+                                if (tableHead.ToList().IndexOf("AccZWhlLF") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    WFT_AZ_LFList.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("AccZWhlLF")]));
+                                }
+                                if (tableHead.ToList().IndexOf("AccZWhlRF") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    WFT_AZ_RFList.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("AccZWhlRF")]));
+                                }
+                                if (tableHead.ToList().IndexOf("AccZWhlLR") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    WFT_AZ_LRList.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("AccZWhlLR")]));
+                                }
+                                if (tableHead.ToList().IndexOf("Brake") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    brakelist.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("Brake")]));
+                                }
+                                if (tableHead.ToList().IndexOf("AccXFM") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    Acc_X_FM_list.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("AccXFM")]));
+                                }
+                                if (tableHead.ToList().IndexOf("AccYFM") != -1)
+                                {
+                                    //speedlist.Add(Convert.ToDouble(aryLine[1]));
+                                    Acc_Y_FM_list.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("AccYFM")]));
+                                }
 
-                                speedlist.Add(Convert.ToDouble(aryLine[1]));
-                                timelist.Add(Convert.ToDouble(aryLine[0]));
-                                WFT_AZ_LFList.Add(Convert.ToDouble(aryLine[9]));
-                                WFT_AZ_RFList.Add(Convert.ToDouble(aryLine[12]));
-                                WFT_AZ_LRList.Add(Convert.ToDouble(aryLine[17]));
+                                //timelist.Add(Convert.ToDouble(aryLine[0]));
+                                //WFT_AZ_LFList.Add(Convert.ToDouble(aryLine[9]));
+                                //WFT_AZ_RFList.Add(Convert.ToDouble(aryLine[12]));
+                                //WFT_AZ_LRList.Add(Convert.ToDouble(aryLine[17]));
 
-                                brakelist.Add(Convert.ToDouble(aryLine[2]));
+                                //brakelist.Add(Convert.ToDouble(aryLine[2]));
 
-                                Acc_X_FM_list.Add(Convert.ToDouble(aryLine[7]));
-                                Acc_Y_FM_list.Add(Convert.ToDouble(aryLine[5]));
+                                //Acc_X_FM_list.Add(Convert.ToDouble(aryLine[7]));
+                                //Acc_Y_FM_list.Add(Convert.ToDouble(aryLine[5]));
 
                                 if (Gyro_Zisexist)
                                 {
-                                    Gyro_Z_list.Add(Convert.ToDouble(aryLine[6]));
+
+                                    Gyro_Z_list.Add(Convert.ToDouble(aryLine[tableHead.ToList().IndexOf("GyroZ")]));
+                                   
+                                    //Gyro_Z_list.Add(Convert.ToDouble(aryLine[6]));
                                 }
 
                                 DataRow dr = dt.NewRow();
@@ -222,6 +287,9 @@ namespace DAL.SH_ADF0979DAL
                             entity._100110 = speeddistribution[10];
                             entity._110120 = speeddistribution[11];
                             entity.Above120 = speeddistribution[12];
+
+                          
+
                             _SpeeddistributionList.Add(entity);
 
                             BumpZero.DoZero(WFT_AZ_LFList, WFT_AZ_LFList, WFT_AZ_LFList);
@@ -239,57 +307,90 @@ namespace DAL.SH_ADF0979DAL
                                 {
                                     Bumprecognition bump = new Bumprecognition();
                                     bump.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-Bump-" + i;
+                                    
                                     bump.VehicleId = MyConfigforVehicleID.VehicleID;
                                     bump.Datadate = Convert.ToDateTime(datetime);
                                     bump.Filename = name;
                                     bump.BumpAcc = bumpcombinedlist[i];
-                                    
-                                    bumpsqllist.Add(bump);
+
+                                    //判断是否数据库中已经有导入相同的数据了，如果有，就不把这一条数据导入进去
+                                    if (!bumpmysqllist.Contains(bump.Id))
+                                    {
+                                        bumpsqllist.Add(bump);
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }   
                                 }
                              
                             }
-
-                            BrakeZero.DoZero(brakelist);
-                            var brakeacclist = BrakeReconize.GetBrake(brakelist, Acc_X_FM_list, speedlist);
-                            if (brakeacclist.Count > 0)
+                            if (Brakeisexist)
                             {
-                                
-
-                                for (int i = 0; i < brakeacclist.Count; i++)
+                                BrakeZero.DoZero(brakelist);
+                                var brakeacclist = BrakeReconize.GetBrake(brakelist, Acc_X_FM_list, speedlist);
+                                if (brakeacclist.Count > 0)
                                 {
-                                    Brakerecognition brake = new Brakerecognition();
-                                    brake.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-Brake-" + i;
-                                    brake.VehicleId = MyConfigforVehicleID.VehicleID;
-                                    brake.Datadate = Convert.ToDateTime(datetime);
-                                    brake.Filename = name;
-                                    brake.BrakeAcc = brakeacclist[i];
 
-                                    brakesqllist.Add(brake);
+
+                                    for (int i = 0; i < brakeacclist.Count; i++)
+                                    {
+                                        Brakerecognition brake = new Brakerecognition();
+                                        brake.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-Brake-" + i;
+                                        brake.VehicleId = MyConfigforVehicleID.VehicleID;
+                                        brake.Datadate = Convert.ToDateTime(datetime);
+                                        brake.Filename = name;
+                                        brake.BrakeAcc = brakeacclist[i];
+
+                                        //判断是否数据库中已经有导入相同的数据了，如果有，就不把这一条数据导入进去
+                                        if (!brakemysqllist.Contains(brake.Id))
+                                        {
+                                            brakesqllist.Add(brake);
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
+
+                                    }
+
                                 }
-                               
                             }
-                         
 
-                            SteeringZero.DoZero(Gyro_Z_list);
-                            var SteeringAccList = SteeringReconize.GetSteering(Gyro_Z_list, Acc_Y_FM_list);
-                            if (SteeringAccList.Count > 0)
+
+                            if (Gyro_Zisexist)
                             {
-                                
-                              
-                                for (int i = 0; i < SteeringAccList.Count; i++)
+                                SteeringZero.DoZero(Gyro_Z_list);
+                                var SteeringAccList = SteeringReconize.GetSteering(Gyro_Z_list, Acc_Y_FM_list);
+                                if (SteeringAccList.Count > 0)
                                 {
-                                    Streeringrecognition steering = new Streeringrecognition();
-                                    steering.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-Steering-" + i;
-                                    steering.VehicleId = MyConfigforVehicleID.VehicleID;
-                                    steering.Datadate = Convert.ToDateTime(datetime);
-                                    steering.Filename = name;
-                                    steering.SteeringAcc = SteeringAccList[i];
-                                    steering.SteeringDirection = (sbyte)(i > 0 ? 1 : -1);
-                                   
-                                    steeringsqllist.Add(steering);
+
+
+                                    for (int i = 0; i < SteeringAccList.Count; i++)
+                                    {
+                                        Streeringrecognition steering = new Streeringrecognition();
+                                        steering.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-Steering-" + i;
+                                        steering.VehicleId = MyConfigforVehicleID.VehicleID;
+                                        steering.Datadate = Convert.ToDateTime(datetime);
+                                        steering.Filename = name;
+                                        steering.SteeringAcc = SteeringAccList[i];
+                                        steering.SteeringDirection = (sbyte)(i > 0 ? 1 : -1);
+                                        //判断是否数据库中已经有导入相同的数据了，如果有，就不把这一条数据导入进去
+                                        if (!steeringmysqllist.Contains(steering.Id))
+                                        {
+                                            steeringsqllist.Add(steering);
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
+
+                                        //steeringsqllist.Add(steering);
+                                    }
+
                                 }
-                               
                             }
+                           
 
                         }
 
@@ -350,6 +451,31 @@ namespace DAL.SH_ADF0979DAL
 
                 }).ToList();
 
+                //经过groupby之后的acc数据再进行判断是否数据库中已经存在，如存在则从这个list中删除这一条数据
+
+
+                //用for倒序遍历删除才行
+                for (int i = ListperHalfHourConvert.Count - 1; i >= 0; i--)
+                {
+                    if (accmysqllist.Contains(ListperHalfHourConvert[i].Id))
+                    {
+                        ListperHalfHourConvert.Remove(ListperHalfHourConvert[i]);
+                    }
+                }
+
+                //不能用foreach来删，因为在foreach中删除元素时，每一次删除都会导致集合的大小和元素索引值发生变化，导致在foreach中删除元素会出现异常。
+                //foreach (var i in ListperHalfHourConvert)
+                //{
+                //    if (accmysqllist.Contains(i.Id))
+                //    {
+                //        ListperHalfHourConvert.Remove(i);
+                //    }
+
+                //}
+
+
+
+
                 var DListperHalfHour = _SpeeddistributionList.GroupBy(x => new
                 {
 
@@ -406,11 +532,26 @@ namespace DAL.SH_ADF0979DAL
 
                 }).ToList();
 
+                //经过groupby之后的acc数据再进行判断是否数据库中已经存在，如存在则从这个list中删除这一条数据
 
+                for (int i = DListperHalfHourConvert.Count - 1; i >= 0; i--)
+                {
+                    if (speedmysqllist.Contains(DListperHalfHourConvert[i].Id))
+                    {
+                        DListperHalfHourConvert.Remove(DListperHalfHourConvert[i]);
+                    }
+                }
 
                 _DB.BulkInsert(bumpsqllist);
-                _DB.BulkInsert(brakesqllist);
-                _DB.BulkInsert(steeringsqllist);
+                if (Brakeisexist)
+                {
+                    _DB.BulkInsert(brakesqllist);
+                }
+                if (Gyro_Zisexist)
+                {
+                    _DB.BulkInsert(steeringsqllist);
+                }
+                
 
                 _DB.BulkInsert(DListperHalfHourConvert);
                 

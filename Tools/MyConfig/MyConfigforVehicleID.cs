@@ -21,23 +21,30 @@ namespace Tools.MyConfig
 
         public static double SteeringZeroStandard;
 
-        public static int SteeringLastingPoints;
+        public static double SteeringLastingPoints;
+        public static string accessKeyId;
+        public static string accessKeySecret;
+        public static string endpoint;
+        public static string drive;
 
         static MyConfigforVehicleID()
         {
             var configuration = new ConfigurationBuilder().AddJsonFile("vehicleidappsettings.json", optional: true, reloadOnChange: true).Build();
-            VehicleID=configuration["ADF0979:VehicleID"];
-            Wheelbaselower = Convert.ToDouble(configuration["ADF0979:Wheelbaselower"]);
-            Wheelbaseupper = Convert.ToDouble(configuration["ADF0979:Wheelbaseupper"]);
-            BmupZeroStandard = Convert.ToDouble(configuration["ADF0979:BmupZeroStandard"]);
-            AccValueGap = Convert.ToDouble(configuration["ADF0979:AccValueGap"]);
-            AccTimeGap = Convert.ToInt32(configuration["ADF0979:AccTimeGap"]);
-            BumpTimeGap = Convert.ToInt32(configuration["ADF0979:BumpTimeGap"]);
-            BrakeZeroStandard = Convert.ToDouble(configuration["ADF0979:BrakeZeroStandard"]);
-            BrakeLastingPoints = Convert.ToInt32(configuration["ADF0979:BrakeLastingPoints"]);
-            SteeringZeroStandard = Convert.ToDouble(configuration["ADF0979:SteeringZeroStandard"]);
-            SteeringLastingPoints = Convert.ToInt32(configuration["ADF0979:SteeringLastingPoints"]);
-
+            VehicleID=configuration["VehicleSetup:VehicleID"];
+            Wheelbaselower = Convert.ToDouble(configuration["VehicleSetup:Wheelbaselower"]);
+            Wheelbaseupper = Convert.ToDouble(configuration["VehicleSetup:Wheelbaseupper"]);
+            BmupZeroStandard = Convert.ToDouble(configuration["VehicleSetup:BmupZeroStandard"]);
+            AccValueGap = Convert.ToDouble(configuration["VehicleSetup:AccValueGap"]);
+            AccTimeGap = Convert.ToInt32(configuration["VehicleSetup:AccTimeGap"]);
+            BumpTimeGap = Convert.ToInt32(configuration["VehicleSetup:BumpTimeGap"]);
+            BrakeZeroStandard = Convert.ToDouble(configuration["VehicleSetup:BrakeZeroStandard"]);
+            BrakeLastingPoints = Convert.ToInt32(configuration["VehicleSetup:BrakeLastingPoints"]);
+            SteeringZeroStandard = Convert.ToDouble(configuration["VehicleSetup:SteeringZeroStandard"]);
+            SteeringLastingPoints = Convert.ToInt32(configuration["VehicleSetup:SteeringLastingPoints"]);
+            accessKeyId = configuration["OSSSetup:accessKeyId"];
+            accessKeySecret = configuration["OSSSetup:accessKeySecret"];
+            endpoint = configuration["OSSSetup:endpoint"];
+            drive = configuration["OSSSetup:drive"];
         }
     }
 }

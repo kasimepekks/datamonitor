@@ -32,7 +32,7 @@ namespace RLDA_VehicleData_Watch.Controllers
                 HttpContext.SignInAsync(new ClaimsPrincipal(identity));
                 //创建session
                 HttpContext.Session.SetString("UserID", user);
-                
+               
                
                 if (user == "Admin")
                 {

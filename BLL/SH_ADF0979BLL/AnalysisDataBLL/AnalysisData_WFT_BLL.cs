@@ -12,29 +12,28 @@ namespace BLL.SH_ADF0979BLL
     public class AnalysisData_WFT_BLL : BaseBLL<SatictisAnalysisdataWft>, IAnalysisData_WFT_IBLL
     {
         private readonly IAnalysisData_WFT_IDAL _AnalysisData_WFT_DAL;
-        private readonly datawatchContext _DB;
-        public AnalysisData_WFT_BLL(IAnalysisData_WFT_IDAL AnalysisData_WFT_DAL, datawatchContext DB)
+        //private readonly datawatchContext _DB;
+        public AnalysisData_WFT_BLL(IAnalysisData_WFT_IDAL AnalysisData_WFT_DAL)
         {
             this._AnalysisData_WFT_DAL = AnalysisData_WFT_DAL;
-            _DB = DB;
+            base.CurrentDal = AnalysisData_WFT_DAL;
+            //_DB = DB;
         }
         public override void SetCurrentDal()
         {
             base.CurrentDal = this._AnalysisData_WFT_DAL;
         }
-        /// <summary>
-        /// 执行添加distance字段并进行统计后存入数据库中
-        /// </summary>
+       
         public bool ReadandMergeWFTDataperHalfHour(string filepath)
         {
-           return( _AnalysisData_WFT_DAL.ReadandMergeWFTDataperHalfHour(filepath));
+            return (_AnalysisData_WFT_DAL.ReadandMergeWFTDataperHalfHour(filepath));
         }
 
 
-        public IQueryable LoadWFTDamage(DateTime sd, DateTime ed)
+        public IQueryable LoadWFTDamage(DateTime sd, DateTime ed, string vehicleid)
         {
             //这里不考虑按每一天进行合并，而是合并相同时间段的数据，不区分哪一天
-            var damagelist = _DB.SatictisAnalysisdataWft.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed).GroupBy(x =>
+            var damagelist = _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId== vehicleid).AsNoTracking().GroupBy(x =>
             x.Chantitle).Select(x => new
             {
                 chantitle = x.Key,
@@ -46,10 +45,11 @@ namespace BLL.SH_ADF0979BLL
             return damagelist;
         }
 
-        public IQueryable LoadWFTDamageCumulation(DateTime sd, DateTime ed)
+        public IQueryable LoadWFTDamageCumulation(DateTime sd, DateTime ed,string vehicleid)
         {
             //这里不考虑按每一天进行合并，而是合并相同时间段的数据，不区分哪一天
-            var damagelist = _DB.SatictisAnalysisdataWft.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1)).GroupBy(x => new
+            // _DB.SatictisAnalysisdataWft.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1))
+            var damagelist = _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1) && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new
             {
                 x.Chantitle,
                 x.Datadate.Value.Year,

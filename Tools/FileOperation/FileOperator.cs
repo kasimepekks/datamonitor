@@ -11,14 +11,12 @@ namespace Tools
         /// <summary>
         /// 删除文件
         /// </summary>
-        public static class FileDelete
-        {
+       
             public static void DeleteFile(string file)
             {
                 File.Delete(file);
             }
 
-        }
         /// <summary>
         /// 定位哪个文件夹并返回其文件路径
         /// </summary>

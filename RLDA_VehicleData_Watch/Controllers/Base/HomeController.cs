@@ -7,6 +7,7 @@ using IBLL.SH_ADF0979IBLL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MysqlforDataWatch;
 using RLDA_VehicleData_Watch.Models;
@@ -39,6 +40,13 @@ namespace RLDA_VehicleData_Watch.Controllers
             return View();
         }
 
+        [Authorize]
+        public IActionResult VehicleSetup()
+        {
+            ViewBag.User = HttpContext.Session.GetString("UserID");
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -61,5 +69,71 @@ namespace RLDA_VehicleData_Watch.Controllers
             var vehiclelist = _db.Set<Vehicletable>().Where(a => a.State == 1).Select(b => b.VehicleId);
             return Json(vehiclelist);
         }
+        /// <summary>
+        /// 获取数据库中的车辆设置表并返回给前端进行表格显示
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult GetVehicleSetup(int page, int limit)
+        {
+            var vehiclelist = _db.Set<Vehicletable>().OrderBy(a=>a.Id).Skip((page - 1) * limit).Take(limit);
+            var count = vehiclelist.Count();
+            return Json(new { code = 0, count = count, data = vehiclelist, msg = "" });
+        }
+
+        public IActionResult AddorEditSingleVehicleData(int id, string method, string vehicleidtext, string countrytext, byte statetext, string remarkstext, string areatext)
+        {
+            Vehicletable vehicle = new Vehicletable()
+            {
+                Id = id,
+                VehicleId = vehicleidtext,
+                Country = countrytext,
+                State = statetext,
+                Remarks = remarkstext,
+                Area = areatext
+
+            };
+
+            if (method == "edit")
+            {                
+                _db.Entry<Vehicletable>(vehicle).State = EntityState.Modified;
+                if (_db.SaveChanges() > 0)
+                {
+                    return Content("编辑成功！");
+                }
+                else
+                {
+                    return Content("编辑失败! ");
+                }
+                    
+            }
+            else
+            {
+                _db.Set<Vehicletable>().Add(vehicle);
+                if (_db.SaveChanges() > 0)
+                {
+                    return Content("添加成功！");
+                }
+                else
+                {
+                    return Content("添加失败! ");
+                }
+
+            }
+        }
+
+        public IActionResult DeleteSingleVehicleData(int id)
+        {
+           var vehicle= _db.Set<Vehicletable>().Where(a => a.Id == id).FirstOrDefault();
+            _db.Entry<Vehicletable>(vehicle).State = EntityState.Deleted;
+            if (_db.SaveChanges() > 0)
+            {
+                return Content("删除成功！");
+            }
+            else
+            {
+                return Content("删除失败! ");
+            }
+        }
+
     }
 }

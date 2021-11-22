@@ -56,10 +56,21 @@ namespace RLDA_VehicleData_Watch
             //services.AddDbContext<datawatchContext>(options => options.UseMySql(connectionstring));
             services.AddDbContext<datawatchContext>(options => options.UseMySql(connectionstring, serverVersion));
             services.AddControllersWithViews();
-          
-          
+            //跨域
+            services.AddCors(option => option.AddPolicy("cors",
+                 policy => policy.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(_ => true)));
+
+            //services.AddSignalR(options => {
+            //    options.ClientTimeoutInterval = TimeSpan.FromMinutes(4);//客户端发保持连接请求到服务端最长间隔，默认30秒，改成4分钟，网页需跟着设置connection.keepAliveIntervalInMilliseconds = 12e4;即2分钟
+            //    options.KeepAliveInterval = TimeSpan.FromMinutes(2);//服务端发保持连接请求到客户端间隔，默认15秒，改成2分钟，网页需跟着设置connection.serverTimeoutInMilliseconds = 24e4;即4分钟
+            //});
             services.AddSignalR();
-            services.AddSession();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromDays(30);
+                options.Cookie.HttpOnly = true;
+            });
             //services.AddTimedJob();
             //services.AddScoped<DbContext, datawatchContext>();
             //services.AddScoped<IRealTimeI_ACC_IDAL, RealTime_ACC_DAL>();
@@ -76,9 +87,9 @@ namespace RLDA_VehicleData_Watch
             //services.AddScoped<IAnalysisData_ACC_IBLL, AnalysisData_ACC_BLL>();
             //services.AddScoped<IAnalysisData_WFT_IBLL, AnalysisData_WFT_BLL>();
             //services.AddScoped<ISpeedDistribution_ACC_IBLL, SpeedDistribution_ACC_BLL>();
-            services.AddTransient<MyInvocable>();
+            //services.AddTransient<MyInvocable>();
             //services.AddScoped<AutoCalCoravelJob>();
-            services.AddScheduler();
+            //services.AddScheduler();
             //services.AddQueue();
             // services.AddSingleton<IJobFactory, SingletonJobFactory>();
             // services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
@@ -102,112 +113,34 @@ namespace RLDA_VehicleData_Watch
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
-            //string DailyisRequired = Configuration["DailyTimeJob:DailyisRequired"];
-            //string AutoisRequired = Configuration["AutoTimeJob:AutoisRequired"];
-            //int hour= int.Parse(Configuration["DailyTimeJob:hour"]);
-            //int minute = int.Parse(Configuration["DailyTimeJob:minute"]);
-            //string interval = Configuration["AutoTimeJob:Interval"];
-            var provider = app.ApplicationServices;
-            if (MonitorRequired == "true") { 
-                provider.UseScheduler(scheduler =>
-                {
-                    scheduler.ScheduleWithParams<MyInvocable>("ADF0979")
-                    .EveryTenSeconds()
-                    
-                    .PreventOverlapping("ADF0979");
-
-
-                }).OnError((ex) =>
-                   throw ex);
-                provider.UseScheduler(scheduler =>
-                {
-                    scheduler.ScheduleWithParams<MyInvocable>("E21SIV161")
-                    .EveryFiveSeconds()
-
-                    .PreventOverlapping("ADF0979");
-
-
-                }).OnError((ex) =>
-                   throw ex);
-            }
-
-            //if (AutoisRequired == "true")
-            //{
-            //    switch (interval)
-            //    {
-            //        case "1":
-            //            provider.UseScheduler(scheduler =>
-            //            {
-            //                scheduler.Schedule<AutoCalCoravelJob>()
-            //               .EveryMinute()
-            //                .PreventOverlapping("AutoCalCoravelJob");
-
-            //            }).OnError((ex) =>
-
-            //            throw ex
-            //            );
-            //            break;
-
-            //        case "5":
-            //            provider.UseScheduler(scheduler =>
-            //            {
-            //                scheduler.Schedule<AutoCalCoravelJob>()
-            //               .EveryFiveMinutes()
-            //                .PreventOverlapping("AutoCalCoravelJob");
-
-            //            }).OnError((ex) =>
-
-            //            throw ex
-            //            );
-            //            break;
-            //        case "10":
-            //            provider.UseScheduler(scheduler =>
-            //            {
-            //                scheduler.Schedule<AutoCalCoravelJob>()
-            //               .EveryTenMinutes()
-            //                .PreventOverlapping("AutoCalCoravelJob");
-
-            //            }).OnError((ex) =>
-
-            //            throw ex
-            //            );
-            //            break;
-            //        case "15":
-            //            provider.UseScheduler(scheduler =>
-            //            {
-            //                scheduler.Schedule<AutoCalCoravelJob>()
-            //               .EveryFifteenMinutes()
-            //                .PreventOverlapping("AutoCalCoravelJob");
-
-            //            }).OnError((ex) =>
-
-            //            throw ex
-            //            );
-            //            break;
-            //        case "30":
-            //            provider.UseScheduler(scheduler =>
-            //            {
-            //                scheduler.Schedule<AutoCalCoravelJob>()
-            //               .EveryThirtyMinutes()
-            //                .PreventOverlapping("AutoCalCoravelJob");
-
-            //            }).OnError((ex) =>
-
-            //            throw ex
-            //            );
-            //            break;
-
-            //    }
-
-
-            //}
             //string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
-            //if (MonitorRequired == "true")
-            //{
-            //    app.UseTimedJob();
+           
+            //var provider = app.ApplicationServices;
+            //if (MonitorRequired == "true") { 
+            //    provider.UseScheduler(scheduler =>
+            //    {
+            //        scheduler.ScheduleWithParams<MyInvocable>("ADF0979")
+            //        .EveryTenSeconds()
+                    
+            //        .PreventOverlapping("ADF0979");
+
+
+            //    }).OnError((ex) =>
+            //       throw ex);
+            //    //provider.UseScheduler(scheduler =>
+            //    //{
+            //    //    scheduler.ScheduleWithParams<MyInvocableOSS>("E21SIV161")
+            //    //    .EveryFiveSeconds()
+
+            //    //    .PreventOverlapping("ADF0979");
+
+
+            //    //}).OnError((ex) =>
+            //    //   throw ex);
             //}
 
+          
+            app.UseCors("cors");
             app.UseSession();
 
             if (env.IsDevelopment())

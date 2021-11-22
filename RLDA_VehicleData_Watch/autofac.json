@@ -73,6 +73,28 @@
     },
 
     {
+      "type": "DAL.SH_ADF0979DAL.BrakeDistribution_DAL,DAL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IDAL.SH_ADF0979IDAL.IBrakeDistribution_IDAL,IDAL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "DAL.SH_ADF0979DAL.BumpDistribution_DAL,DAL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IDAL.SH_ADF0979IDAL.IBumpDistribution_IDAL,IDAL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
       "type": "BLL.SH_ADF0979BLL.RealTime_ACC_BLL,BLL", //接口的实现 全名称
       "services": [
         {
@@ -137,6 +159,28 @@
       "services": [
         {
           "type": "IBLL.SH_ADF0979IBLL.ISpeedDistribution_ACC_IBLL,IBLL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //单例生命周期
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "BLL.SH_ADF0979BLL.BrakeDistribution_BLL,BLL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IBLL.SH_ADF0979IBLL.IBrakeDistribution_IBLL,IBLL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //单例生命周期
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "BLL.SH_ADF0979BLL.BumpDistribution_BLL,BLL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IBLL.SH_ADF0979IBLL.IBumpDistribution_IBLL,IBLL" // 接口的全名称
         }
       ],
       "instanceScope": "per-lifetimescope", //单例生命周期

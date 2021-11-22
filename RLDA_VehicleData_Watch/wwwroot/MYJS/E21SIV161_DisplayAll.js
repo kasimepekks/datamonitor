@@ -6,38 +6,54 @@ var polyline;
 layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
+    element = layui.element;
 
-    var hideorshow = false;
-    $(".third-class").on('click', function () {
-        //$(".layui-nav-third-child").hide();
-        if (!hideorshow) {
-            $(this).next().show();
-            hideorshow = true;
-        }
-        else {
-            $(this).next().hide();
-            hideorshow = false;
-        }
+    $.ajax({
+
+        type: "POST",
+        //请求的媒体类型
+        dataType: 'text',//这里改为json就不会传回success需要的数据了
+        //请求地址
+        url: urlfilewatcher,
+        data: {
+            _vehicleID: "E21SIV161"
+        },
+
     });
 
-    var form = layui.form;
+
+
+    //var hideorshow = false;
+    //$(".third-class").on('click', function () {
+    //    //$(".layui-nav-third-child").hide();
+    //    if (!hideorshow) {
+    //        $(this).next().show();
+    //        hideorshow = true;
+    //    }
+    //    else {
+    //        $(this).next().hide();
+    //        hideorshow = false;
+    //    }
+    //});
+
+    //var form = layui.form;
     //var table = layui.table;
-    element = layui.element;
+    
     //var n = 0;
     //var id = "";
 
-    $(".layui-table-box").hide();
-    form.on('switch(tabledisplay)', function (data) {
+    //$(".layui-table-box").hide();
+    //form.on('switch(tabledisplay)', function (data) {
 
-        if (data.elem.checked) {
-            $(".layui-table-box").show();
+    //    if (data.elem.checked) {
+    //        $(".layui-table-box").show();
 
-        }
-        else {
-            $(".layui-table-box").hide()
-        };
+    //    }
+    //    else {
+    //        $(".layui-table-box").hide()
+    //    };
 
-    });
+    //});
 
     if (navigator.onLine) {
 
@@ -71,28 +87,22 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     allPoint.push(new BMap.Point(Lon[i], Lat[i]));
 
                 }
-                //allPoint.push(new BMap.Point(Lon[0], Lat[0]));
-                //allPoint.push(new BMap.Point(Lon[Lon.length-1], Lat[Lat.length-1]));
-                //console.log(allPoint);
+                
                 callback = function (xyResult) {
-                    //console.log(xyResult);
-                    //if (xyResult.error != 0) { return; }//出错就直接返回;
+                  
                     for (var i = 0; i < xyResult.length; i++) {
                         testPoint.push(new BMap.Point(xyResult[i]["x"], xyResult[i]["y"]));
 
                     }
 
-                    //console.log(testPoint);
+                  
                     polyline = new BMap.Polyline(testPoint, {
                         strokeColor: "blue",
                         strokeWeight: 3,
                         strokeOpacity: 0.7
                     });
                     map.addOverlay(polyline);
-                    //console.log(lushu);
-                    //if (lushu) {
-                    //    lushu.pause();
-                    //}
+                   
                     routpath=routpath.concat(testPoint);
                     if (lushu == null) {
                         lushu = new BMapLib.LuShu(map, routpath, {
@@ -109,12 +119,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     else {
                         lushu.goPath(testPoint)
                     }
-
-                    
-
-
-                    //var marker = new BMap.Marker(point);
-                    //map.addOverlay(marker);
+                  
 
                 }
 
@@ -133,5 +138,27 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         return console.error(err.toString());
     });
 
+    //$("#loginfo").click(function () {
 
+    //    layer.open({
+    //        type: 2,
+    //        title: '数据错误日志信息',
+    //        shadeClose: true,
+    //        shade: 0.8,
+    //        area: ['720px', '80%'],
+    //        content: urlloginfo, //iframe的url
+    //        btn: ['确认', '取消'],
+
+    //        success: function (layero, index) {
+
+    //            bodylog = layer.getChildFrame('body', index);
+    //            for (var i in fileinfo) {
+    //                bodylog.append('<p>' + "警告！文件名为" + fileinfo[i] + "的数据有问题，请查看源数据" + '</p>');
+    //            }
+
+    //        }
+    //    });
+
+
+    //});
 });

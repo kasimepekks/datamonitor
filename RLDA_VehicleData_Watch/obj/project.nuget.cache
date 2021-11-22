@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nC4qdybn0+/FTei1hH5NeExFfXtOeBgpoWrLpuYrZ5mW+lE47Uia9UtqgIekhq/v5JGKBc3bCOGfB3BjOXCSgw==",
+  "dgSpecHash": "cUZKuXV84RViU65wM7v9AQ7tGak3hiLQcPrNd+OulW1P6M4TU4wK7RHtWwBrMCJKukssayqnLtXqOBz3n+wtqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\111\\source\\repos\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
+  "projectFilePath": "C:\\Users\\111\\source\\repos\\data-monitor\\RLDA_VehicleData_Watch\\RLDA_VehicleData_Watch.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\111\\.nuget\\packages\\aliyun.oss.sdk.netcore\\2.13.0\\aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\autofac.configuration\\6.0.0\\autofac.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
@@ -56,6 +57,7 @@
     "C:\\Users\\111\\.nuget\\packages\\microsoft.net.http.headers\\2.0.0\\microsoft.net.http.headers.2.0.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\111\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\3.1.5\\microsoft.visualstudio.web.codegeneration.3.1.5.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\3.1.5\\microsoft.visualstudio.web.codegeneration.contracts.3.1.5.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\3.1.5\\microsoft.visualstudio.web.codegeneration.core.3.1.5.nupkg.sha512",

@@ -23,6 +23,22 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
 
+    $.ajax({
+
+        type: "POST",
+        //请求的媒体类型
+        dataType: 'text',//这里改为json就不会传回success需要的数据了
+        //请求地址
+        url: urlfilewatcher,
+        data: {
+            _vehicleID: "ADF0979"
+        },
+       
+    });
+
+
+
+
     var hideorshow = false;
     $(".third-class").on('click', function () {
         //$(".layui-nav-third-child").hide();
@@ -69,12 +85,14 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     }
 
     var connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
-
+    //connection.serverTimeoutInMilliseconds = 240000;
+    //connection.keepAliveIntervalInMilliseconds = 120000;
     //if (navigator.onLine) {
        
 
     //}
     connection.on("SpeedtoDistance", function (_vehicleID, distance, speed, brake, Lat, Lon, zerotime) {
+        var number = speed.length;
         //判断服务器传过来的是哪辆车就显示哪辆车的信息，因为每辆车的数据源不一样
         if (_vehicleID == "ADF0979") {
             $("#distance").text(distance.toFixed(2));
@@ -198,7 +216,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
             setInterval(function () {
 
 
-                if (zerotime < 10) {
+                if (zerotime < number) {
                     speedoption.series[0].data[0].value = speed[zerotime].toFixed(0);
                     brakeoption.series[0].data[0].value = brake[zerotime].toFixed(0);
                     //trackMap.push(new BMap.Point(Lon[zerotime], Lat[zerotime]));
@@ -219,8 +237,8 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
                 }
                 else {
-                    speedoption.series[0].data[0].value = speed[9].toFixed(0);
-                    brakeoption.series[0].data[0].value = brake[9].toFixed(0);
+                    speedoption.series[0].data[0].value = speed[number - 1].toFixed(0);
+                    brakeoption.series[0].data[0].value = brake[number - 1].toFixed(0);
                     myChart.setOption(speedoption, true);
                     BrakeChart.setOption(brakeoption, true);
 
@@ -293,7 +311,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
    
 
     connection.on("ReloadDataWFT", function (_vehicleID, name, timedomainresult, statisticresult) {
-        console.log(timedomainresult);
+        //console.log(timedomainresult);
         if (_vehicleID == "ADF0979") {
 
             if (timedomainresult.length > 0) {
@@ -1724,29 +1742,30 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         return console.error(err.toString());
     });
 
-    $("#loginfo").click(function () {
 
-        layer.open({
-            type: 2,
-            title: '数据错误日志信息',
-            shadeClose: true,
-            shade: 0.8,
-            area: ['720px', '80%'],
-            content: urlloginfo, //iframe的url
-            btn: ['确认', '取消'],
+    //$("#loginfo").click(function () {
 
-            success: function (layero, index) {
+    //    layer.open({
+    //        type: 2,
+    //        title: '数据错误日志信息',
+    //        shadeClose: true,
+    //        shade: 0.8,
+    //        area: ['720px', '80%'],
+    //        content: urlloginfo, //iframe的url
+    //        btn: ['确认', '取消'],
 
-                bodylog = layer.getChildFrame('body', index);
-                for (var i in fileinfo) {
-                    bodylog.append('<p>' + "警告！文件名为" + fileinfo[i] + "的数据有问题，请查看源数据" + '</p>');
-                }
+    //        success: function (layero, index) {
 
-            }
-        });
+    //            bodylog = layer.getChildFrame('body', index);
+    //            for (var i in fileinfo) {
+    //                bodylog.append('<p>' + "警告！文件名为" + fileinfo[i] + "的数据有问题，请查看源数据" + '</p>');
+    //            }
+
+    //        }
+    //    });
 
 
-    });
+    /*});*/
     
    
 });

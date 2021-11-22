@@ -40,6 +40,7 @@
           "IBLL": "1.0.0",
           "IDAL": "1.0.0",
           "Microsoft.Extensions.Logging.Log4Net.AspNetCore": "5.0.3",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.11.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.5",
           "MysqlforDataWatch": "1.0.0",
           "Pomelo.AspNetCore.TimedJob": "2.0.0-rtm-10046",
@@ -310,6 +311,17 @@
         },
         "compile": {
           "RLDA_VehicleData_Watch.dll": {}
+        }
+      },
+      "Aliyun.OSS.SDK.NetCore/2.13.0": {
+        "runtime": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {
+            "assemblyVersion": "2.13.0.0",
+            "fileVersion": "2.13.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
         }
       },
       "Autofac/6.1.0": {
@@ -1097,6 +1109,7 @@
       },
       "Microsoft.NETCore.Platforms/2.1.2": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {},
       "Microsoft.VisualStudio.Web.CodeGeneration/3.1.5": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "5.0.1",
@@ -2265,6 +2278,7 @@
       },
       "MysqlforDataWatch/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "5.0.0",
           "Zack.EFCore.Batch.MySQL.Pomelo": "1.4.9"
         },
@@ -2277,6 +2291,7 @@
       },
       "Tools/1.0.0": {
         "dependencies": {
+          "Aliyun.OSS.SDK.NetCore": "2.13.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.4",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "MysqlforDataWatch": "1.0.0"
@@ -3856,6 +3871,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Aliyun.OSS.SDK.NetCore/2.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ElvJwTAdBqFmgb7K4PdxDXPFbOBCIUI5OvCOMfCoUoDL21aivtWMFUtU1v4Dxc2wcrN8XQdY1EKeGFhJK/zVyQ==",
+      "path": "aliyun.oss.sdk.netcore/2.13.0",
+      "hashPath": "aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512"
+    },
     "Autofac/6.1.0": {
       "type": "package",
       "serviceable": true,
@@ -4219,6 +4241,13 @@
       "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.11.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1jHxWlSi6/ryWODk6SUjsZPHk/BdsucxqhIi1szEzwc84e8nvZWF45qRXcT2gWPISJ3Ybbyg2LsNG6yX8r7VuA==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.11.1",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.1.5": {
       "type": "package",

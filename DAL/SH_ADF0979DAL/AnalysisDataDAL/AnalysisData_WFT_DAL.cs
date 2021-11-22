@@ -27,6 +27,8 @@ namespace DAL.SH_ADF0979DAL
             if (filelist.Length > 0)
             {
                 List<SatictisAnalysisdataWft> List = new List<SatictisAnalysisdataWft>();
+                var wftmysqllist = _DB.Set<SatictisAnalysisdataWft>().Select(a => a.Id).ToList();
+
                 foreach (var file in filelist)
                 {
                     if (file.Length != 0)
@@ -189,6 +191,16 @@ namespace DAL.SH_ADF0979DAL
                     Damage = a.Damage
 
                 }).ToList();
+
+                for (int i = ListperHalfHourConvert.Count - 1; i >= 0; i--)
+                {
+                    if (wftmysqllist.Contains(ListperHalfHourConvert[i].Id))
+                    {
+                        ListperHalfHourConvert.Remove(ListperHalfHourConvert[i]);
+                    }
+                }
+                                           
+
                 _DB.BulkInsert(ListperHalfHourConvert);
 
                 //this.CurrentDBSession.SaveChanges();

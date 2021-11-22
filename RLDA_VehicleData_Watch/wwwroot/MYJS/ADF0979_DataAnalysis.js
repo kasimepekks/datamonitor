@@ -4,7 +4,7 @@
     var table = layui.table;
     var element = layui.element;
     var laydate = layui.laydate;
-    var datevalue,startdate, enddate;
+    var datevalue,startdate, enddate,brakecount;
     var hideorshow = false;
     $(".third-class").on('click', function () {
         //$(".layui-nav-third-child").hide();
@@ -481,6 +481,101 @@
                 }
 
             });
+
+            $.ajax({
+
+                type: "POST",
+                //请求的媒体类型
+                dataType: 'json',
+                //请求地址
+                url: urlgetbrakecount,
+                data: {
+                    startdate: startdate,
+
+                    enddate: enddate,
+                    vehicleid: 'ADF0979'
+                },
+                success: function (data) {
+                   
+                    brakecount = data;
+                }
+                , error: function (e) {
+                    layer.msg(e);
+                }
+
+            });
+
+            $.ajax({
+
+                type: "POST",
+                //请求的媒体类型
+                dataType: 'json',
+                //请求地址
+                url: urlgetbrakedata,
+                data: {
+                    startdate: startdate,
+
+                    enddate: enddate,
+                    vehicleid:'ADF0979'
+                },
+                success: function (data) {
+                    
+                   
+                    Highcharts.chart('brakehistogramcontainer', {
+                       
+                        credits: {
+                            enabled: false // 禁用版权信息
+                        },
+                        title: {
+                            text: '刹车强度分布图',
+
+                        },
+                        subtitle: {
+                            text: startdate + "to" + enddate + "一共有" + brakecount+"刹车次数"
+                        },
+                        xAxis: [{
+                            title: { text: '刹车强度'}
+                        }, {
+                            title: { text: '刹车强度' },
+                            opposite: true
+                        }],
+                        yAxis: [{
+                            title: { text: '刹车强度'}
+                        }, {
+                            title: { text: '频次' },
+                            opposite: true
+                        }],
+                        
+                        series: [{
+                            name: 'Histogram',
+                            type: 'histogram',
+                            xAxis: 1,
+                            yAxis: 1,
+                            baseSeries: 's1',
+                            zIndex: -1
+                        }, {
+                            name: 'Data',
+                            type: 'scatter',
+                            data: data,
+                            id: 's1',
+                            marker: {
+                                radius: 1.5
+                            }
+                        }]
+
+                    });
+
+
+
+                    layer.close(index);
+                }
+                , error: function (e) {
+                    layer.msg(e);
+                }
+
+            });
+
+
         }
         else {
             //console.log("jieshu");
