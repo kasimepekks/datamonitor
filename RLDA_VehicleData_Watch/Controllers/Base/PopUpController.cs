@@ -16,6 +16,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         }
         public IActionResult VehicleSetupTablePopUp()
         {
+
             return View();
         }
     }

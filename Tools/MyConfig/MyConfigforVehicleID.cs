@@ -26,6 +26,7 @@ namespace Tools.MyConfig
         public static string accessKeySecret;
         public static string endpoint;
         public static string drive;
+   
 
         static MyConfigforVehicleID()
         {

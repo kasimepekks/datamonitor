@@ -313,6 +313,17 @@
           "RLDA_VehicleData_Watch.dll": {}
         }
       },
+      "Aliyun.OSS.SDK.NetCore/2.13.0": {
+        "runtime": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {
+            "assemblyVersion": "2.13.0.0",
+            "fileVersion": "2.13.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Aliyun.OSS.Core.dll": {}
+        }
+      },
       "Autofac/6.1.0": {
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "5.0.1"
@@ -2280,6 +2291,7 @@
       },
       "Tools/1.0.0": {
         "dependencies": {
+          "Aliyun.OSS.SDK.NetCore": "2.13.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.4",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "MysqlforDataWatch": "1.0.0"
@@ -3858,6 +3870,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Aliyun.OSS.SDK.NetCore/2.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ElvJwTAdBqFmgb7K4PdxDXPFbOBCIUI5OvCOMfCoUoDL21aivtWMFUtU1v4Dxc2wcrN8XQdY1EKeGFhJK/zVyQ==",
+      "path": "aliyun.oss.sdk.netcore/2.13.0",
+      "hashPath": "aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512"
     },
     "Autofac/6.1.0": {
       "type": "package",

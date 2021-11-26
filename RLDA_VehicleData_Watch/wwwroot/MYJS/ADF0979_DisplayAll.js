@@ -14,67 +14,52 @@
     return currentdate;
 }
 
-var fileinfo = [];
+
+
 var map;
 var lushu;
-
+var n = 0;
+var id = "";
 var polyline;
 layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
+    var connection;
 
-    $.ajax({
+    function heartbeat() {
+        $.ajax({
 
-        type: "POST",
-        //请求的媒体类型
-        dataType: 'text',//这里改为json就不会传回success需要的数据了
-        //请求地址
-        url: urlfilewatcher,
-        data: {
-            _vehicleID: "ADF0979"
-        },
+            type: "POST",
+            //请求的媒体类型
+            dataType: 'text',//这里改为json就不会传回success需要的数据了
+            //请求地址
+            url: urlheartbeat,
+            data: {
+                _vehicleID: "ADF0979"
+            },
+            success: function (data) {
+
+                console.log(data);
+            }
+        });
+    }
+
+    //$.ajax({
+
+    //    type: "POST",
+    //    //请求的媒体类型
+    //    dataType: 'text',//这里改为json就不会传回success需要的数据了
+    //    //请求地址
+    //    url: urlfilewatcher,
+    //    data: {
+    //        _vehicleID: "ADF0979"
+    //    },
        
-    });
+    //});
 
 
-
-
-    var hideorshow = false;
-    $(".third-class").on('click', function () {
-        //$(".layui-nav-third-child").hide();
-        if (!hideorshow) {
-            $(this).next().show();
-            hideorshow = true;
-        }
-        else {
-            $(this).next().hide();
-            hideorshow = false;
-        }
-    });
-
-    var form = layui.form;
-    //var table = layui.table;
     element = layui.element;
-    var n = 0;
-    var id = "";
-
-    $(".layui-table-box").hide();
-    form.on('switch(tabledisplay)', function (data) {
-
-        if (data.elem.checked) {
-            $(".layui-table-box").show();
-
-        }
-        else {
-            $(".layui-table-box").hide()
-        };
-
-    });
    
-   
-
-    //拿到一个csv文件中的所有数据
-
     if (navigator.onLine) {
 
 
@@ -84,15 +69,13 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         map.centerAndZoom(startpoint, 17);
     }
 
-    var connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
-    //connection.serverTimeoutInMilliseconds = 240000;
-    //connection.keepAliveIntervalInMilliseconds = 120000;
-    //if (navigator.onLine) {
-       
-
-    //}
+    connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+    connection.serverTimeoutInMilliseconds = 30000;
+    connection.keepAliveIntervalInMilliseconds = 15000;
+   
     connection.on("SpeedtoDistance", function (_vehicleID, distance, speed, brake, Lat, Lon, zerotime) {
         var number = speed.length;
+      
         //判断服务器传过来的是哪辆车就显示哪辆车的信息，因为每辆车的数据源不一样
         if (_vehicleID == "ADF0979") {
             $("#distance").text(distance.toFixed(2));
@@ -982,7 +965,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
     connection.on("ReloadDataACC", function (_vehicleID,name,acctimedomainresult, accstatisticresult) {
         if (_vehicleID == "ADF0979") {
-            console.log(acctimedomainresult);
+           
             if (acctimedomainresult.length > 0) {
                 id = name;               //var array = acctimedomainresult["data"];
                 var time = [];
@@ -1737,35 +1720,28 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
     connection.start().then(function () {
         layer.msg("已开始监视");
-        //document.getElementById("StartUpload").disabled = false;
+       
     }).catch(function (err) {
+      /*  setTimeout(() => start(), 3000);*/
         return console.error(err.toString());
     });
 
+    //async function start() {
+    //    try {
+    //        /*connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();*/
+    //        await connection.start();
+    //        console.log("connected");
+    //    } catch (err) {
+    //        console.log(err);
+    //        setTimeout(() => start(), 3000);
+    //    }
+    //};
 
-    //$("#loginfo").click(function () {
+    //connection.onclose(async () => {
+    //    start();
+    //});
 
-    //    layer.open({
-    //        type: 2,
-    //        title: '数据错误日志信息',
-    //        shadeClose: true,
-    //        shade: 0.8,
-    //        area: ['720px', '80%'],
-    //        content: urlloginfo, //iframe的url
-    //        btn: ['确认', '取消'],
-
-    //        success: function (layero, index) {
-
-    //            bodylog = layer.getChildFrame('body', index);
-    //            for (var i in fileinfo) {
-    //                bodylog.append('<p>' + "警告！文件名为" + fileinfo[i] + "的数据有问题，请查看源数据" + '</p>');
-    //            }
-
-    //        }
-    //    });
-
-
-    /*});*/
-    
+   
+    setInterval(heartbeat, 10000);
    
 });

@@ -183,7 +183,6 @@ C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcor
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\libman.json
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\mysqlconnection.json
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\appsettings.json
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\Dockerfile
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\RLDA_VehicleData_Watch.exe
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\log4net.config
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\RLDA_VehicleData_Watch.deps.json
@@ -333,13 +332,6 @@ C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcor
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.TagHelpers.input.cache
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.TagHelpers.output.cache
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.RazorCoreGenerate.cache
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\AddDistance.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\AddWFT.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\CoravelJob.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\DataAnalysis.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\DataPrediction.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\ADF0979\DisPlayAll.cshtml.g.cs
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\E21SIV161\DisPlayAll.cshtml.g.cs
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\Home\HomePage.cshtml.g.cs
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\PopUp\LogPopUp.cshtml.g.cs
@@ -356,3 +348,6 @@ C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcor
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.dll
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.pdb
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\RLDA_VehicleData_Watch.genruntimeconfig.cache
+C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\Aliyun.OSS.Core.dll
+C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\Home\VehicleSetup.cshtml.g.cs
+C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\PopUp\VehicleSetupTablePopUp.cshtml.g.cs

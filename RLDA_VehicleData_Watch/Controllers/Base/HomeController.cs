@@ -28,22 +28,27 @@ namespace RLDA_VehicleData_Watch.Controllers
            
         }
         
+        public IActionResult heartbeat(string _vehicleID)
+        {
+            return Json(_vehicleID);
+        }
         public IActionResult Login()
         {
             
             return View();
         }
-        [Authorize]
-        public IActionResult Index()
-        {
-            ViewBag.User = HttpContext.Session.GetString("UserID");
-            return View();
-        }
+        //[Authorize]
+        //public IActionResult Index()
+        //{
+        //    ViewBag.User = HttpContext.Session.GetString("UserID");
+        //    return View();
+        //}
 
         [Authorize]
         public IActionResult VehicleSetup()
         {
             ViewBag.User = HttpContext.Session.GetString("UserID");
+            
             return View();
         }
 
@@ -63,7 +68,7 @@ namespace RLDA_VehicleData_Watch.Controllers
             return View();
         }
 
-
+        [Authorize]
         public IActionResult GetVehicleID()
         {
             var vehiclelist = _db.Set<Vehicletable>().Where(a => a.State == 1).Select(b => b.VehicleId);
@@ -73,6 +78,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         /// 获取数据库中的车辆设置表并返回给前端进行表格显示
         /// </summary>
         /// <returns></returns>
+        
         public IActionResult GetVehicleSetup(int page, int limit)
         {
             var vehiclelist = _db.Set<Vehicletable>().OrderBy(a=>a.Id).Skip((page - 1) * limit).Take(limit);
@@ -82,19 +88,20 @@ namespace RLDA_VehicleData_Watch.Controllers
 
         public IActionResult AddorEditSingleVehicleData(int id, string method, string vehicleidtext, string countrytext, byte statetext, string remarkstext, string areatext)
         {
-            Vehicletable vehicle = new Vehicletable()
-            {
-                Id = id,
-                VehicleId = vehicleidtext,
-                Country = countrytext,
-                State = statetext,
-                Remarks = remarkstext,
-                Area = areatext
-
-            };
+            
 
             if (method == "edit")
-            {                
+            {
+                Vehicletable vehicle = new Vehicletable()
+                {
+                    Id = id,
+                    VehicleId = vehicleidtext,
+                    Country = countrytext,
+                    State = statetext,
+                    Remarks = remarkstext,
+                    Area = areatext
+
+                };
                 _db.Entry<Vehicletable>(vehicle).State = EntityState.Modified;
                 if (_db.SaveChanges() > 0)
                 {
@@ -108,6 +115,16 @@ namespace RLDA_VehicleData_Watch.Controllers
             }
             else
             {
+                Vehicletable vehicle = new Vehicletable()
+                {
+                    
+                    VehicleId = vehicleidtext,
+                    Country = countrytext,
+                    State = statetext,
+                    Remarks = remarkstext,
+                    Area = areatext
+
+                };
                 _db.Set<Vehicletable>().Add(vehicle);
                 if (_db.SaveChanges() > 0)
                 {

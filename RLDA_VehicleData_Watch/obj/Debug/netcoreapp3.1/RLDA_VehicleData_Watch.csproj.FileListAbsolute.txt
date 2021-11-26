@@ -347,7 +347,6 @@ C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Debug\netcorea
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Debug\netcoreapp3.1\RLDA_VehicleData_Watch.dll
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Debug\netcoreapp3.1\RLDA_VehicleData_Watch.pdb
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Debug\netcoreapp3.1\RLDA_VehicleData_Watch.genruntimeconfig.cache
-C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Debug\netcoreapp3.1\Dockerfile
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Debug\netcoreapp3.1\mysqlconnection.json
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Debug\netcoreapp3.1\Aliyun.OSS.Core.dll
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Debug\netcoreapp3.1\Razor\Views\Home\VehicleSetup.cshtml.g.cs

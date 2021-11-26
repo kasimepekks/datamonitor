@@ -37,8 +37,8 @@
     "accessKeyId": "LTAI5t5YP36JjczH9A5EMXPp",
     "accessKeySecret": "Sm4B7y6BhFk90JtouStGV1LoWWgcJY",
     "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
-    "drive": "D:/" //从oss下载到本地的盘符路径，如果是linux系统需要更改
-
+    "drive": "D:/"//从oss下载到本地的盘符路径，如果是linux系统需要更改
+    
   }
 
 }

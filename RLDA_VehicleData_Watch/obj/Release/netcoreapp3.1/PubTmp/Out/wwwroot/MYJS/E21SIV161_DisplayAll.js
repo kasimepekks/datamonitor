@@ -1,43 +1,58 @@
-﻿var fileinfo = [];
-var map;
+﻿var map;
 var lushu;
 var routpath=[];
 var polyline;
 layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
-
-    var hideorshow = false;
-    $(".third-class").on('click', function () {
-        //$(".layui-nav-third-child").hide();
-        if (!hideorshow) {
-            $(this).next().show();
-            hideorshow = true;
-        }
-        else {
-            $(this).next().hide();
-            hideorshow = false;
-        }
-    });
-
-    var form = layui.form;
-    //var table = layui.table;
     element = layui.element;
+    var connection;
+    //$.ajax({
+
+    //    type: "POST",
+    //    //请求的媒体类型
+    //    dataType: 'text',//这里改为json就不会传回success需要的数据了
+    //    //请求地址
+    //    url: urlfilewatcher,
+    //    data: {
+    //        _vehicleID: "E21SIV161"
+    //    },
+
+    //});
+
+
+
+    //var hideorshow = false;
+    //$(".third-class").on('click', function () {
+    //    //$(".layui-nav-third-child").hide();
+    //    if (!hideorshow) {
+    //        $(this).next().show();
+    //        hideorshow = true;
+    //    }
+    //    else {
+    //        $(this).next().hide();
+    //        hideorshow = false;
+    //    }
+    //});
+
+    //var form = layui.form;
+    //var table = layui.table;
+    
     //var n = 0;
     //var id = "";
 
-    $(".layui-table-box").hide();
-    form.on('switch(tabledisplay)', function (data) {
+    //$(".layui-table-box").hide();
+    //form.on('switch(tabledisplay)', function (data) {
 
-        if (data.elem.checked) {
-            $(".layui-table-box").show();
+    //    if (data.elem.checked) {
+    //        $(".layui-table-box").show();
 
-        }
-        else {
-            $(".layui-table-box").hide()
-        };
+    //    }
+    //    else {
+    //        $(".layui-table-box").hide()
+    //    };
 
-    });
+    //});
 
     if (navigator.onLine) {
 
@@ -53,7 +68,9 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         });
     }
 
-    var connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+    connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+    connection.serverTimeoutInMilliseconds = 30000;
+    connection.keepAliveIntervalInMilliseconds = 15000;
 
     connection.on("SpeedtoDistance", function (_vehicleID, distance, speed, brake, Lat, Lon, zerotime) {
         //判断服务器传过来的是哪辆车就显示哪辆车的信息，因为每辆车的数据源不一样
@@ -71,28 +88,22 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     allPoint.push(new BMap.Point(Lon[i], Lat[i]));
 
                 }
-                //allPoint.push(new BMap.Point(Lon[0], Lat[0]));
-                //allPoint.push(new BMap.Point(Lon[Lon.length-1], Lat[Lat.length-1]));
-                //console.log(allPoint);
+                
                 callback = function (xyResult) {
-                    //console.log(xyResult);
-                    //if (xyResult.error != 0) { return; }//出错就直接返回;
+                  
                     for (var i = 0; i < xyResult.length; i++) {
                         testPoint.push(new BMap.Point(xyResult[i]["x"], xyResult[i]["y"]));
 
                     }
 
-                    //console.log(testPoint);
+                  
                     polyline = new BMap.Polyline(testPoint, {
                         strokeColor: "blue",
                         strokeWeight: 3,
                         strokeOpacity: 0.7
                     });
                     map.addOverlay(polyline);
-                    //console.log(lushu);
-                    //if (lushu) {
-                    //    lushu.pause();
-                    //}
+                   
                     routpath=routpath.concat(testPoint);
                     if (lushu == null) {
                         lushu = new BMapLib.LuShu(map, routpath, {
@@ -109,12 +120,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     else {
                         lushu.goPath(testPoint)
                     }
-
-                    
-
-
-                    //var marker = new BMap.Marker(point);
-                    //map.addOverlay(marker);
+                  
 
                 }
 
@@ -128,10 +134,52 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
     connection.start().then(function () {
         layer.msg("已开始监视");
-        //document.getElementById("StartUpload").disabled = false;
+       
     }).catch(function (err) {
+      /*  setTimeout(() => start(), 540000);*/
         return console.error(err.toString());
     });
 
+    //async function start() {
+    //    try {
+    //        await connection.start();
+    //        console.log("connected");
+    //    } catch (err) {
+    //        console.log(err);
+    //        setTimeout(() => start(), 540000);
+    //    }
+    //};
 
+    //connection.onclose(async () => {
+    //    start();
+    //});
+
+
+
+
+
+
+    //$("#loginfo").click(function () {
+
+    //    layer.open({
+    //        type: 2,
+    //        title: '数据错误日志信息',
+    //        shadeClose: true,
+    //        shade: 0.8,
+    //        area: ['720px', '80%'],
+    //        content: urlloginfo, //iframe的url
+    //        btn: ['确认', '取消'],
+
+    //        success: function (layero, index) {
+
+    //            bodylog = layer.getChildFrame('body', index);
+    //            for (var i in fileinfo) {
+    //                bodylog.append('<p>' + "警告！文件名为" + fileinfo[i] + "的数据有问题，请查看源数据" + '</p>');
+    //            }
+
+    //        }
+    //    });
+
+
+    //});
 });

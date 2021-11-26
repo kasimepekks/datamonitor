@@ -1,5 +1,4 @@
-﻿var fileinfo = [];
-var map;
+﻿var map;
 var lushu;
 var routpath=[];
 var polyline;
@@ -7,19 +6,19 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
     element = layui.element;
+    var connection;
+    //$.ajax({
 
-    $.ajax({
+    //    type: "POST",
+    //    //请求的媒体类型
+    //    dataType: 'text',//这里改为json就不会传回success需要的数据了
+    //    //请求地址
+    //    url: urlfilewatcher,
+    //    data: {
+    //        _vehicleID: "E21SIV161"
+    //    },
 
-        type: "POST",
-        //请求的媒体类型
-        dataType: 'text',//这里改为json就不会传回success需要的数据了
-        //请求地址
-        url: urlfilewatcher,
-        data: {
-            _vehicleID: "E21SIV161"
-        },
-
-    });
+    //});
 
 
 
@@ -69,7 +68,9 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         });
     }
 
-    var connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+    connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
+    connection.serverTimeoutInMilliseconds = 30000;
+    connection.keepAliveIntervalInMilliseconds = 15000;
 
     connection.on("SpeedtoDistance", function (_vehicleID, distance, speed, brake, Lat, Lon, zerotime) {
         //判断服务器传过来的是哪辆车就显示哪辆车的信息，因为每辆车的数据源不一样
@@ -133,10 +134,30 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
     connection.start().then(function () {
         layer.msg("已开始监视");
-        //document.getElementById("StartUpload").disabled = false;
+       
     }).catch(function (err) {
+        setTimeout(() => start(), 3000);
         return console.error(err.toString());
     });
+
+    async function start() {
+        try {
+            await connection.start();
+            console.log("connected");
+        } catch (err) {
+            console.log(err);
+            setTimeout(() => start(), 3000);
+        }
+    };
+
+    connection.onclose(async () => {
+        start();
+    });
+
+
+
+
+
 
     //$("#loginfo").click(function () {
 
