@@ -156,24 +156,45 @@
                     var vehicledl2 = document.getElementById("dataimport");
                     var vehicledl3 = document.getElementById("dataanalysis");
                     var vehicledl4 = document.getElementById("dataprediction");
+
+                    //var dd1 = document.createElement("dd");
+                    //var dd2 = document.createElement("dd");
+                    //var dd3 = document.createElement("dd");
+                    //var dd4 = document.createElement("dd");
+
+                    //a1 = document.createElement('a');
+                    //a2 = document.createElement('a');
+
+                    //a3 = document.createElement('a');
+                    //a4 = document.createElement('a');
+
+               
+
                     for (var i = 0; i < data.length; i++) {
                         var item = data[i];
                         var dd1 = document.createElement("dd");
                         var dd2 = document.createElement("dd");
                         var dd3 = document.createElement("dd");
                         var dd4 = document.createElement("dd");
-                        vehicledl1.appendChild(dd1);
-                        vehicledl2.appendChild(dd2);
-                        vehicledl3.appendChild(dd3);
-                        vehicledl4.appendChild(dd4);
+                      
+
+                     
                         a1 = document.createElement('a');
                         a2 = document.createElement('a');
 
                         a3 = document.createElement('a');
                         a4 = document.createElement('a');
 
-                        //a.href = "/" + item + "/DisPlayAll/";
-                        a1.href = "/Html/WatchHtml/" + item + ".html";
+                      
+
+                     
+                        if (item == "ADF0979") {
+                            a1.href = "/Html/WatchHtml/" + item + ".html?id=" + item;
+                        }
+                        else {
+                            a1.href = "/Html/WatchHtml/Watcher.html?id=" + item;
+                        }
+                     
                         a1.target = "_blank";
 
                         a2.href = "/Html/ImportHtml/ImportData.html?id="+item;
@@ -189,12 +210,20 @@
                         a2.innerText = item;
                         a3.innerText = item;
                         a4.innerText = item;
-
                         dd1.appendChild(a1);
                         dd2.appendChild(a2);
                         dd3.appendChild(a3);
                         dd4.appendChild(a4);
+
+                        vehicledl1.appendChild(dd1);
+                        vehicledl2.appendChild(dd2);
+                        vehicledl3.appendChild(dd3);
+                        vehicledl4.appendChild(dd4);
+                     
                     }
+
+                  
+
                 }
 
 

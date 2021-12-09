@@ -336,7 +336,8 @@
       },
       "IBLL/1.0.0": {
         "dependencies": {
-          "MysqlforDataWatch": "1.0.0"
+          "MysqlforDataWatch": "1.0.0",
+          "Tools": "1.0.0"
         },
         "runtime": {
           "IBLL.dll": {}
@@ -344,7 +345,8 @@
       },
       "IDAL/1.0.0": {
         "dependencies": {
-          "MysqlforDataWatch": "1.0.0"
+          "MysqlforDataWatch": "1.0.0",
+          "Tools": "1.0.0"
         },
         "runtime": {
           "IDAL.dll": {}

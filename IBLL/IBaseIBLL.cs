@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Tools.FileOperation;
 
 namespace IBLL
 {
@@ -13,8 +14,11 @@ namespace IBLL
         bool DeleteEntity(T entity);
         bool EditEntity(T entity);
         bool AddEntity(T entity);
-        List<T> ReadOneCsvFileService(string filefullpath, string filename, out string name, out List<double> speed, out List<double> brake, out List<double> Lat, out List<double> Lon);
-        List<SatictisData> ReadOneCsvFileForStatisticService(string filefullpath, string filename, out string name, out double sdistance);
-        //bool SaveChanges();
+        //List<T> ReadOneCsvFileService(string filefullpath, string filename, out string name, out List<double> speed, out List<double> Brake, out List<double> Lat, out List<double> Lon);
+        //List<SatictisData> ReadOneCsvFileForStatisticService(string filefullpath, string filename, out string name, out double sdistance);
+        
+      
+        CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename);
+
     }
 }

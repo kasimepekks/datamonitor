@@ -6,7 +6,6 @@ namespace MysqlforDataWatch
     public  class SatictisData
     {
       
-      
         public string Chantitle { get; set; }
         public double Max { get; set; }
         public double Min { get; set; }

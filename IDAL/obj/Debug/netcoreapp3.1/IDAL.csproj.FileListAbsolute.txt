@@ -25,3 +25,6 @@ C:\Users\111\source\repos\data-monitor\IDAL\obj\Debug\netcoreapp3.1\IDAL.csproj.
 C:\Users\111\source\repos\data-monitor\IDAL\obj\Debug\netcoreapp3.1\IDAL.dll
 C:\Users\111\source\repos\data-monitor\IDAL\obj\Debug\netcoreapp3.1\IDAL.pdb
 C:\Users\111\source\repos\data-monitor\IDAL\bin\Debug\netcoreapp3.1\mysqlconnection.json
+C:\Users\111\source\repos\data-monitor\IDAL\bin\Debug\netcoreapp3.1\vehicleidappsettings.json
+C:\Users\111\source\repos\data-monitor\IDAL\bin\Debug\netcoreapp3.1\Tools.dll
+C:\Users\111\source\repos\data-monitor\IDAL\bin\Debug\netcoreapp3.1\Tools.pdb

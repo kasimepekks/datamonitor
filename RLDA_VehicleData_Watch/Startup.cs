@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ using BLL.SH_ADF0979BLL;
 using Coravel;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
@@ -77,8 +79,10 @@ namespace RLDA_VehicleData_Watch
                 //options.Cookie.SameSite = SameSiteMode.Strict;
                 options.Cookie.HttpOnly = true;
             });
-          
-            services.AddTransient<MyInvocable>();
+
+            //services.AddDataProtection().PersistKeysToFileSystem(new DirectoryInfo(Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar + "DataProtection"));
+
+            //services.AddTransient<MyInvocable>();
             //services.AddScoped<AutoCalCoravelJob>();
             services.AddScheduler();
             //services.AddQueue();
@@ -98,28 +102,28 @@ namespace RLDA_VehicleData_Watch
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
-           string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(";");
+           // string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
+           //string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(";");
 
-            var provider = app.ApplicationServices;
-            if (MonitorRequired == "true")
-            {
-                foreach(var i in MonitorVehicle)
-                {
-                    provider.UseScheduler(scheduler =>
-                    {
-                        scheduler.ScheduleWithParams<MyInvocable>(i)
-                        .EveryTenSeconds()
+           // var provider = app.ApplicationServices;
+           // if (MonitorRequired == "true")
+           // {
+           //     foreach(var i in MonitorVehicle)
+           //     {
+           //         provider.UseScheduler(scheduler =>
+           //         {
+           //             scheduler.ScheduleWithParams<MyInvocable>(i)
+           //             .EveryTenSeconds()
 
-                        .PreventOverlapping(i);
+           //             .PreventOverlapping(i);
 
 
-                    }).OnError((ex) =>
-                       throw ex);
-                }
+           //         }).OnError((ex) =>
+           //            throw ex);
+           //     }
                 
             
-            }
+           // }
 
 
             //app.UseCors("cors");

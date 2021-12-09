@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MysqlforDataWatch\MysqlforDataWatch.csproj" />
+    <ProjectReference Include="..\Tools\Tools.csproj" />
   </ItemGroup>
 
 </Project>

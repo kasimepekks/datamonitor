@@ -26,47 +26,70 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     layer = layui.layer;
     var connection;
 
-    function heartbeat() {
+    function filewatchcontroller() {
         $.ajax({
 
             type: "POST",
             //请求的媒体类型
             dataType: 'text',//这里改为json就不会传回success需要的数据了
             //请求地址
-            url: urlheartbeat,
+            url: urlfilewatcher,
             data: {
                 _vehicleID: "ADF0979"
             },
-            success: function (data) {
 
-                console.log(data);
-            }
         });
     }
 
-    //$.ajax({
 
-    //    type: "POST",
-    //    //请求的媒体类型
-    //    dataType: 'text',//这里改为json就不会传回success需要的数据了
-    //    //请求地址
-    //    url: urlfilewatcher,
-    //    data: {
-    //        _vehicleID: "ADF0979"
-    //    },
-       
-    //});
-
+   
+    
+    filewatchcontroller();
 
     element = layui.element;
    
     if (navigator.onLine) {
 
+        //定义一个控件
+        function CustomControl() {
+            // 设置默认停靠位置和偏移量
+            this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+            this.defaultOffset = new BMap.Size(10, 10);
+        }
 
         map = new BMap.Map("allmap");
 
         var startpoint = new BMap.Point(121.472644, 31.231706);
         map.centerAndZoom(startpoint, 17);
+
+      
+
+        //通过该属性继承BMap控件
+        CustomControl.prototype = new BMap.Control();
+
+        //必须实现控件的初始化事件，因为当你把控件添加到地图中会首先初始化kong'j
+        CustomControl.prototype.initialize = function (map) {
+            //创建DOM对象
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode("清除路线"));
+            div.style.cursor = "pointer";
+            div.style.padding = "7px 10px";
+            div.style.boxShadow = "0 2px 6px 0 rgba(27, 142, 236, 0.5)";
+            div.style.borderRadius = "5px";
+            div.style.backgroundColor = "white";
+            // 绑定事件
+            div.οnclick = function (e) {
+                map.clearOverlays(polyline);
+            }
+            //添加该控件到地图中
+            map.getContainer().appendChild(div);
+            return div;
+        }
+
+        var customCtrl = new CustomControl();
+        map.addControl(customCtrl);
+      
+
     }
 
     connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
@@ -82,7 +105,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
             var myChart = echarts.init(document.getElementById('speedchart'));
             //var DisChart = echarts.init(document.getElementById('dischart'));
             var BrakeChart = echarts.init(document.getElementById('brakechart'));
-            var speedoption, disoption, brakeoption;
+            var speedoption, brakeoption;
             speedoption = {
 
                 series: [{
@@ -365,10 +388,10 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     WFT_Mz_LR.push([timedomainresult[i]["time"], timedomainresult[i]["wftMzLR"]]);
                     WFT_Mz_RR.push([timedomainresult[i]["time"], timedomainresult[i]["wftMzRR"]]);
                 }
-                if (n > 0) {
-                    $("#warninginfo").text(n);
-                    fileinfo.push(id);
-                }
+                //if (n > 0) {
+                //    $("#warninginfo").text(n);
+                //    fileinfo.push(id);
+                //}
                 Highcharts.chart('WFTFX', {
                     chart: {
                         zoomType: 'x'
@@ -593,39 +616,39 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
                 for (var i in statisticresult) {
 
-                    if (statisticresult[i]["chantitle"] == "WFT_Fx_LF" || statisticresult[i]['chantitle'] == "WFT_Fy_LF" || statisticresult[i]['chantitle'] == "WFT_Fz_LF") {
+                    if (statisticresult[i]["chantitle"] == "WFTFxLF" || statisticresult[i]['chantitle'] == "WFTFyLF" || statisticresult[i]['chantitle'] == "WFTFzLF") {
                         WFTLFmax.push(statisticresult[i]["max"]);
                         WFTLFmin.push(statisticresult[i]["min"]);
 
                     }
-                    if (statisticresult[i]["chantitle"] == "WFT_Fx_RF" || statisticresult[i]['chantitle'] == "WFT_Fy_RF" || statisticresult[i]['chantitle'] == "WFT_Fz_RF") {
+                    if (statisticresult[i]["chantitle"] == "WFTFxRF" || statisticresult[i]['chantitle'] == "WFTFyRF" || statisticresult[i]['chantitle'] == "WFTFzRF") {
                         WFTRFmax.push(statisticresult[i]["max"]);
                         WFTRFmin.push(statisticresult[i]["min"]);
 
                     }
-                    if (statisticresult[i]["chantitle"] == "WFT_Fx_LR" || statisticresult[i]['chantitle'] == "WFT_Fy_LR" || statisticresult[i]['chantitle'] == "WFT_Fz_LR") {
+                    if (statisticresult[i]["chantitle"] == "WFTFxLR" || statisticresult[i]['chantitle'] == "WFTFyLR" || statisticresult[i]['chantitle'] == "WFTFzLR") {
                         WFTLRmax.push(statisticresult[i]["max"]);
                         WFTLRmin.push(statisticresult[i]["min"]);
                     }
-                    if (statisticresult[i]["chantitle"] == "WFT_Fx_RR" || statisticresult[i]['chantitle'] == "WFT_Fy_RR" || statisticresult[i]['chantitle'] == "WFT_Fz_RR") {
+                    if (statisticresult[i]["chantitle"] == "WFTFxRR" || statisticresult[i]['chantitle'] == "WFTFyRR" || statisticresult[i]['chantitle'] == "WFTFzRR") {
                         WFTRRmax.push(statisticresult[i]["max"]);
                         WFTRRmin.push(statisticresult[i]["min"]);
 
                     }
 
-                    if (statisticresult[i]["chantitle"] == "Dis_Dmp_LF") {
+                    if (statisticresult[i]["chantitle"] == "DisDmpLF") {
                         DMPLFmax.push(statisticresult[i]["max"]);
                         DMPLFmin.push(statisticresult[i]["min"])
                     }
-                    if (statisticresult[i]["chantitle"] == "Dis_Dmp_RF") {
+                    if (statisticresult[i]["chantitle"] == "DisDmpRF") {
                         DMPRFmax.push(statisticresult[i]["max"]);
                         DMPRFmin.push(statisticresult[i]["min"])
                     }
-                    if (statisticresult[i]["chantitle"] == "Dis_Dmp_LR") {
+                    if (statisticresult[i]["chantitle"] == "DisDmpLR") {
                         DMPLRmax.push(statisticresult[i]["max"]);
                         DMPLRmin.push(statisticresult[i]["min"])
                     }
-                    if (statisticresult[i]["chantitle"] == "Dis_Dmp_RR") {
+                    if (statisticresult[i]["chantitle"] == "DisDmpRR") {
                         DMPRRmax.push(statisticresult[i]["max"]);
                         DMPRRmin.push(statisticresult[i]["min"])
                     }
@@ -1144,8 +1167,6 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
                 });
 
-
-
                 Highcharts.chart('WheelAccZcontainer', {
                     chart: {
                         zoomType: 'x'
@@ -1288,33 +1309,33 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
                 for (var i in accstatisticresult) {
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_FM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXFM") {
                         ACCFMmax.push(accstatisticresult[i]["max"]);
                         ACCFMmin.push(accstatisticresult[i]["min"]);
                         ACCFMrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_RM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXRM") {
                         ACCRMmax.push(accstatisticresult[i]["max"]);
                         ACCRMmin.push(accstatisticresult[i]["min"]);
                         ACCRMrms.push(accstatisticresult[i]["rms"])
                     }
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_Whl_LF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXWhlLF") {
                         ACCWHLLFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_Whl_RF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXWhlRF") {
                         ACCWHLRFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_Whl_LR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXWhlLR") {
                         ACCWHLLRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLRrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_X_Whl_RR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccXWhlRR") {
                         ACCWHLRRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRRrms.push(accstatisticresult[i]["rms"])
@@ -1326,33 +1347,33 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
 
                 for (var i in accstatisticresult) {
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_FM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYFM") {
                         ACCFMmax.push(accstatisticresult[i]["max"]);
                         ACCFMmin.push(accstatisticresult[i]["min"]);
                         ACCFMrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_RM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYRM") {
                         ACCRMmax.push(accstatisticresult[i]["max"]);
                         ACCRMmin.push(accstatisticresult[i]["min"]);
                         ACCRMrms.push(accstatisticresult[i]["rms"])
                     }
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_Whl_LF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYWhlLF") {
                         ACCWHLLFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_Whl_RF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYWhlRF") {
                         ACCWHLRFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_Whl_LR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYWhlLR") {
                         ACCWHLLRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLRrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Y_Whl_RR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccYWhlRR") {
                         ACCWHLRRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRRrms.push(accstatisticresult[i]["rms"])
@@ -1361,33 +1382,33 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                 }
                 for (var i in accstatisticresult) {
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_FM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZFM") {
                         ACCFMmax.push(accstatisticresult[i]["max"]);
                         ACCFMmin.push(accstatisticresult[i]["min"]);
                         ACCFMrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_RM") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZRM") {
                         ACCRMmax.push(accstatisticresult[i]["max"]);
                         ACCRMmin.push(accstatisticresult[i]["min"]);
                         ACCRMrms.push(accstatisticresult[i]["rms"])
                     }
 
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_Whl_LF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZWhlLF") {
                         ACCWHLLFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_Whl_RF") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZWhlRF") {
                         ACCWHLRFmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRFmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRFrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_Whl_LR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZWhlLR") {
                         ACCWHLLRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLLRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLLRrms.push(accstatisticresult[i]["rms"])
                     }
-                    if (accstatisticresult[i]['chantitle'] == "Acc_Z_Whl_RR") {
+                    if (accstatisticresult[i]['chantitle'] == "AccZWhlRR") {
                         ACCWHLRRmax.push(accstatisticresult[i]["max"]);
                         ACCWHLRRmin.push(accstatisticresult[i]["min"]);
                         ACCWHLRRrms.push(accstatisticresult[i]["rms"])
@@ -1722,26 +1743,24 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         layer.msg("已开始监视");
        
     }).catch(function (err) {
-      /*  setTimeout(() => start(), 3000);*/
+      
         return console.error(err.toString());
     });
 
-    //async function start() {
-    //    try {
-    //        /*connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();*/
-    //        await connection.start();
-    //        console.log("connected");
-    //    } catch (err) {
-    //        console.log(err);
-    //        setTimeout(() => start(), 3000);
-    //    }
-    //};
+    async function start() {
+        try {
+          
+            await connection.start();
+            console.log(connection);
+        } catch (err) {
+            console.log(err);
+            setTimeout(() => start(), 10000);
+        }
+    };
 
-    //connection.onclose(async () => {
-    //    start();
-    //});
+    connection.onclose(async () => {
+      await start();
+    });
 
-   
-    setInterval(heartbeat, 10000);
    
 });

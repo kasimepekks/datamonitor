@@ -11,13 +11,13 @@ using System.Text;
 
 namespace DAL.SH_ADF0979
 {
-   public class Statistic_WFT_DAL:BaseDAL<SatictisData>, IStatistic_WFT_IDAL
-    {
+   //public class Statistic_WFT_DAL:BaseDAL<SatictisData>, IStatistic_WFT_IDAL
+   // {
         
-        public Statistic_WFT_DAL(datawatchContext _DB) :base(_DB){
+   //     public Statistic_WFT_DAL(datawatchContext _DB) :base(_DB){
             
-        }
+   //     }
       
 
-    }
+   // }
 }

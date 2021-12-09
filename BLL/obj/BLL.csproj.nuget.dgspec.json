@@ -179,6 +179,9 @@
             "projectReferences": {
               "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
                 "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              },
+              "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
               }
             }
           }
@@ -241,6 +244,9 @@
             "projectReferences": {
               "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
                 "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              },
+              "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
               }
             }
           }

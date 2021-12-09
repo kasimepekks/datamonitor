@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace MysqlforDataWatch
 {
-    public  class RealtimeTempdataWft
+    public  class RealtimeTempdataWft: TempdataAccBase
     {
        
-        public double Time { get; set; }
+        //public double Time { get; set; }
         public double DisDmpLF { get; set; }
         public double DisDmpLR { get; set; }
         public double DisDmpRF { get; set; }

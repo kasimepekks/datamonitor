@@ -118,7 +118,7 @@ namespace DAL.SH_ADF0979DAL
                                 tableHead = strLine.Split(',');
                                 IsFirst = false;
                                 columnCount = tableHead.Length;
-                                for (int i = 0; i < tableHead.Length; i++)
+                                for (int i = 0; i < columnCount; i++)
                                 {
                                     var t = tableHead[i].Replace("_", "");
                                     tableHead[i] = t.Replace(" ", "");

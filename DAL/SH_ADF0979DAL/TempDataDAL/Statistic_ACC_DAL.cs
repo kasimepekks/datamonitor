@@ -12,14 +12,14 @@ using System.Text;
 
 namespace DAL.SH_ADF0979
 {
-   public class Statistic_ACC_DAL:BaseDAL<SatictisData>, IStatistic_ACC_IDAL
-    {
+   //public class Statistic_ACC_DAL:BaseDAL<SatictisData>, IStatistic_ACC_IDAL
+   // {
         
-        public Statistic_ACC_DAL(datawatchContext _DB) :base(_DB){
+   //     public Statistic_ACC_DAL(datawatchContext _DB) :base(_DB){
             
-        }
+   //     }
        
 
       
-    }
+   // }
 }

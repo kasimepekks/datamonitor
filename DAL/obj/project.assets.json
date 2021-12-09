@@ -359,7 +359,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MysqlforDataWatch": "1.0.0"
+          "MysqlforDataWatch": "1.0.0",
+          "Tools": "1.0.0"
         },
         "compile": {
           "bin/placeholder/IBLL.dll": {}
@@ -372,7 +373,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MysqlforDataWatch": "1.0.0"
+          "MysqlforDataWatch": "1.0.0",
+          "Tools": "1.0.0"
         },
         "compile": {
           "bin/placeholder/IDAL.dll": {}

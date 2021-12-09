@@ -14,6 +14,8 @@
     return currentdate;
 }
 
+
+
 var map;
 var lushu;
 var n = 0;
@@ -23,29 +25,71 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     var $ = layui.jquery;
     layer = layui.layer;
     var connection;
-    //$.ajax({
 
-    //    type: "POST",
-    //    //请求的媒体类型
-    //    dataType: 'text',//这里改为json就不会传回success需要的数据了
-    //    //请求地址
-    //    url: urlfilewatcher,
-    //    data: {
-    //        _vehicleID: "ADF0979"
-    //    },
-       
-    //});
+    function filewatchcontroller() {
+        $.ajax({
 
+            type: "POST",
+            //请求的媒体类型
+            dataType: 'text',//这里改为json就不会传回success需要的数据了
+            //请求地址
+            url: urlfilewatcher,
+            data: {
+                _vehicleID: "ADF0979"
+            },
+
+        });
+    }
+
+
+   
+    
+    filewatchcontroller();
 
     element = layui.element;
    
     if (navigator.onLine) {
 
+        //定义一个控件
+        function CustomControl() {
+            // 设置默认停靠位置和偏移量
+            this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+            this.defaultOffset = new BMap.Size(10, 10);
+        }
 
         map = new BMap.Map("allmap");
 
         var startpoint = new BMap.Point(121.472644, 31.231706);
         map.centerAndZoom(startpoint, 17);
+
+      
+
+        //通过该属性继承BMap控件
+        CustomControl.prototype = new BMap.Control();
+
+        //必须实现控件的初始化事件，因为当你把控件添加到地图中会首先初始化kong'j
+        CustomControl.prototype.initialize = function (map) {
+            //创建DOM对象
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode("清除路线"));
+            div.style.cursor = "pointer";
+            div.style.padding = "7px 10px";
+            div.style.boxShadow = "0 2px 6px 0 rgba(27, 142, 236, 0.5)";
+            div.style.borderRadius = "5px";
+            div.style.backgroundColor = "white";
+            // 绑定事件
+            div.οnclick = function (e) {
+                map.clearOverlays(polyline);
+            }
+            //添加该控件到地图中
+            map.getContainer().appendChild(div);
+            return div;
+        }
+
+        var customCtrl = new CustomControl();
+        map.addControl(customCtrl);
+      
+
     }
 
     connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
@@ -61,7 +105,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
             var myChart = echarts.init(document.getElementById('speedchart'));
             //var DisChart = echarts.init(document.getElementById('dischart'));
             var BrakeChart = echarts.init(document.getElementById('brakechart'));
-            var speedoption, disoption, brakeoption;
+            var speedoption, brakeoption;
             speedoption = {
 
                 series: [{
@@ -1701,26 +1745,24 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
         layer.msg("已开始监视");
        
     }).catch(function (err) {
-        /*setTimeout(() => start(), 3000);*/
+      
         return console.error(err.toString());
     });
 
-    //async function start() {
-    //    try {
-    //        connection = new signalR.HubConnectionBuilder().withUrl("/MyHub").build();
-    //        await connection.start();
-    //        console.log("connected");
-    //    } catch (err) {
-    //        console.log(err);
-    //        setTimeout(() => start(), 3000);
-    //    }
-    //};
+    async function start() {
+        try {
+          
+            await connection.start();
+            console.log(connection);
+        } catch (err) {
+            console.log(err);
+            setTimeout(() => start(), 10000);
+        }
+    };
 
-    //connection.onclose(async () => {
-    //    start();
-    //});
+    connection.onclose(async () => {
+      await start();
+    });
 
-   
-    
    
 });

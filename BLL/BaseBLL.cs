@@ -4,6 +4,7 @@ using MysqlforDataWatch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Tools.FileOperation;
 
 namespace BLL
 {
@@ -40,15 +41,22 @@ namespace BLL
 
             return CurrentDal.SaveChanges();
         }
-        public List<T> ReadOneCsvFileService(string filefullpath, string filename, out string name, out List<double> speed, out List<double> brake, out List<double> Lat, out List<double> Lon)
-        {
-            return CurrentDal.ReadOneCsvFile(filefullpath, filename,out name,out speed,out brake,out Lat,out Lon);
+        //public List<T> ReadOneCsvFileService(string filefullpath, string filename, out string name, out List<double> speed, out List<double> Brake, out List<double> Lat, out List<double> Lon)
+        //{
+        //    return CurrentDal.ReadOneCsvFile(filefullpath, filename,out name,out speed,out Brake, out Lat,out Lon);
 
-        }
-        public List<SatictisData> ReadOneCsvFileForStatisticService(string filefullpath, string filename, out string name, out double sdistance)
-        {
-            return CurrentDal.ReadOneCsvFileForStatistic(filefullpath, filename, out name, out sdistance);
+        //}
+        //public List<SatictisData> ReadOneCsvFileForStatisticService(string filefullpath, string filename, out string name, out double sdistance)
+        //{
+        //    return CurrentDal.ReadOneCsvFileForStatistic(filefullpath, filename, out name, out sdistance);
 
+        //}
+       
+
+        public CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename)
+        {
+            return CurrentDal.ReadCSVFileAll(filefullpath, filename);
         }
+
     }
 }

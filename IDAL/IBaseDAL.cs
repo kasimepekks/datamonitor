@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Tools.FileOperation;
 
 namespace IDAL
 {
@@ -13,7 +14,10 @@ namespace IDAL
         bool EditEntity(T entity);
         bool AddEntity(T entity);
         bool SaveChanges();
-        List<T> ReadOneCsvFile(string filefullpath, string filename, out string name, out List<double> speed, out List<double> brake, out List<double> Lat, out List<double> Lon);
-        List<SatictisData> ReadOneCsvFileForStatistic(string filefullpath, string filename, out string name, out double sdistance);
+        //List<T> ReadOneCsvFile(string filefullpath, string filename, out string name, out List<double> speed, out List<double> Brake, out List<double> Lat, out List<double> Lon);
+        //List<SatictisData> ReadOneCsvFileForStatistic(string filefullpath, string filename, out string name, out double sdistance);
+              
+        CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename);
+
     }
 }
