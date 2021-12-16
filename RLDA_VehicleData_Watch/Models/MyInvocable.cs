@@ -165,22 +165,29 @@ namespace RLDA_VehicleData_Watch.Models
 
                             //向所有登录用户发送信息，前端可以接受此信息并作出响应
                             //_hubContext.Clients.All.SendAsync("ReloadData");
-                            //_hubContext.Clients.Group(MyHub.user).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
-                            //_hubContext.Clients.Group(MyHub.user).SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);//zerotime用来初始化每次的开始时间，每当有新数据读取时，zerotime初始化为0，传入前端，用于前端的speed和brake仪表盘的显示
+                            foreach(var i in MyHub.user)
+                            {
+                                _hubContext.Clients.Group(i).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
+                                _hubContext.Clients.Group(i).SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);//zerotime用来初始化每次的开始时间，每当有新数据读取时，zerotime初始化为0，传入前端，用于前端的speed和brake仪表盘的显示
 
-                            _hubContext.Clients.All.SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
-                            _hubContext.Clients.All.SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);
+                            }
 
-                            
+                            //_hubContext.Clients.All.SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
+                            //_hubContext.Clients.All.SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);
+
+
                         }
 
                         if (vehicledictionary[_vehicleID + "outputpath"].FileName != "default" && vehicledictionary[_vehicleID + "outputpath"].FileName != newdictionary[_vehicleID + "output"].FileName)
                         {
                             var structresultall = _IRealTime_WFT_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "outputpath"].FullFileName, vehicledictionary[_vehicleID + "outputpath"].FileName);
                             newdictionary[_vehicleID + "output"] = vehicledictionary[_vehicleID + "outputpath"];
-                           
-                            //_hubContext.Clients.Groups(MyHub.user).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
-                            _hubContext.Clients.All.SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
+                            foreach (var i in MyHub.user)
+                            {
+                              _hubContext.Clients.Groups(i).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
+
+                            }
+                            //_hubContext.Clients.All.SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
                         }
                     });
 
