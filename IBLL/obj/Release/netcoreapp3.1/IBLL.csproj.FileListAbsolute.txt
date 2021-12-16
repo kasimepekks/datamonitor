@@ -25,3 +25,6 @@ C:\Users\111\source\repos\data-monitor\IBLL\obj\Release\netcoreapp3.1\IBLL.cspro
 C:\Users\111\source\repos\data-monitor\IBLL\obj\Release\netcoreapp3.1\IBLL.csproj.CopyComplete
 C:\Users\111\source\repos\data-monitor\IBLL\obj\Release\netcoreapp3.1\IBLL.dll
 C:\Users\111\source\repos\data-monitor\IBLL\obj\Release\netcoreapp3.1\IBLL.pdb
+C:\Users\111\source\repos\data-monitor\IBLL\bin\Release\netcoreapp3.1\vehicleidappsettings.json
+C:\Users\111\source\repos\data-monitor\IBLL\bin\Release\netcoreapp3.1\Tools.dll
+C:\Users\111\source\repos\data-monitor\IBLL\bin\Release\netcoreapp3.1\Tools.pdb

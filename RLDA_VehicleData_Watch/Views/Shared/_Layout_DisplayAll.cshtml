@@ -188,14 +188,16 @@
                       
 
                      
-                        if (item == "ADF0979") {
-                            a1.href = "/Html/WatchHtml/" + item + ".html?id=" + item;
-                        }
-                        else {
-                            a1.href = "/Html/WatchHtml/Watcher.html?id=" + item;
-                        }
-                     
-                        a1.target = "_blank";
+                        //if (item == "ADF0979") {
+                        //    a1.href = "/Html/WatchHtml/" + item + ".html?id=" + item;
+                        //}
+                        //else {
+                        //    a1.href = "/Html/WatchHtml/Watcher.html?id=" + item;
+                        //}
+                        a1.href = "/Html/WatchHtml/Watcher.html?id=" + item;
+                        
+                        a1.target = '_blank';
+                        a1.target = "/Html/WatchHtml/Watcher.html?id=" + item;
 
                         a2.href = "/Html/ImportHtml/ImportData.html?id="+item;
                         a2.target = "/Html/ImportHtml/ImportData.html?id=" + item;

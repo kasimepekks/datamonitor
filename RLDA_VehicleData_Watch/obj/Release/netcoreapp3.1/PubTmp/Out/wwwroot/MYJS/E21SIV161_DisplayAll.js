@@ -57,40 +57,6 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
     if (navigator.onLine) {
 
 
-        map = new BMap.Map("allmap");
-
-        var startpoint = new BMap.Point(121.472644, 31.231706);
-        map.centerAndZoom(startpoint, 17);
-        map.enableScrollWheelZoom();
-        function CustomControl() {
-            // 设置默认停靠位置和偏移量
-            this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
-            this.defaultOffset = new BMap.Size(10, 10);
-        }
-        //通过该属性继承BMap控件
-        CustomControl.prototype = new BMap.Control();
-
-        //必须实现控件的初始化事件，因为当你把控件添加到地图中会首先初始化kong'j
-        CustomControl.prototype.initialize = function (map) {
-            //创建DOM对象
-            var div = document.createElement("div");
-            div.appendChild(document.createTextNode("清除路线"));
-            div.style.cursor = "pointer";
-            div.style.padding = "7px 10px";
-            div.style.boxShadow = "0 2px 6px 0 rgba(27, 142, 236, 0.5)";
-            div.style.borderRadius = "5px";
-            div.style.backgroundColor = "white";
-            // 绑定事件
-            div.οnclick = function (e) {
-                map.clearOverlays(polyline);
-            }
-            //添加该控件到地图中
-            map.getContainer().appendChild(div);
-            return div;
-        }
-
-        var customCtrl = new CustomControl();
-        map.addControl(customCtrl);
 
         var myIcon = new BMap.Icon('/Pictures/car.png',
             new BMap.Size(52, 26), {
