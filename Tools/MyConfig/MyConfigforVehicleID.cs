@@ -26,7 +26,10 @@ namespace Tools.MyConfig
         public static string accessKeySecret;
         public static string endpoint;
         public static string drive;
-   
+
+        public static int reductiontimesforsampling;
+
+
 
         static MyConfigforVehicleID()
         {
@@ -46,6 +49,7 @@ namespace Tools.MyConfig
             accessKeySecret = configuration["OSSSetup:accessKeySecret"];
             endpoint = configuration["OSSSetup:endpoint"];
             drive = configuration["OSSSetup:drive"];
+            reductiontimesforsampling = Convert.ToInt32(configuration["VehicleSetup:reductiontimesforsampling"]);
         }
     }
 }

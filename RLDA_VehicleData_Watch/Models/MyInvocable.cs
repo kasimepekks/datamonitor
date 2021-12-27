@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Tools;
@@ -148,12 +149,14 @@ namespace RLDA_VehicleData_Watch.Models
             {
                 if (_MonitorvehicleID.Contains(_vehicleID))//先判断是否需要监控配置文件里需要监控的车辆，如配置文件里没有则不需要进行监控了
                 {
-
+                    //Console.WriteLine(pathdictionary[_vehicleID + "inputpath"]);
                     Task.Run(() =>
                     {
-                                               
+                        
                         if (vehicledictionary[_vehicleID + "inputpath"].FileName != "default" && vehicledictionary[_vehicleID + "inputpath"].FileName != newdictionary[_vehicleID + "input"].FileName)
                         {
+                            //Stopwatch sw = new Stopwatch();
+                            //sw.Start();
                             var structall= _IRealTime_ACC_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "inputpath"].FullFileName, vehicledictionary[_vehicleID + "inputpath"].FileName);
                             vehicledistance[_vehicleID] = Math.Round(structall.sdistance, 2);
 
@@ -167,16 +170,16 @@ namespace RLDA_VehicleData_Watch.Models
                             //_hubContext.Clients.All.SendAsync("ReloadData");
                             foreach(var i in MyHub.user)
                             {
-                                _hubContext.Clients.Group(i).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
+                                _hubContext.Clients.Group(i).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TListReSampling, structall.STList);
                                 _hubContext.Clients.Group(i).SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);//zerotime用来初始化每次的开始时间，每当有新数据读取时，zerotime初始化为0，传入前端，用于前端的speed和brake仪表盘的显示
 
                             }
 
-                            //_hubContext.Clients.All.SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TList, structall.STList);
-                            //_hubContext.Clients.All.SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);
-
-
+                            //sw.Stop();
+                            //Console.WriteLine(vehicledictionary[_vehicleID + "inputpath"].FileName + "读取时间为 " + sw.ElapsedMilliseconds + "ms");
                         }
+                       
+
 
                         if (vehicledictionary[_vehicleID + "outputpath"].FileName != "default" && vehicledictionary[_vehicleID + "outputpath"].FileName != newdictionary[_vehicleID + "output"].FileName)
                         {
@@ -184,17 +187,18 @@ namespace RLDA_VehicleData_Watch.Models
                             newdictionary[_vehicleID + "output"] = vehicledictionary[_vehicleID + "outputpath"];
                             foreach (var i in MyHub.user)
                             {
-                              _hubContext.Clients.Groups(i).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
+                              _hubContext.Clients.Groups(i).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TListReSampling, structresultall.STList);
 
                             }
                             //_hubContext.Clients.All.SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
                         }
+                        
                     });
 
                 }
             }
 
-
+           
             return Task.CompletedTask;
         }
     }

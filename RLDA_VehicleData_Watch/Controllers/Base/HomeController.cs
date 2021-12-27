@@ -28,9 +28,9 @@ namespace RLDA_VehicleData_Watch.Controllers
            
         }
         
-        public IActionResult heartbeat(string _vehicleID)
+        public IActionResult Chat()
         {
-            return Json(_vehicleID);
+            return View();
         }
         public IActionResult Login()
         {

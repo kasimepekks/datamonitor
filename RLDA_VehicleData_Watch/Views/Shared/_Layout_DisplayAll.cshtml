@@ -108,7 +108,7 @@
                     <a href="">设置</a>
                     <dl class="layui-nav-child" id="vehiclesetup">
                         <dd><a href="@Url.Action("VehicleSetup", "Home")">车辆设置</a></dd>
-
+                        <dd><a href="@Url.Action("Chat", "Home")">聊天室测试</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -133,11 +133,11 @@
         var element = document.getElementById('id');
         var span = document.getElementById('user');
         if ("@ViewBag.User"=="Admin") {
-            element.src ="/Pictures/老板.png"
+            element.src ="/Pictures/Boss.png"
             span.textContent = "Admin";
         }
         else {
-            element.src = "/Pictures/普通用户.png";
+            element.src = "/Pictures/User.png";
             span.textContent = "User";
     }
 

@@ -35,6 +35,27 @@ namespace MysqlforDataWatch
         public double AccYRM { get; set; }
         public double AccZRM { get; set; }
 
+        public double AccXSTLF { get; set; }
+        public double AccYSTLF { get; set; }
+        public double AccZSTLF { get; set; }
+
+        public double AccXSTRF { get; set; }
+        public double AccYSTRF { get; set; }
+        public double AccZSTRF { get; set; }
+
+        public double AccXSTLR { get; set; }
+        public double AccYSTLR { get; set; }
+        public double AccZSTLR { get; set; }
+
+        public double AccXSTRR { get; set; }
+        public double AccYSTRR { get; set; }
+        public double AccZSTRR { get; set; }
+
+        public double DisDmpLF { get; set; }
+        public double DisDmpLR { get; set; }
+        public double DisDmpRF { get; set; }
+        public double DisDmpRR { get; set; }
+
 
         //public double Lat { get; set; }
         //public double Lon { get; set; }

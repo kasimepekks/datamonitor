@@ -11,7 +11,7 @@
 
 
 
- 
+
   "VehicleSetup": {
 
     "VehicleID": "ADF0979", //这个是自动定时计算的指定车辆编号，要录入数据库的字段中
@@ -26,9 +26,9 @@
     "BrakeLastingPoints": "100", //刹车持续点数
 
     "SteeringZeroStandard": "10", //尽量不要改动
-    "SteeringLastingPoints": "100" //转向持续点数
+    "SteeringLastingPoints": "100", //转向持续点数
 
-
+    "reductiontimesforsampling": "20"  //重采样降低倍数
 
   },
   //这个是从oss上下载文件到本地后再读取，如oss与ecs已经挂载好了就没必要用这个配置了
@@ -37,8 +37,8 @@
     "accessKeyId": "LTAI5t5YP36JjczH9A5EMXPp",
     "accessKeySecret": "Sm4B7y6BhFk90JtouStGV1LoWWgcJY",
     "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
-    "drive": "D:/"//从oss下载到本地的盘符路径，如果是linux系统需要更改
-    
+    "drive": "D:/" //从oss下载到本地的盘符路径，如果是linux系统需要更改
+
   }
 
 }

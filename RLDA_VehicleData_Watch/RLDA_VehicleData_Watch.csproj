@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Content Remove="Views\Home\Index.cshtml" />
+    <Content Remove="wwwroot\Html\WatchHtml\ADF0979.html" />
+    <Content Remove="wwwroot\Html\WatchHtml\E21SIV161.html" />
     <Content Remove="wwwroot\MYJS\ADF0979_RealTimeACC.js" />
     <Content Remove="wwwroot\MYJS\ADF0979_VehicleStatic.js" />
+    <Content Remove="wwwroot\MYJS\LuShu.js" />
   </ItemGroup>
 
   <ItemGroup>

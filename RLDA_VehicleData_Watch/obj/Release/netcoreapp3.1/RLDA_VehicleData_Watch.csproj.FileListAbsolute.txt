@@ -351,3 +351,4 @@ C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcor
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1\Aliyun.OSS.Core.dll
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\Home\VehicleSetup.cshtml.g.cs
 C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\PopUp\VehicleSetupTablePopUp.cshtml.g.cs
+C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\obj\Release\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs

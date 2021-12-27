@@ -72,9 +72,7 @@ namespace RLDA_VehicleData_Watch
                 options.Cookie.HttpOnly = true;
             });
             services.AddTransient<MyInvocable>();
-            //services.AddScoped<AutoCalCoravelJob>();
             services.AddScheduler();
-            //services.AddQueue();
 
         }
 
@@ -96,28 +94,34 @@ namespace RLDA_VehicleData_Watch
             bool stringtoint=int.TryParse(Configuration["DataMonitor:TimeGap"],out result);
            
             string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(";");
-            if (stringtoint)
+            if (MonitorRequired == "true")
             {
-                var provider = app.ApplicationServices;
-                if (MonitorRequired == "true")
+                if (stringtoint)
                 {
-                    foreach (var i in MonitorVehicle)
+                    var provider = app.ApplicationServices;
+                    if (MonitorRequired == "true")
                     {
-                        provider.UseScheduler(scheduler =>
+                        foreach (var i in MonitorVehicle)
                         {
-                            scheduler.ScheduleWithParams<MyInvocable>(i)
-                            .EverySeconds(result)
+                            provider.UseScheduler(scheduler =>
+                            {
+                                scheduler.ScheduleWithParams<MyInvocable>(i)
+                                .EverySeconds(result)
 
-                            .PreventOverlapping(i);
-
-
-                        }).OnError((ex) =>
-                           throw ex);
+                                .PreventOverlapping(i);
+                            }).OnError((ex) =>
+                               throw ex);
+                        }
                     }
-
-
                 }
-
+                else
+                {
+                    Console.WriteLine("配置文件TimeGap参数有误，不会启用定时任务！！！");
+                }
+            }
+            else
+            {
+                Console.WriteLine("配置文件MonitorRequired参数有误，不会启用定时任务！！！");
             }
          
 

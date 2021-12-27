@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zFYyGut6DsA2m5oD7T22gDOl2jjbAEpYeysZLNA12JXgbFzma4QvoxV0z40PZ1VXFoPVP2wtpUBW8jCmHyXhgg==",
+  "dgSpecHash": "xYSTfFfm158CkLbxLhqaor+6fmQab9fbqwgImn8/GIX/Ej+Ener4A45pgrqDLMkPGZcH8dUgWRT2i90mISg43Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,10 @@
     "C:\\Users\\111\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch\\1.4.8\\zack.efcore.batch.1.4.8.nupkg.sha512",
-    "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch.mysql.pomelo\\1.4.9\\zack.efcore.batch.mysql.pomelo.1.4.9.nupkg.sha512"
+    "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch.mysql.pomelo\\1.4.9\\zack.efcore.batch.mysql.pomelo.1.4.9.nupkg.sha512",
+    "C:\\Users\\111\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.19\\microsoft.netcore.app.runtime.win-x86.3.1.19.nupkg.sha512",
+    "C:\\Users\\111\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.19\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.19.nupkg.sha512",
+    "C:\\Users\\111\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.19\\microsoft.aspnetcore.app.runtime.win-x86.3.1.19.nupkg.sha512"
   ],
   "logs": []
 }
