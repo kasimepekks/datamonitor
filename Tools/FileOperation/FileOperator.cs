@@ -29,18 +29,59 @@ namespace Tools
           
             return datereplace;
         }
-        //public static string LastDatetoName(string date, int i)
-        //{
-        //    string path = @"E:\RealTimeData\";
-        //    string absolutepath = @"\\DESKTOP-SHGECD9\input\";
-        //    string[] pathgroup = { path, absolutepath };
-        //    string datenormal = date;
-        //    string datereplace = datenormal.Replace("-", "_");
-        //    string datefiledirectorypath = pathgroup[i] + datereplace;
+        //创建import的flag文件
+        public static void CreateDataImportCompleteFlag(string filePath)
+        {
+           string filename=filePath+ "/DataImportCompleteFlag.txt";
+            if (!File.Exists(filename))
+            {
+                File.Create(filename).Close();
+            }
+          
+        }
 
-        //    return datefiledirectorypath;
-        //}
-        //返回目标文件夹下的所有csv文件并按文件名排序,用于历史数据拼接
+
+       //返回目标文件夹下的所有子文件夹，不包括子文件夹的子文件夹
+        public static DirectoryInfo[] GetSubDirectories(string filePath)
+        {
+            DirectoryInfo root = new DirectoryInfo(filePath);
+            return root.GetDirectories();
+        }
+        //判断是否有这个txt文件，“DataImportCompleteFlag.txt”，如果有则说明这个文件夹已经处理完了返回true，没有返回false
+        public static bool DataImportCompleteFlag(DirectoryInfo root)
+        {
+            string flag = root.FullName + "/DataImportCompleteFlag.txt";
+            return File.Exists(flag);
+
+        }
+        /// <summary>
+        /// 给手动导入用
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public static bool DataImportCompleteFlag(string root)
+        {
+            string flag = root + "/DataImportCompleteFlag.txt";
+            return File.Exists(flag);
+
+        }
+
+        //判断是否有这个txt文件，“Done.txt”，如果有则说明数据已经上传完了返回true，没有返回false
+        public static bool DataTransferCompleteFlag(DirectoryInfo root)
+        {
+            string flag = root.FullName + "/"+root.Name+"_Done.txt";
+            return File.Exists(flag);
+
+        }
+        //给手动导入用
+        public static bool DataTransferCompleteFlag(string root,string datename)
+        {
+            string flag = root + "/" + datename + "_Done.txt";
+            return File.Exists(flag);
+
+        }
+
+        //返回目标文件夹下的所有csv文件，并按文件名排序
         public static FileInfo[] Isfileexist(string filePath)
         {
             DirectoryInfo root = new DirectoryInfo(filePath);
@@ -107,6 +148,11 @@ namespace Tools
                 };
             }
         }
+
+
+  
+
+
 
         /// <summary>
         /// 生成ID（数字和字母混和） 

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BLL.SH_ADF0979BLL
 {
@@ -32,14 +33,10 @@ namespace BLL.SH_ADF0979BLL
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistribution(DateTime sd, DateTime ed, string vehicleid)
+        public async Task<IQueryable> LoadSpeedDistribution(DateTime sd, DateTime ed, string vehicleid)
         {
-            //var s1 = _DB.Set<ShAdf0979Speeddistribution>().Where(a => a.Datadate >= sd && a.Datadate <= ed).Select(a=>new {
-            //    Time = sd + "-" + ed,
-            //    ten=a._010
-            //});
-
-            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new { }).Select(q => new
+            
+            var speeddistributionlist = await Task.Run(() => _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new { }).Select(q => new
             {
                 Time = sd + "-" + ed,
                 sum0_10 = q.Sum(x => x._010),
@@ -57,7 +54,7 @@ namespace BLL.SH_ADF0979BLL
                 sumabove120 = q.Sum(x => x.Above120),
 
 
-            });
+            }));
 
             return speeddistributionlist;
 
@@ -70,9 +67,9 @@ namespace BLL.SH_ADF0979BLL
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistributionperday(DateTime sd, DateTime ed, string vehicleid)
+        public async Task<IQueryable> LoadSpeedDistributionperday(DateTime sd, DateTime ed, string vehicleid)
         {
-            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new
+            var speeddistributionlist = await Task.Run(() => _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new
             {
                 x.Datadate.Value.Year,
                 x.Datadate.Value.Month,
@@ -82,7 +79,7 @@ namespace BLL.SH_ADF0979BLL
                 day = x.Key,
                 Distance = x.Sum(a => a._010) + x.Sum(a => a._100110) + x.Sum(a => a._1020) + x.Sum(a => a._110120) + x.Sum(a => a._2030) + x.Sum(a => a._3040)
                 + x.Sum(a => a._4050) + x.Sum(a => a._5060) + x.Sum(a => a._6070) + x.Sum(a => a._7080) + x.Sum(a => a._8090) + x.Sum(a => a._90100)
-            });
+            }));
 
 
             return speeddistributionlist;
@@ -93,16 +90,16 @@ namespace BLL.SH_ADF0979BLL
         /// <param name="sd"></param>
         /// <param name="ed"></param>
         /// <returns></returns>
-        public IQueryable LoadSpeedDistributionperhour(DateTime sd, DateTime ed, string vehicleid)
+        public async Task<IQueryable> LoadSpeedDistributionperhour(DateTime sd, DateTime ed, string vehicleid)
         {
             //这里不考虑按每一天进行合并，而是合并相同时间段的数据，不区分哪一天
-            var speeddistributionlist = _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId== vehicleid).AsNoTracking().GroupBy(x => 
+            var speeddistributionlist = await Task.Run(() => _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId== vehicleid).AsNoTracking().GroupBy(x => 
             x.Datadate.Value.Hour).Select(x => new
             {
                 Hour = x.Key,
                 Distance = x.Sum(a => a._010) + x.Sum(a => a._100110) + x.Sum(a => a._1020) + x.Sum(a => a._110120) + x.Sum(a => a._2030) + x.Sum(a => a._3040)
                 + x.Sum(a => a._4050) + x.Sum(a => a._5060) + x.Sum(a => a._6070) + x.Sum(a => a._7080) + x.Sum(a => a._8090) + x.Sum(a => a._90100)
-            });
+            }));
 
 
             return speeddistributionlist;

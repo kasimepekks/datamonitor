@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Tools.FileOperation;
 
 namespace IDAL
@@ -17,7 +18,7 @@ namespace IDAL
         //List<T> ReadOneCsvFile(string filefullpath, string filename, out string name, out List<double> speed, out List<double> Brake, out List<double> Lat, out List<double> Lon);
         //List<SatictisData> ReadOneCsvFileForStatistic(string filefullpath, string filename, out string name, out double sdistance);
               
-        CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename);
+        Task<CsvFileReturnAllList<T>> ReadCSVFileAll(string filefullpath, string filename);
 
     }
 }

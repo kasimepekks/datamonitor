@@ -143,21 +143,21 @@ namespace RLDA_VehicleData_Watch.Models
         //这里日期选择当前时间，0代表input,1代表output
 
 
-        public Task Invoke()
+        public async Task Invoke()
         {
             if (_MonitorvehicleID != null)
             {
                 if (_MonitorvehicleID.Contains(_vehicleID))//先判断是否需要监控配置文件里需要监控的车辆，如配置文件里没有则不需要进行监控了
                 {
                     //Console.WriteLine(pathdictionary[_vehicleID + "inputpath"]);
-                    Task.Run(() =>
+                   await Task.Run(async () =>
                     {
                         
                         if (vehicledictionary[_vehicleID + "inputpath"].FileName != "default" && vehicledictionary[_vehicleID + "inputpath"].FileName != newdictionary[_vehicleID + "input"].FileName)
                         {
                             //Stopwatch sw = new Stopwatch();
                             //sw.Start();
-                            var structall= _IRealTime_ACC_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "inputpath"].FullFileName, vehicledictionary[_vehicleID + "inputpath"].FileName);
+                            var structall=  await _IRealTime_ACC_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "inputpath"].FullFileName, vehicledictionary[_vehicleID + "inputpath"].FileName);
                             vehicledistance[_vehicleID] = Math.Round(structall.sdistance, 2);
 
                             vehiclecumdistance[_vehicleID] += vehicledistance[_vehicleID];
@@ -170,8 +170,8 @@ namespace RLDA_VehicleData_Watch.Models
                             //_hubContext.Clients.All.SendAsync("ReloadData");
                             foreach(var i in MyHub.user)
                             {
-                                _hubContext.Clients.Group(i).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TListReSampling, structall.STList);
-                                _hubContext.Clients.Group(i).SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);//zerotime用来初始化每次的开始时间，每当有新数据读取时，zerotime初始化为0，传入前端，用于前端的speed和brake仪表盘的显示
+                                await _hubContext.Clients.Group(i).SendAsync("ReloadDataACC", _vehicleID, structall.name, structall.TListReSampling, structall.STList);
+                                await _hubContext.Clients.Group(i).SendAsync("SpeedtoDistance", _vehicleID, vehiclecumdistance[_vehicleID], structall.Speed, structall.Brake, structall.Lat, structall.Lon, structall.StrgWhlAng, zerotime);//zerotime用来初始化每次的开始时间，每当有新数据读取时，zerotime初始化为0，传入前端，用于前端的speed和brake仪表盘的显示
 
                             }
 
@@ -183,11 +183,11 @@ namespace RLDA_VehicleData_Watch.Models
 
                         if (vehicledictionary[_vehicleID + "outputpath"].FileName != "default" && vehicledictionary[_vehicleID + "outputpath"].FileName != newdictionary[_vehicleID + "output"].FileName)
                         {
-                            var structresultall = _IRealTime_WFT_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "outputpath"].FullFileName, vehicledictionary[_vehicleID + "outputpath"].FileName);
+                            var structresultall = await _IRealTime_WFT_Service.ReadCSVFileAll(vehicledictionary[_vehicleID + "outputpath"].FullFileName, vehicledictionary[_vehicleID + "outputpath"].FileName);
                             newdictionary[_vehicleID + "output"] = vehicledictionary[_vehicleID + "outputpath"];
                             foreach (var i in MyHub.user)
                             {
-                              _hubContext.Clients.Groups(i).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TListReSampling, structresultall.STList);
+                             await _hubContext.Clients.Groups(i).SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TListReSampling, structresultall.STList);
 
                             }
                             //_hubContext.Clients.All.SendAsync("ReloadDataWFT", _vehicleID, structresultall.name, structresultall.TList, structresultall.STList);
@@ -199,7 +199,7 @@ namespace RLDA_VehicleData_Watch.Models
             }
 
            
-            return Task.CompletedTask;
+            //return Task.CompletedTask;
         }
     }
 }

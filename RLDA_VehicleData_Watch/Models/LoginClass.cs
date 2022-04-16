@@ -12,7 +12,7 @@ namespace RLDA_VehicleData_Watch.Models
         {
 
             datawatchContext saicdb = new datawatchContext();
-            SysAuthority sys_Authority = saicdb.SysAuthority.FirstOrDefault(p => p.LoginName == id && p.Password == pwd);
+            SysAuthority sys_Authority = saicdb.SysAuthorities.FirstOrDefault(p => p.LoginName == id && p.Password == pwd);
             return sys_Authority;
         }
     }

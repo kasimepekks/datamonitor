@@ -12,7 +12,7 @@ namespace Tools.AddDistance
             
             double distance5=0, distance15=0, distance25=0, distance35=0, distance45=0, distance55=0, distance65=0, 
                 distance75=0, distance85=0, distance95=0, distance105=0, distance115=0, distance125=0;
-            for (int i = 0; i < speedlist.Count-1; i++)
+            for (int i = 0; i < speedlist.Count; i++)
             {
                 if (speedlist[i]<10)
                 {

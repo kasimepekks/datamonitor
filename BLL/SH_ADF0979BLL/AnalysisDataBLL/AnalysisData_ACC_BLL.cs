@@ -5,6 +5,7 @@ using MysqlforDataWatch;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace BLL.SH_ADF0979BLL
 {
@@ -26,9 +27,9 @@ namespace BLL.SH_ADF0979BLL
         }
        
 
-        public bool ReadandMergeACCDataperHalfHour(string filepath)
+        public async Task<bool> ReadandMergeACCDataperHalfHour(string filepath)
         {
-            return _AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(filepath);
+            return await _AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(filepath);
         }
     }
 }

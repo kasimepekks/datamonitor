@@ -17,22 +17,20 @@ namespace MysqlforDataWatch
         {
         }
 
-        public virtual DbSet<Brakerecognition> Brakerecognition { get; set; }
-        public virtual DbSet<Bumprecognition> Bumprecognition { get; set; }
-        public virtual DbSet<SatictisAnalysisdataAcc> SatictisAnalysisdataAcc { get; set; }
-        public virtual DbSet<SatictisAnalysisdataWft> SatictisAnalysisdataWft { get; set; }
-        public virtual DbSet<Speeddistribution> Speeddistribution { get; set; }
-        public virtual DbSet<Streeringrecognition> Streeringrecognition { get; set; }
-        public virtual DbSet<SysAuthority> SysAuthority { get; set; }
-        public virtual DbSet<Vehicletable> Vehicletable { get; set; }
+        public virtual DbSet<Brakerecognition> Brakerecognitions { get; set; }
+        public virtual DbSet<Bumprecognition> Bumprecognitions { get; set; }
+        public virtual DbSet<SatictisAnalysisdataAcc> SatictisAnalysisdataAccs { get; set; }
+        public virtual DbSet<SatictisAnalysisdataWft> SatictisAnalysisdataWfts { get; set; }
+        public virtual DbSet<Speeddistribution> Speeddistributions { get; set; }
+        public virtual DbSet<Streeringrecognition> Streeringrecognitions { get; set; }
+        public virtual DbSet<SysAuthority> SysAuthorities { get; set; }
+        public virtual DbSet<Vehicletable> Vehicletables { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //optionsBuilder.UseMySql("server=localhost;user id=root;password=Mxz04122465;database=datawatch", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
-                optionsBuilder.UseMySql(MysqlConnectionConfiguration.mysqlconnection, new MySqlServerVersion(new Version(5, 7, 20)));
-                optionsBuilder.UseBatchEF_MySQLPomelo();
+                optionsBuilder.UseMySql(MysqlConnectionConfiguration.mysqlconnection, Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
             }
         }
 
@@ -48,7 +46,7 @@ namespace MysqlforDataWatch
                     .HasMaxLength(64)
                     .HasColumnName("id");
 
-                entity.Property(e => e.BrakeAcc).HasColumnType("double(64,0)");
+                entity.Property(e => e.BrakeAcc).HasColumnType("double(64,2)");
 
                 entity.Property(e => e.Datadate)
                     .HasColumnType("datetime")
@@ -71,7 +69,7 @@ namespace MysqlforDataWatch
                     .HasMaxLength(64)
                     .HasColumnName("id");
 
-                entity.Property(e => e.BumpAcc).HasColumnType("double(64,0)");
+                entity.Property(e => e.BumpAcc).HasColumnType("double(64,2)");
 
                 entity.Property(e => e.Datadate)
                     .HasColumnType("datetime")
@@ -247,6 +245,8 @@ namespace MysqlforDataWatch
                     .HasMaxLength(64)
                     .HasColumnName("id");
 
+                entity.Property(e => e.AngularAcc).HasColumnType("double(64,2)");
+
                 entity.Property(e => e.Datadate)
                     .HasColumnType("datetime")
                     .HasColumnName("datadate");
@@ -255,9 +255,13 @@ namespace MysqlforDataWatch
                     .HasMaxLength(64)
                     .HasColumnName("filename");
 
-                entity.Property(e => e.SteeringAcc).HasColumnType("double(64,0)");
+                entity.Property(e => e.Speed).HasColumnType("double(64,2)");
+
+                entity.Property(e => e.SteeringAcc).HasColumnType("double(64,2)");
 
                 entity.Property(e => e.SteeringDirection).HasColumnType("tinyint(2)");
+
+                entity.Property(e => e.StrgWhlAng).HasColumnType("double(64,2)");
 
                 entity.Property(e => e.VehicleId)
                     .HasMaxLength(64)

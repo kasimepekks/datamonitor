@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HgjTgllap9twwtp/iveTMzoR+ESvI7mxIlYXKhpTs9jgxfTrtu3ZlHySYj9bPnQtdymRiTWzZNb+6ymYk/eA+A==",
+  "dgSpecHash": "dzArO1thICW7RGu2XMWA6bhMc6nVB0lPCxnXKXzc1CAoLAkLpclt5+G7bNWSJGrHHreUphV+xeDfRkDplUXrUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
   "expectedPackageFiles": [
@@ -34,10 +34,7 @@
     "C:\\Users\\111\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
     "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch\\1.4.8\\zack.efcore.batch.1.4.8.nupkg.sha512",
-    "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch.mysql.pomelo\\1.4.9\\zack.efcore.batch.mysql.pomelo.1.4.9.nupkg.sha512",
-    "C:\\Users\\111\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\3.1.19\\microsoft.netcore.app.runtime.win-x86.3.1.19.nupkg.sha512",
-    "C:\\Users\\111\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\3.1.19\\microsoft.windowsdesktop.app.runtime.win-x86.3.1.19.nupkg.sha512",
-    "C:\\Users\\111\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\3.1.19\\microsoft.aspnetcore.app.runtime.win-x86.3.1.19.nupkg.sha512"
+    "C:\\Users\\111\\.nuget\\packages\\zack.efcore.batch.mysql.pomelo\\1.4.9\\zack.efcore.batch.mysql.pomelo.1.4.9.nupkg.sha512"
   ],
   "logs": []
 }

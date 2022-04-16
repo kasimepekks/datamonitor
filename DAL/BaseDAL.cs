@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using Tools.Cash;
 using Tools.FileOperation;
 
@@ -58,9 +59,9 @@ namespace DAL
         /// <param name="filefullpath"></param>
         /// <param name="filename"></param>
         /// <returns></returns>
-        public CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename)
+        public async Task<CsvFileReturnAllList<T>> ReadCSVFileAll(string filefullpath, string filename)
         {
-            return CSVFileOperation<T>.ReadCSVFileAll(filefullpath, filename);
+            return await CSVFileOperation<T>.ReadCSVFileAll(filefullpath, filename);
         }
     }
 }

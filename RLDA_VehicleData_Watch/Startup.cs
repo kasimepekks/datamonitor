@@ -56,6 +56,7 @@ namespace RLDA_VehicleData_Watch
             option.LoginPath = new PathString("/Home/Login"));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<datawatchContext>(options => options.UseMySql(connectionstring, serverVersion));
+            services.AddScoped<DbContext, datawatchContext>();
             services.AddControllersWithViews();
             //跨域
             //services.AddCors(option => option.AddPolicy("cors",
@@ -72,6 +73,7 @@ namespace RLDA_VehicleData_Watch
                 options.Cookie.HttpOnly = true;
             });
             services.AddTransient<MyInvocable>();
+            services.AddTransient<MyInvocableforAutoDataImport>();
             services.AddScheduler();
 
         }
@@ -88,12 +90,15 @@ namespace RLDA_VehicleData_Watch
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
+            string ImportRequired = Configuration["DataImport:ImportRequired"];
 
             int result;
 
             bool stringtoint=int.TryParse(Configuration["DataMonitor:TimeGap"],out result);
            
             string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(";");
+            string[] DataImportVehicle = Configuration["DataImport:ImportVehicleID"].Split(";");
+
             if (MonitorRequired == "true")
             {
                 if (stringtoint)
@@ -123,7 +128,20 @@ namespace RLDA_VehicleData_Watch
             {
                 Console.WriteLine("配置文件MonitorRequired参数有误，不会启用定时任务！！！");
             }
-         
+            if (ImportRequired == "true")
+            {
+                var provider = app.ApplicationServices;
+                foreach (var i in DataImportVehicle)
+                {
+                    provider.UseScheduler(scheduler =>
+                    {
+                        scheduler.ScheduleWithParams<MyInvocableforAutoDataImport>(i)
+                        .EverySeconds(10)
+                        .PreventOverlapping(i);
+                    }).OnError((ex) =>
+                       throw ex);
+                }
+            }
 
 
             //app.UseCors("cors");

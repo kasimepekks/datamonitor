@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Tools.FileOperation;
 
 namespace IBLL
@@ -18,7 +19,7 @@ namespace IBLL
         //List<SatictisData> ReadOneCsvFileForStatisticService(string filefullpath, string filename, out string name, out double sdistance);
         
       
-        CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename);
+        Task<CsvFileReturnAllList<T>> ReadCSVFileAll(string filefullpath, string filename);
 
     }
 }

@@ -185,18 +185,18 @@
       ],
       "instanceScope": "per-lifetimescope", //单例生命周期
       "injectProperties": true //是否支持属性注入
-    },
-
-    {
-      "type": "MysqlforDataWatch.datawatchContext,MysqlforDataWatch", //接口的实现 全名称
-      "services": [
-        {
-          "type": "Microsoft.EntityFrameworkCore.DbContext,Microsoft.EntityFrameworkCore" // 接口的全名称
-        }
-      ],
-      "instanceScope": "per-lifetimescope", //单例生命周期
-      "injectProperties": true //是否支持属性注入
     }
+
+    //{
+    //  "type": "MysqlforDataWatch.datawatchContext,MysqlforDataWatch", //接口的实现 全名称
+    //  "services": [
+    //    {
+    //      "type": "Microsoft.EntityFrameworkCore.DbContext,Microsoft.EntityFrameworkCore" // 接口的全名称
+    //    }
+    //  ],
+    //  "instanceScope": "per-lifetimescope", //单例生命周期
+    //  "injectProperties": true //是否支持属性注入
+    //}
 
   ]
 }

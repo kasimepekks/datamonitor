@@ -4,6 +4,7 @@ using MysqlforDataWatch;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Tools.FileOperation;
 
 namespace BLL
@@ -53,9 +54,9 @@ namespace BLL
         //}
        
 
-        public CsvFileReturnAllList<T> ReadCSVFileAll(string filefullpath, string filename)
+        public async Task<CsvFileReturnAllList<T>> ReadCSVFileAll(string filefullpath, string filename)
         {
-            return CurrentDal.ReadCSVFileAll(filefullpath, filename);
+            return await CurrentDal.ReadCSVFileAll(filefullpath, filename);
         }
 
     }
