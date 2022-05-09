@@ -19,18 +19,20 @@ namespace MysqlforDataWatch
 
         public virtual DbSet<Brakerecognition> Brakerecognitions { get; set; }
         public virtual DbSet<Bumprecognition> Bumprecognitions { get; set; }
+        public virtual DbSet<Gpsrecord> Gpsrecords { get; set; }
         public virtual DbSet<SatictisAnalysisdataAcc> SatictisAnalysisdataAccs { get; set; }
         public virtual DbSet<SatictisAnalysisdataWft> SatictisAnalysisdataWfts { get; set; }
         public virtual DbSet<Speeddistribution> Speeddistributions { get; set; }
         public virtual DbSet<Streeringrecognition> Streeringrecognitions { get; set; }
         public virtual DbSet<SysAuthority> SysAuthorities { get; set; }
+        public virtual DbSet<Throttlerecognition> Throttlerecognitions { get; set; }
         public virtual DbSet<Vehicletable> Vehicletables { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql(MysqlConnectionConfiguration.mysqlconnection, Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
+                optionsBuilder.UseMySql("server=localhost;user id=root;password=Mxz04122465;database=datawatch", Microsoft.EntityFrameworkCore.ServerVersion.Parse("5.7.20-mysql"));
             }
         }
 
@@ -78,6 +80,33 @@ namespace MysqlforDataWatch
                 entity.Property(e => e.Filename)
                     .HasMaxLength(64)
                     .HasColumnName("filename");
+
+                entity.Property(e => e.VehicleId)
+                    .HasMaxLength(64)
+                    .HasColumnName("VehicleID");
+            });
+
+            modelBuilder.Entity<Gpsrecord>(entity =>
+            {
+                entity.ToTable("gpsrecord");
+
+                entity.Property(e => e.Id)
+                    .HasMaxLength(64)
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Datadate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("datadate");
+
+                entity.Property(e => e.Filename)
+                    .HasMaxLength(64)
+                    .HasColumnName("filename");
+
+                entity.Property(e => e.Lat).HasColumnType("double(64,5)");
+
+                entity.Property(e => e.Lon).HasColumnType("double(64,5)");
+
+                entity.Property(e => e.Speed).HasColumnType("double(64,0)");
 
                 entity.Property(e => e.VehicleId)
                     .HasMaxLength(64)
@@ -285,6 +314,37 @@ namespace MysqlforDataWatch
                 entity.Property(e => e.Password)
                     .IsRequired()
                     .HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<Throttlerecognition>(entity =>
+            {
+                entity.ToTable("throttlerecognition");
+
+                entity.Property(e => e.Id)
+                    .HasMaxLength(64)
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Accelerograph).HasColumnType("double(64,1)");
+
+                entity.Property(e => e.Datadate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("datadate");
+
+                entity.Property(e => e.Filename)
+                    .HasMaxLength(64)
+                    .HasColumnName("filename");
+
+                entity.Property(e => e.LastingTime).HasColumnType("double(64,2)");
+
+                entity.Property(e => e.Reverse).HasColumnType("tinyint(2)");
+
+                entity.Property(e => e.Speed).HasColumnType("double(64,1)");
+
+                entity.Property(e => e.ThrottleAcc).HasColumnType("double(64,2)");
+
+                entity.Property(e => e.VehicleId)
+                    .HasMaxLength(64)
+                    .HasColumnName("VehicleID");
             });
 
             modelBuilder.Entity<Vehicletable>(entity =>

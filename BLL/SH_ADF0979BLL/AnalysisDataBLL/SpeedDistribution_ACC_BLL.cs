@@ -105,7 +105,20 @@ namespace BLL.SH_ADF0979BLL
             return speeddistributionlist;
         }
 
-       
+        //专门返回当天里程和累积里程
+        public async Task<List<double>> LoadTextRecord(DateTime sd, DateTime ed, string vehicleid)
+        {
+            List<double> list = new List<double>();
+            var currentmile = await Task.Run(() => _ISpeedDistribution_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().
+            Sum(a=>a._010+a._1020+a._2030+a._3040+a._4050+a._5060+a._6070+a._7080+a._8090+a._90100+a._100110+a._110120+a.Above120));
+
+            var accumtmile = await Task.Run(() => _ISpeedDistribution_ACC_DAL.LoadEntities(a =>  a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().
+ Sum(a => a._010 + a._1020 + a._2030 + a._3040 + a._4050 + a._5060 + a._6070 + a._7080 + a._8090 + a._90100 + a._100110 + a._110120 + a.Above120));
+
+            list.Add((double)currentmile);
+            list.Add((double)accumtmile);
+            return list;
+        }
 
     }
 }

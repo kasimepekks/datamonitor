@@ -13,9 +13,9 @@ namespace Tools.ListOperation
         /// <param name="WFT_AZ_LFList"></param>
         /// <param name="WFT_AZ_RFList"></param>
         /// <param name="WFT_AZ_LRList"></param>
-        public static void DoZero(List<double> WFT_AZ_LFList, List<double> WFT_AZ_RFList, List<double> WFT_AZ_LRList)
+        public static void DoZero(List<double> WFT_AZ_LFList, List<double> WFT_AZ_RFList, List<double> WFT_AZ_LRList, VehicleIDPara vehicleIDPara)
         {
-            double bumpzero = MyConfigforVehicleID.BmupZeroStandard;
+            double bumpzero = vehicleIDPara.BmupZeroStandard;
             
             for (int i = 0; i < WFT_AZ_LFList.Count; i++)
             {

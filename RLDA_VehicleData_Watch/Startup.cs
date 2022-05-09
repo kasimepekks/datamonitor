@@ -96,8 +96,8 @@ namespace RLDA_VehicleData_Watch
 
             bool stringtoint=int.TryParse(Configuration["DataMonitor:TimeGap"],out result);
            
-            string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(";");
-            string[] DataImportVehicle = Configuration["DataImport:ImportVehicleID"].Split(";");
+            string[] MonitorVehicle = Configuration["DataMonitor:MonitoringVehicleID"].Split(",");
+            string[] DataImportVehicle = Configuration["DataImport:ImportVehicleID"].Split(",");
 
             if (MonitorRequired == "true")
             {
@@ -136,7 +136,7 @@ namespace RLDA_VehicleData_Watch
                     provider.UseScheduler(scheduler =>
                     {
                         scheduler.ScheduleWithParams<MyInvocableforAutoDataImport>(i)
-                        .EverySeconds(10)
+                        .EveryThirtyMinutes()
                         .PreventOverlapping(i);
                     }).OnError((ex) =>
                        throw ex);

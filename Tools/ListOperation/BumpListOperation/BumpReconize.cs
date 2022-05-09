@@ -20,7 +20,7 @@ namespace Tools.ListOperation
         /// <param name="speedlist"></param>
         /// <param name="OuttimeList"></param>
         /// <returns></returns>
-        public static List<double> GetBump(List<double> WFT_AZ_LFPeakList, List<double> WFT_AZ_RFPeakList, List<double> WFT_AZ_LRPeakList, List<int> WFT_AZ_LFPeakTimeList, List<int> WFT_AZ_RFPeakTimeList, List<int> WFT_AZ_LRPeakTimeList, List<double> speedpeaklist, List<double> speedlist, out List<int> OuttimeList)
+        public static List<double> GetBump(List<double> WFT_AZ_LFPeakList, List<double> WFT_AZ_RFPeakList, List<double> WFT_AZ_LRPeakList, List<int> WFT_AZ_LFPeakTimeList, List<int> WFT_AZ_RFPeakTimeList, List<int> WFT_AZ_LRPeakTimeList, List<double> speedpeaklist, List<double> speedlist, VehicleIDPara vehicleIDPara, out List<int> OuttimeList)
         {
             List<double> bumplist = new List<double>();
             List<int> bumptimelist = new List<int>();
@@ -33,16 +33,16 @@ namespace Tools.ListOperation
                     for (int j = s1; j < WFT_AZ_RFPeakTimeList.Count; j++)
                     {
                         //如果LF的波峰值的时刻和RF的波峰值的时刻相近,这里的5需要动态更改
-                        if (Math.Abs(WFT_AZ_LFPeakTimeList[i] - WFT_AZ_RFPeakTimeList[j]) < MyConfigforVehicleID.AccTimeGap)
+                        if (Math.Abs(WFT_AZ_LFPeakTimeList[i] - WFT_AZ_RFPeakTimeList[j]) < vehicleIDPara.AccTimeGap)
                         {
                             s1++;
                             //如果LF的波峰值和RF的波峰值相近，这里的0.5需要动态更改
-                            if (Math.Abs(WFT_AZ_LFPeakList[i] - WFT_AZ_RFPeakList[j]) < MyConfigforVehicleID.AccValueGap)
+                            if (Math.Abs(WFT_AZ_LFPeakList[i] - WFT_AZ_RFPeakList[j]) < vehicleIDPara.AccValueGap && speedpeaklist[i]>5)
                             {
 
                                 //通过轴距，LF出现波峰的时刻的瞬时速度，采样率来计算左前和左后之间的点数差距，后面还要用平均速度来修正
-                                int ogappointslower = Convert.ToInt32(MyConfigforVehicleID.Wheelbaselower * 3.6 * 512 / speedpeaklist[i]);
-                                int ogappointsupper = Convert.ToInt32(MyConfigforVehicleID.Wheelbaseupper * 3.6 * 512 / speedpeaklist[i]);
+                                int ogappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * 512 / speedpeaklist[i]);
+                                int ogappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * 512 / speedpeaklist[i]);
                                 double t1 = 0,t2=0;
                                 if(WFT_AZ_LFPeakTimeList[i]+ ogappointsupper <= 5120)//这里必须要判断LF出现peak以后LR是否出现在下一个文件里，也就是说LF的peak出现的太晚导致LR的peak没有出现
                                 {
@@ -54,8 +54,8 @@ namespace Tools.ListOperation
                                     {
                                         t2 += speedlist[l];
                                     }
-                                    int realgappointslower = Convert.ToInt32(MyConfigforVehicleID.Wheelbaselower * 3.6 * 512 / (t1 / ogappointslower));
-                                    int realgappointsupper = Convert.ToInt32(MyConfigforVehicleID.Wheelbaseupper * 3.6 * 512 / (t2 / ogappointsupper));
+                                    int realgappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * 512 / (t1 / ogappointslower));
+                                    int realgappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * 512 / (t2 / ogappointsupper));
 
                                     for (int k = s2; k < WFT_AZ_LRPeakTimeList.Count; k++)
                                     {

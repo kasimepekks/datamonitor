@@ -1,13 +1,12 @@
 /**
- * @license Highcharts Gantt JS v8.2.2 (2020-10-22)
+ * @license Highcharts Gantt JS v10.0.0 (2022-03-07)
  *
  * Pathfinder
  *
- * (c) 2016-2019 Øystein Moseng
+ * (c) 2016-2021 Øystein Moseng
  *
  * License: www.highcharts.com/license
  */
-'use strict';
 (function (factory) {
     if (typeof module === 'object' && module.exports) {
         factory['default'] = factory;
@@ -22,10 +21,20 @@
         factory(typeof Highcharts !== 'undefined' ? Highcharts : undefined);
     }
 }(function (Highcharts) {
+    'use strict';
     var _modules = Highcharts ? Highcharts._modules : {};
     function _registerModule(obj, path, args, fn) {
         if (!obj.hasOwnProperty(path)) {
             obj[path] = fn.apply(null, args);
+
+            if (typeof CustomEvent === 'function') {
+                window.dispatchEvent(
+                    new CustomEvent(
+                        'HighchartsModuleLoaded',
+                        { detail: { path: path, module: obj[path] }
+                    })
+                );
+            }
         }
     }
     _registerModule(_modules, 'Extensions/ArrowSymbols.js', [_modules['Core/Renderer/SVG/SVGRenderer.js']], function (SVGRenderer) {
@@ -37,6 +46,12 @@
          *  License: www.highcharts.com/license
          *
          *  !!!!!!! SOURCE GETS TRANSPILED BY TYPESCRIPT. EDIT TS FILE ONLY. !!!!!!!
+         *
+         * */
+        var symbols = SVGRenderer.prototype.symbols;
+        /* *
+         *
+         *  Functions
          *
          * */
         /**
@@ -69,14 +84,14 @@
          * @return {Highcharts.SVGPathArray}
          *         Path array
          */
-        SVGRenderer.prototype.symbols.arrow = function (x, y, w, h) {
+        function arrow(x, y, w, h) {
             return [
                 ['M', x, y + h / 2],
                 ['L', x + w, y],
                 ['L', x, y + h / 2],
                 ['L', x + w, y + h]
             ];
-        };
+        }
         /**
          * Creates a half-width arrow symbol. Like a triangle, except not filled.
          * ```
@@ -105,9 +120,9 @@
          * @return {Highcharts.SVGPathArray}
          *         Path array
          */
-        SVGRenderer.prototype.symbols['arrow-half'] = function (x, y, w, h) {
-            return SVGRenderer.prototype.symbols.arrow(x, y, w / 2, h);
-        };
+        function arrowHalf(x, y, w, h) {
+            return arrow(x, y, w / 2, h);
+        }
         /**
          * Creates a left-oriented triangle.
          * ```
@@ -136,36 +151,14 @@
          * @return {Highcharts.SVGPathArray}
          *         Path array
          */
-        SVGRenderer.prototype.symbols['triangle-left'] = function (x, y, w, h) {
+        function triangleLeft(x, y, w, h) {
             return [
                 ['M', x + w, y],
                 ['L', x, y + h / 2],
                 ['L', x + w, y + h],
                 ['Z']
             ];
-        };
-        /**
-         * Alias function for triangle-left.
-         *
-         * @private
-         * @function
-         *
-         * @param {number} x
-         *        x position of the arrow
-         *
-         * @param {number} y
-         *        y position of the arrow
-         *
-         * @param {number} w
-         *        width of the arrow
-         *
-         * @param {number} h
-         *        height of the arrow
-         *
-         * @return {Highcharts.SVGPathArray}
-         *         Path array
-         */
-        SVGRenderer.prototype.symbols['arrow-filled'] = SVGRenderer.prototype.symbols['triangle-left'];
+        }
         /**
          * Creates a half-width, left-oriented triangle.
          * ```
@@ -194,34 +187,24 @@
          * @return {Highcharts.SVGPathArray}
          *         Path array
          */
-        SVGRenderer.prototype.symbols['triangle-left-half'] = function (x, y, w, h) {
-            return SVGRenderer.prototype.symbols['triangle-left'](x, y, w / 2, h);
-        };
-        /**
-         * Alias function for triangle-left-half.
+        function triangleLeftHalf(x, y, w, h) {
+            return triangleLeft(x, y, w / 2, h);
+        }
+        symbols.arrow = arrow;
+        symbols['arrow-filled'] = triangleLeft;
+        symbols['arrow-filled-half'] = triangleLeftHalf;
+        symbols['arrow-half'] = arrowHalf;
+        symbols['triangle-left'] = triangleLeft;
+        symbols['triangle-left-half'] = triangleLeftHalf;
+        /* *
          *
-         * @private
-         * @function
+         *  Default Export
          *
-         * @param {number} x
-         *        x position of the arrow
-         *
-         * @param {number} y
-         *        y position of the arrow
-         *
-         * @param {number} w
-         *        width of the arrow
-         *
-         * @param {number} h
-         *        height of the arrow
-         *
-         * @return {Highcharts.SVGPathArray}
-         *         Path array
-         */
-        SVGRenderer.prototype.symbols['arrow-filled-half'] = SVGRenderer.prototype.symbols['triangle-left-half'];
+         * */
 
+        return symbols;
     });
-    _registerModule(_modules, 'Gantt/Connection.js', [_modules['Core/Globals.js'], _modules['Core/Options.js'], _modules['Core/Series/Point.js'], _modules['Core/Utilities.js']], function (H, O, Point, U) {
+    _registerModule(_modules, 'Gantt/Connection.js', [_modules['Core/Globals.js'], _modules['Core/DefaultOptions.js'], _modules['Core/Series/Point.js'], _modules['Core/Utilities.js']], function (H, D, Point, U) {
         /* *
          *
          *  (c) 2016 Highsoft AS
@@ -255,7 +238,7 @@
          * @typedef {"fastAvoid"|"simpleConnect"|"straight"|string} Highcharts.PathfinderTypeValue
          */
         ''; // detach doclets above
-        var defaultOptions = O.defaultOptions;
+        var defaultOptions = D.defaultOptions;
         var addEvent = U.addEvent,
             defined = U.defined,
             error = U.error,
@@ -537,10 +520,10 @@
             // Prefer using shapeArgs (columns)
             if (shapeArgs) {
                 return {
-                    xMin: shapeArgs.x,
-                    xMax: shapeArgs.x + shapeArgs.width,
-                    yMin: shapeArgs.y,
-                    yMax: shapeArgs.y + shapeArgs.height
+                    xMin: shapeArgs.x || 0,
+                    xMax: (shapeArgs.x || 0) + (shapeArgs.width || 0),
+                    yMin: shapeArgs.y || 0,
+                    yMax: (shapeArgs.y || 0) + (shapeArgs.height || 0)
                 };
             }
             // Otherwise use plotX/plotY and bb
@@ -1031,11 +1014,11 @@
              *        The radius of the marker, to calculate the additional distance to
              *        the center of the marker.
              *
-             * @param {object} anchor
+             * @param {Object} anchor
              *        The anchor point of the path and marker as an object with x/y
              *        properties.
              *
-             * @return {object}
+             * @return {Object}
              *         The marker vector as an object with x/y properties.
              */
             getMarkerVector: function (radians, markerRadius, anchor) {
@@ -1056,7 +1039,6 @@
                         x: rectHorizontalCenter,
                         y: rectVerticalCenter
                     },
-                    markerPoint = {},
                     xFactor = 1,
                     yFactor = 1;
                 while (theta < -Math.PI) {
@@ -1099,9 +1081,10 @@
                 if (anchor.y !== rectVerticalCenter) {
                     edgePoint.y = anchor.y;
                 }
-                markerPoint.x = edgePoint.x + (markerRadius * Math.cos(theta));
-                markerPoint.y = edgePoint.y - (markerRadius * Math.sin(theta));
-                return markerPoint;
+                return {
+                    x: edgePoint.x + (markerRadius * Math.cos(theta)),
+                    y: edgePoint.y - (markerRadius * Math.sin(theta))
+                };
             }
         });
         /**
@@ -1188,7 +1171,7 @@
          * @private
          * @function pointWithinObstacle
          *
-         * @param {object} obstacle
+         * @param {Object} obstacle
          *        Obstacle to test.
          *
          * @param {Highcharts.Point} point
@@ -1260,10 +1243,10 @@
          * @private
          * @function limitObstacleToBounds
          *
-         * @param {object} obstacle
+         * @param {Object} obstacle
          *        Obstacle to limit.
          *
-         * @param {object} bounds
+         * @param {Object} bounds
          *        Bounds to use as limit.
          *
          * @return {void}
@@ -1286,7 +1269,7 @@
          * @param {Highcharts.PositionObject} end
          *        Ending coordinate, object with x/y props.
          *
-         * @return {object}
+         * @return {Object}
          *         An object with the SVG path in Array form as accepted by the SVG
          *         renderer, as well as an array of new obstacles making up this
          *         path.
@@ -1313,19 +1296,19 @@
          * @param {Highcharts.PositionObject} end
          *        Ending coordinate, object with x/y props.
          *
-         * @param {object} options
+         * @param {Object} options
          *        Options for the algorithm:
          *        - chartObstacles: Array of chart obstacles to avoid
          *        - startDirectionX: Optional. True if starting in the X direction.
          *          If not provided, the algorithm starts in the direction that is
          *          the furthest between start/end.
          *
-         * @return {object}
+         * @return {Object}
          *         An object with the SVG path in Array form as accepted by the SVG
          *         renderer, as well as an array of new obstacles making up this
          *         path.
          */
-        var simpleConnect = extend(function (start,
+        var simpleConnect = function (start,
             end,
             options) {
                 var segments = [],
@@ -1430,9 +1413,8 @@
                 path: pathFromSegments(segments),
                 obstacles: segments
             };
-        }, {
-            requiresObstacles: true
-        });
+        };
+        simpleConnect.requiresObstacles = true;
         /**
          * Find a path from a starting coordinate to an ending coordinate, taking
          * obstacles into consideration. Might not always find the optimal path,
@@ -1446,7 +1428,7 @@
          * @param {Highcharts.PositionObject} end
          *        Ending coordinate, object with x/y props.
          *
-         * @param {object} options
+         * @param {Object} options
          *        Options for the algorithm.
          *        - chartObstacles:  Array of chart obstacles to avoid
          *        - lineObstacles:   Array of line obstacles to jump over
@@ -1458,12 +1440,12 @@
          *                           direction that is the furthest between
          *                           start/end.
          *
-         * @return {object}
+         * @return {Object}
          *         An object with the SVG path in Array form as accepted by the SVG
          *         renderer, as well as an array of new obstacles making up this
          *         path.
          */
-        var fastAvoid = extend(function (start,
+        var fastAvoid = function (start,
             end,
             options) {
                 /*
@@ -1593,19 +1575,19 @@
              * @private
              * @function
              *
-             * @param {object} obstacle
+             * @param {Object} obstacle
              *        Obstacle to dodge/escape.
              *
-             * @param {object} fromPoint
+             * @param {Object} fromPoint
              *        Point with x/y props that's dodging/escaping.
              *
-             * @param {object} toPoint
+             * @param {Object} toPoint
              *        Goal point.
              *
              * @param {boolean} dirIsX
              *        Dodge in X dimension.
              *
-             * @param {object} bounds
+             * @param {Object} bounds
              *        Hard and soft boundaries.
              *
              * @return {boolean}
@@ -1840,9 +1822,8 @@
                 path: pathFromSegments(segments),
                 obstacles: segments
             };
-        }, {
-            requiresObstacles: true
-        });
+        };
+        fastAvoid.requiresObstacles = true;
         // Define the available pathfinding algorithms.
         // Algorithms take up to 3 arguments: starting point, ending point, and an
         // options object.
@@ -1854,7 +1835,7 @@
 
         return algorithms;
     });
-    _registerModule(_modules, 'Gantt/Pathfinder.js', [_modules['Gantt/Connection.js'], _modules['Core/Chart/Chart.js'], _modules['Core/Globals.js'], _modules['Core/Options.js'], _modules['Core/Series/Point.js'], _modules['Core/Utilities.js'], _modules['Gantt/PathfinderAlgorithms.js']], function (Connection, Chart, H, O, Point, U, pathfinderAlgorithms) {
+    _registerModule(_modules, 'Gantt/Pathfinder.js', [_modules['Gantt/Connection.js'], _modules['Core/Chart/Chart.js'], _modules['Core/Globals.js'], _modules['Core/DefaultOptions.js'], _modules['Core/Series/Point.js'], _modules['Core/Utilities.js'], _modules['Gantt/PathfinderAlgorithms.js']], function (Connection, Chart, H, D, Point, U, pathfinderAlgorithms) {
         /* *
          *
          *  (c) 2016 Highsoft AS
@@ -1888,7 +1869,7 @@
          * @typedef {"fastAvoid"|"simpleConnect"|"straight"|string} Highcharts.PathfinderTypeValue
          */
         ''; // detach doclets above
-        var defaultOptions = O.defaultOptions;
+        var defaultOptions = D.defaultOptions;
         var addEvent = U.addEvent,
             defined = U.defined,
             error = U.error,
@@ -2170,10 +2151,10 @@
             // Prefer using shapeArgs (columns)
             if (shapeArgs) {
                 return {
-                    xMin: shapeArgs.x,
-                    xMax: shapeArgs.x + shapeArgs.width,
-                    yMin: shapeArgs.y,
-                    yMax: shapeArgs.y + shapeArgs.height
+                    xMin: shapeArgs.x || 0,
+                    xMax: (shapeArgs.x || 0) + (shapeArgs.width || 0),
+                    yMin: shapeArgs.y || 0,
+                    yMax: (shapeArgs.y || 0) + (shapeArgs.height || 0)
                 };
             }
             // Otherwise use plotX/plotY and bb
@@ -2318,7 +2299,8 @@
                             // For Gantt series the connect could be
                             // defined as a dependency
                             if (ganttPointOptions && ganttPointOptions.dependency) {
-                                ganttPointOptions.connect = ganttPointOptions.dependency;
+                                ganttPointOptions.connect = ganttPointOptions
+                                    .dependency;
                             }
                             var to,
                                 connects = (point.options &&
@@ -2345,7 +2327,7 @@
                 });
                 // Clear connections that should not be updated, and move old info over
                 // to new connections.
-                for (var j = 0, k, found, lenOld = oldConnections.length, lenNew = pathfinder.connections.length; j < lenOld; ++j) {
+                for (var j = 0, k = void 0, found = void 0, lenOld = oldConnections.length, lenNew = pathfinder.connections.length; j < lenOld; ++j) {
                     found = false;
                     for (k = 0; k < lenNew; ++k) {
                         if (oldConnections[j].fromPoint ===
@@ -2420,7 +2402,7 @@
              *
              * @function Highcharts.Pathfinder#getChartObstacles
              *
-             * @param {object} options
+             * @param {Object} options
              *        Options for the calculation. Currenlty only
              *        options.algorithmMargin.
              *
@@ -2435,7 +2417,7 @@
                     calculatedMargin;
                 for (var i = 0, sLen = series.length; i < sLen; ++i) {
                     if (series[i].visible && !series[i].options.isInternal) {
-                        for (var j = 0, pLen = series[i].points.length, bb, point; j < pLen; ++j) {
+                        for (var j = 0, pLen = series[i].points.length, bb = void 0, point = void 0; j < pLen; ++j) {
                             point = series[i].points[j];
                             if (point.visible) {
                                 bb = getPointBB(point);
@@ -2479,7 +2461,7 @@
              * @param {Array<object>} obstacles
              *        An array of obstacles to inspect.
              *
-             * @return {object}
+             * @return {Object}
              *         The calculated metrics, as an object with maxHeight and maxWidth
              *         properties.
              */
@@ -2609,11 +2591,11 @@
              *        The radius of the marker, to calculate the additional distance to
              *        the center of the marker.
              *
-             * @param {object} anchor
+             * @param {Object} anchor
              *        The anchor point of the path and marker as an object with x/y
              *        properties.
              *
-             * @return {object}
+             * @return {Object}
              *         The marker vector as an object with x/y properties.
              */
             getMarkerVector: function (radians, markerRadius, anchor) {
@@ -2634,7 +2616,6 @@
                         x: rectHorizontalCenter,
                         y: rectVerticalCenter
                     },
-                    markerPoint = {},
                     xFactor = 1,
                     yFactor = 1;
                 while (theta < -Math.PI) {
@@ -2677,9 +2658,10 @@
                 if (anchor.y !== rectVerticalCenter) {
                     edgePoint.y = anchor.y;
                 }
-                markerPoint.x = edgePoint.x + (markerRadius * Math.cos(theta));
-                markerPoint.y = edgePoint.y - (markerRadius * Math.sin(theta));
-                return markerPoint;
+                return {
+                    x: edgePoint.x + (markerRadius * Math.cos(theta)),
+                    y: edgePoint.y - (markerRadius * Math.sin(theta))
+                };
             }
         });
         /**

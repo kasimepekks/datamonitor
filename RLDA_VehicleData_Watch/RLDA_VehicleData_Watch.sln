@@ -17,11 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IBLL", "..\IBLL\IBLL.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "..\BLL\BLL.csproj", "{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "..\ConsoleTest\ConsoleTest.csproj", "{C2718AC0-CBC8-4B7E-9EC6-5072B05CA4D1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleforDataWatchCalculation", "..\..\ConsoleforDataWatchCalculation\data-watch-calculation_-console\ConsoleforDataWatchCalculation.csproj", "{03A8DA9F-6250-4702-AFE9-6C480FF6D7F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionRecognition", "..\ConditionRecognition\ConditionRecognition.csproj", "{97149085-5182-4E2D-B77F-EB0D2CAB7A70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionRecognition", "..\ConditionRecognition\ConditionRecognition.csproj", "{97149085-5182-4E2D-B77F-EB0D2CAB7A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,14 +53,6 @@ Global
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2718AC0-CBC8-4B7E-9EC6-5072B05CA4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2718AC0-CBC8-4B7E-9EC6-5072B05CA4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2718AC0-CBC8-4B7E-9EC6-5072B05CA4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2718AC0-CBC8-4B7E-9EC6-5072B05CA4D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03A8DA9F-6250-4702-AFE9-6C480FF6D7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03A8DA9F-6250-4702-AFE9-6C480FF6D7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03A8DA9F-6250-4702-AFE9-6C480FF6D7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03A8DA9F-6250-4702-AFE9-6C480FF6D7F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Release|Any CPU.ActiveCfg = Release|Any CPU

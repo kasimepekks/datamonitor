@@ -21,7 +21,7 @@ namespace DAL.SH_ADF0979DAL
 
         }
        
-        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath)
+        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath,string vehicleid)
         {
             FileInfo[] filelist = FileOperator.Isfileexist(filepath);//获得指定文件下的所有csv文件
             Encoding encoding = Encoding.Default;
@@ -111,8 +111,8 @@ namespace DAL.SH_ADF0979DAL
 
                                     SatictisAnalysisdataWft entity = new SatictisAnalysisdataWft();
 
-                                    entity.Id = MyConfigforVehicleID.VehicleID + "-" + name + "-WFT-" + l.ToString();
-                                    entity.VehicleId = MyConfigforVehicleID.VehicleID;
+                                    entity.Id = vehicleid + "-" + name + "-WFT-" + l.ToString();
+                                    entity.VehicleId = vehicleid;
                                     entity.Filename = name;
                                     entity.Datadate = Convert.ToDateTime(datetime);
                                     entity.Chantitle = tableHead[l + 1];
@@ -172,7 +172,7 @@ namespace DAL.SH_ADF0979DAL
                    ).Select(x => new
                    {
                        Id = x.Min(a => a.Id),
-                       VehicleID = MyConfigforVehicleID.VehicleID,
+                       VehicleID = vehicleid,
                        Filename = x.Min(a => a.Filename),
                        Datadate = x.Min(a => a.Datadate),
                        x.Key.Chantitle,

@@ -11,10 +11,10 @@ namespace Tools.ListOperation
         /// 把参数的数据小于zero的清零，zero可在配置文件中修改
         /// </summary>
     
-        public static void DoZero( List<double> brakelist)
+        public static void DoZero( List<double> brakelist, VehicleIDPara vehicleIDPara)
         {
           
-            double brakezero = MyConfigforVehicleID.BrakeZeroStandard;
+            double brakezero = vehicleIDPara.BrakeZeroStandard;
             
             for (int i = 0; i < brakelist.Count; i++)
             {

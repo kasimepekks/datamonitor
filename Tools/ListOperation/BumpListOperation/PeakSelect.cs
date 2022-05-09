@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Tools.MyConfig;
 
 namespace Tools.ListOperation
 {
   public static  class PeakSelect
     {
         /// <summary>
-        /// 取在速度小于45的4个轮心的波峰值并返回
+        /// 取在速度小于配置文件里的速度参数的4个轮心的波峰值并返回
         /// </summary>
         /// <param name="WFT_AZ_LFList"></param>
         /// <param name="WFT_AZ_RFList"></param>
@@ -20,7 +21,7 @@ namespace Tools.ListOperation
         /// <param name="WFT_AZ_RFPeakTimeList"></param>
         /// <param name="WFT_AZ_LRPeakTimeList"></param>
         /// <param name="speedpeaklist"></param>
-        public static void GetPeak(List<double> WFT_AZ_LFList, List<double> WFT_AZ_RFList, List<double> WFT_AZ_LRList, List<double> speedlist,out List<double> WFT_AZ_LFPeakList, out List<double> WFT_AZ_RFPeakList, out List<double> WFT_AZ_LRPeakList, out List<int> WFT_AZ_LFPeakTimeList, out List<int> WFT_AZ_RFPeakTimeList, out List<int> WFT_AZ_LRPeakTimeList, out List<double> speedpeaklist)
+        public static void GetPeak(List<double> WFT_AZ_LFList, List<double> WFT_AZ_RFList, List<double> WFT_AZ_LRList, List<double> speedlist, VehicleIDPara vehicleIDPara, out List<double> WFT_AZ_LFPeakList, out List<double> WFT_AZ_RFPeakList, out List<double> WFT_AZ_LRPeakList, out List<int> WFT_AZ_LFPeakTimeList, out List<int> WFT_AZ_RFPeakTimeList, out List<int> WFT_AZ_LRPeakTimeList, out List<double> speedpeaklist)
         {
             List<double> _WFT_AZ_LFPeakList = new List<double>();
             List<double> _WFT_AZ_RFPeakList = new List<double>();
@@ -31,7 +32,7 @@ namespace Tools.ListOperation
             List<double> _speedpeaklist = new List<double>();
             for (int i = 0; i < speedlist.Count - 2; i++)
             {
-                if (speedlist[i + 1] < 50)
+                if (speedlist[i + 1] < vehicleIDPara.BumpMaxSpeed)
                 {
                     if (WFT_AZ_LFList[i] < WFT_AZ_LFList[i + 1] && WFT_AZ_LFList[i + 1] > WFT_AZ_LFList[i + 2])
                     {

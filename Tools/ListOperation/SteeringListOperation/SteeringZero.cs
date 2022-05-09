@@ -11,14 +11,14 @@ namespace Tools.ListOperation
         /// 把参数的数据小于zero的清零，zero可在配置文件中修改
         /// </summary>
      
-        public static void DoZero( List<double> Gyro_Z_list)
+        public static void DoZero( List<double> Gyro_Z_list, VehicleIDPara vehicleIDPara)
         {
           
-            double Steeringzero = MyConfigforVehicleID.SteeringZeroStandard;
+            double Steeringzero = vehicleIDPara.SteeringZeroStandard;
             
             for (int i = 0; i < Gyro_Z_list.Count; i++)
             {
-                if (Gyro_Z_list[i] <= Steeringzero && Gyro_Z_list[i] >= -Steeringzero)
+                if (Gyro_Z_list[i] <= Steeringzero && Gyro_Z_list[i] >= Steeringzero*(-1))
                 {
                     Gyro_Z_list[i] = 0;
                 }

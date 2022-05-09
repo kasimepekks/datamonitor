@@ -22,7 +22,7 @@ namespace Tools.ListOperation.SteeringListOperation
         /// <param name="Gyro_Z_list"></param>
         /// <param name="Acc_Y_FM_list"></param>
         /// <returns></returns>
-        public static List<double> GetSteering(List<double> Gyro_Z_list, List<double> Acc_Y_FM_list)
+        public static List<double> GetSteering(List<double> Gyro_Z_list, List<double> Acc_Y_FM_list, VehicleIDPara vehicleIDPara)
         {
             List<double> SteeringAccList = new List<double>();
             int start = 0, end;//识别转向开始点数和结束点数
@@ -44,7 +44,7 @@ namespace Tools.ListOperation.SteeringListOperation
                         SteeringAccTemp.Add(Acc_Y_FM_list[j]);
                     }
                     //保证转向点数大于配置里的参数才算做转向
-                    if (SteeringAccTemp.Count > MyConfigforVehicleID.SteeringLastingPoints)
+                    if (SteeringAccTemp.Count > vehicleIDPara.SteeringLastingPoints)
                     {
                         //这里选取最大值和最小值之间绝对值最大的那个数
                         SteeringAccList.Add(Math.Abs(SteeringAccTemp.Max())> Math.Abs(SteeringAccTemp.Min())? SteeringAccTemp.Max(): SteeringAccTemp.Min());
@@ -65,7 +65,7 @@ namespace Tools.ListOperation.SteeringListOperation
         /// </summary>
         /// <param name="StrgWhlAngList"></param>
         /// <returns></returns>
-        public static List<SteeringParemeters> GetSteering(List<double> StrgWhlAngList,List<double> AngularAccList, List<double> SpeedList, List<double> SteeringStrenthList)
+        public static List<SteeringParemeters> GetSteering(List<double> StrgWhlAngList,List<double> AngularAccList, List<double> SpeedList, List<double> SteeringStrenthList, VehicleIDPara vehicleIDPara)
         {
             List<SteeringParemeters> SteeringAngleList = new List<SteeringParemeters>();
             int start = 0, end;//识别转向开始点数和结束点数
@@ -94,7 +94,7 @@ namespace Tools.ListOperation.SteeringListOperation
                         
                     }
                     //保证转向点数大于配置里的参数才算做转向，防止有毛刺信号
-                    if (SteeringAngelTemp.Count > MyConfigforVehicleID.SteeringLastingPoints)
+                    if (SteeringAngelTemp.Count > vehicleIDPara.SteeringLastingPoints)
                     {
                         SteeringParemeters steeringParemeters;
                         //这里选取最大值和最小值之间绝对值最大的那个数

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Tools.MyConfig;
 
 namespace BLL.SH_ADF0979BLL
 {
@@ -27,9 +28,9 @@ namespace BLL.SH_ADF0979BLL
         }
        
 
-        public async Task<bool> ReadandMergeACCDataperHalfHour(string filepath)
+        public async Task<bool> ReadandMergeACCDataperHalfHour(string filepath,string vehicleid, VehicleIDPara vehicleIDPara)
         {
-            return await _AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(filepath);
+            return await _AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(filepath, vehicleid, vehicleIDPara);
         }
     }
 }

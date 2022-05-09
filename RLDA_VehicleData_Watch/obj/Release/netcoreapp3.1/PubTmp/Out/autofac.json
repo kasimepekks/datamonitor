@@ -11,16 +11,7 @@
       "instanceScope": "per-lifetimescope", //
       "injectProperties": true //是否支持属性注入
     },
-    //{
-    //  "type": "DAL.SH_ADF0979.Statistic_ACC_DAL,DAL", //接口的实现 全名称
-    //  "services": [
-    //    {
-    //      "type": "IDAL.SH_ADF0979IDAL.IStatistic_ACC_IDAL,IDAL" // 接口的全名称
-    //    }
-    //  ],
-    //  "instanceScope": "per-lifetimescope", //
-    //  "injectProperties": true //是否支持属性注入
-    //},
+
     {
       "type": "DAL.SH_ADF0979.RealTime_WFT_DAL,DAL", //接口的实现 全名称
       "services": [
@@ -31,16 +22,7 @@
       "instanceScope": "per-lifetimescope", //
       "injectProperties": true //是否支持属性注入
     },
-    //{
-    //  "type": "DAL.SH_ADF0979.Statistic_WFT_DAL,DAL", //接口的实现 全名称
-    //  "services": [
-    //    {
-    //      "type": "IDAL.SH_ADF0979IDAL.IStatistic_WFT_IDAL,IDAL" // 接口的全名称
-    //    }
-    //  ],
-    //  "instanceScope": "per-lifetimescope", //
-    //  "injectProperties": true //是否支持属性注入
-    //},
+
     {
       "type": "DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL,DAL", //接口的实现 全名称
       "services": [
@@ -95,6 +77,39 @@
     },
 
     {
+      "type": "DAL.SH_ADF0979DAL.ThrottleDistribution_DAL,DAL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IDAL.SH_ADF0979IDAL.IThrottleDistribution_IDAL,IDAL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "DAL.SH_ADF0979DAL.SteeringDistribution_DAL,DAL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IDAL.SH_ADF0979IDAL.ISteeringDistribution_IDAL,IDAL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "DAL.SH_ADF0979DAL.GPSRecord_DAL,DAL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IDAL.SH_ADF0979IDAL.IGPSRecord_IDAL,IDAL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
       "type": "BLL.SH_ADF0979BLL.RealTime_ACC_BLL,BLL", //接口的实现 全名称
       "services": [
         {
@@ -104,16 +119,7 @@
       "instanceScope": "per-lifetimescope", //单例生命周期
       "injectProperties": true //是否支持属性注入
     },
-    //{
-    //  "type": "BLL.SH_ADF0979BLL.Statistic_ACC_BLL,BLL", //接口的实现 全名称
-    //  "services": [
-    //    {
-    //      "type": "IBLL.SH_ADF0979IBLL.IStatistic_ACC_IBLL,IBLL" // 接口的全名称
-    //    }
-    //  ],
-    //  "instanceScope": "per-lifetimescope", //单例生命周期
-    //  "injectProperties": true //是否支持属性注入
-    //},
+
     {
       "type": "BLL.SH_ADF0979BLL.RealTime_WFT_BLL,BLL", //接口的实现 全名称
       "services": [
@@ -124,16 +130,7 @@
       "instanceScope": "per-lifetimescope", //单例生命周期
       "injectProperties": true //是否支持属性注入
     },
-    //{
-    //  "type": "BLL.SH_ADF0979BLL.Statistic_WFT_BLL,BLL", //接口的实现 全名称
-    //  "services": [
-    //    {
-    //      "type": "IBLL.SH_ADF0979IBLL.IStatistic_WFT_IBLL,IBLL" // 接口的全名称
-    //    }
-    //  ],
-    //  "instanceScope": "per-lifetimescope", //单例生命周期
-    //  "injectProperties": true //是否支持属性注入
-    //},
+
     {
       "type": "BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL,BLL", //接口的实现 全名称
       "services": [
@@ -188,15 +185,51 @@
     },
 
     {
-      "type": "MysqlforDataWatch.datawatchContext,MysqlforDataWatch", //接口的实现 全名称
+      "type": "BLL.SH_ADF0979BLL.ThrottleDistribution_BLL,BLL", //接口的实现 全名称
       "services": [
         {
-          "type": "Microsoft.EntityFrameworkCore.DbContext,Microsoft.EntityFrameworkCore" // 接口的全名称
+          "type": "IBLL.SH_ADF0979IBLL.IThrottleDistribution_IBLL,IBLL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //单例生命周期
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "BLL.SH_ADF0979BLL.SteeringDistribution_BLL,BLL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IBLL.SH_ADF0979IBLL.ISteeringDistribution_IBLL,IBLL" // 接口的全名称
+        }
+      ],
+      "instanceScope": "per-lifetimescope", //单例生命周期
+      "injectProperties": true //是否支持属性注入
+    },
+
+    {
+      "type": "BLL.SH_ADF0979BLL.GPSRecord_BLL,BLL", //接口的实现 全名称
+      "services": [
+        {
+          "type": "IBLL.SH_ADF0979IBLL.IGPSRecord_IBLL,IBLL" // 接口的全名称
         }
       ],
       "instanceScope": "per-lifetimescope", //单例生命周期
       "injectProperties": true //是否支持属性注入
     }
+
+
+
+
+    //{
+    //  "type": "MysqlforDataWatch.datawatchContext,MysqlforDataWatch", //接口的实现 全名称
+    //  "services": [
+    //    {
+    //      "type": "Microsoft.EntityFrameworkCore.DbContext,Microsoft.EntityFrameworkCore" // 接口的全名称
+    //    }
+    //  ],
+    //  "instanceScope": "per-lifetimescope", //单例生命周期
+    //  "injectProperties": true //是否支持属性注入
+    //}
 
   ]
 }

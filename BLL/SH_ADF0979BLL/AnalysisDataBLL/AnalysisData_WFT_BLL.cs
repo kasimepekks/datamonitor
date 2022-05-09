@@ -25,9 +25,9 @@ namespace BLL.SH_ADF0979BLL
             base.CurrentDal = this._AnalysisData_WFT_DAL;
         }
        
-        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath)
+        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath, string vehicleid)
         {
-            return await _AnalysisData_WFT_DAL.ReadandMergeWFTDataperHalfHour(filepath);
+            return await _AnalysisData_WFT_DAL.ReadandMergeWFTDataperHalfHour(filepath, vehicleid);
         }
 
 

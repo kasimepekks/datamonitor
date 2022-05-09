@@ -13,5 +13,6 @@ namespace IBLL.SH_ADF0979IBLL
         Task<IQueryable> LoadSpeedDistribution(DateTime sd, DateTime ed, string vehicleid);
         Task<IQueryable> LoadSpeedDistributionperday(DateTime sd, DateTime ed, string vehicleid);
         Task<IQueryable> LoadSpeedDistributionperhour(DateTime sd, DateTime ed, string vehicleid);
+        Task<List<double>> LoadTextRecord(DateTime sd, DateTime ed, string vehicleid);
     }
 }

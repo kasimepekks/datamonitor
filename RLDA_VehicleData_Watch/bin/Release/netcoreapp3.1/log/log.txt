@@ -1,20 +1,4 @@
-2021-09-17 10:01:23,436 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2021-09-17 10:01:23,456 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2021-09-17 10:01:23,460 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2021-09-17 10:01:23,464 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
-2021-09-17 12:04:35,571 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2021-09-17 12:04:35,589 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2021-09-17 12:04:35,593 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2021-09-17 12:04:35,602 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
-2021-09-17 12:04:43,841 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
-2021-09-17 12:04:44,198 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
-2021-09-17 12:08:38,229 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2021-09-17 12:08:38,249 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2021-09-17 12:08:38,255 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2021-09-17 12:08:38,259 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
-2021-09-17 12:08:46,040 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
-2021-09-17 12:08:46,312 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了监控页面
-2021-09-17 12:10:57,439 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2021-09-17 12:10:57,456 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2021-09-17 12:10:57,461 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2021-09-17 12:10:57,469 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\RLDA_VehicleData_Watch
+2022-05-02 20:48:21,216 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5000
+2022-05-02 20:48:21,224 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1
