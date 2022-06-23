@@ -1,0 +1,65 @@
+2022-05-25 14:34:04,921 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 14:34:04,944 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 14:34:04,950 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 14:34:04,952 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-25 14:35:07,527 [10] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 14:35:07
+2022-05-25 14:51:12,993 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 14:51:13,008 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 14:51:13,011 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 14:51:13,014 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-25 14:51:33,378 [6] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 14:51:33
+2022-05-25 15:09:50,222 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 15:09:50,237 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 15:09:50,240 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 15:09:50,242 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-25 15:10:18,217 [15] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 15:10:18
+2022-05-25 15:38:26,664 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 15:38:26,687 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 15:38:26,689 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 15:38:26,692 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-25 15:38:37,903 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 15:38:37
+2022-05-25 15:39:07,212 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_14的input数据手动导入完成时间2022-05-25 15:39:07
+2022-05-25 15:39:07,227 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_14的result数据还没有上传完毕
+2022-05-25 19:27:03,513 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 19:27:03,532 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 19:27:03,535 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 19:27:03,537 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-25 19:27:12,998 [5] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2022-05-25 19:27:24,321 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 19:27:24
+2022-05-25 19:27:44,183 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_14的input数据手动导入完成时间2022-05-25 19:27:44
+2022-05-25 19:27:44,211 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_14的result数据还没有上传完毕
+2022-05-25 19:29:59,281 [37] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 19:29:59
+2022-05-25 19:41:52,754 [37] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.AggregateException: One or more errors occurred. (Could not find file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\04_14\2022_01_17-09_31_00-1-F.csv'.)
+ ---> System.IO.FileNotFoundException: Could not find file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\04_14\2022_01_17-09_31_00-1-F.csv'.
+File name: 'D:\JianGuoYun\我的坚果云\IVHM_data\input\04_14\2022_01_17-09_31_00-1-F.csv'
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in D:\VS_Project\SourceCode\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 119
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in D:\VS_Project\SourceCode\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 45
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in D:\VS_Project\SourceCode\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 68错误发生在2022-05-25 19-41-52
+2022-05-25 19:42:28,975 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-05-25 19:42:28
+2022-05-25 23:17:00,718 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-25 23:17:00,767 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-25 23:17:00,771 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-25 23:17:00,780 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch

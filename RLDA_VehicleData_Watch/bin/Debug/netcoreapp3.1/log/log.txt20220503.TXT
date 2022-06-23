@@ -1,0 +1,34 @@
+2022-05-03 10:10:09,617 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-03 10:10:09,630 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-03 10:10:09,637 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-03 10:10:09,640 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-03 10:30:00,181 [95] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-03 10:30:00,189 [95] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-03 10:30:00,196 [95] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 11:00:00,158 [137] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 11:30:00,181 [132] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 12:00:00,168 [158] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 12:30:00,159 [132] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 13:00:00,158 [82] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 16:15:14,149 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-03 16:15:14,168 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-03 16:15:14,172 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-03 16:15:14,175 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-03 16:30:00,691 [55] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 16:30:00,729 [49] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-03 16:30:00,745 [49] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-03 17:00:00,638 [28] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 17:30:00,635 [39] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 18:00:00,639 [63] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 18:30:00,371 [164] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 19:00:00,367 [134] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-03 19:32:11,135 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-03 19:32:11,152 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-03 19:32:11,155 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-03 19:32:11,157 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-03 19:32:41,298 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-03 19:32:41
+2022-05-03 19:32:47,125 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据手动导入完成时间2022-05-03 19:32:47
+2022-05-03 19:32:47,129 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的result数据还没有上传完毕
+2022-05-03 20:00:00,813 [69] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-03 20:00:00,816 [69] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-03 20:00:00,829 [69] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979

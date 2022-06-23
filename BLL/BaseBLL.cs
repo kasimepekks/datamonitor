@@ -31,6 +31,11 @@ namespace BLL
             CurrentDal.DeleteEntity(entity);
             return CurrentDal.SaveChanges();
         }
+        public bool DeleteAllEntity(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda)
+        {
+            CurrentDal.DeleteAllEntity(whereLambda);
+            return CurrentDal.SaveChanges();
+        }
         public bool EditEntity(T entity)
         {
             CurrentDal.EditEntity(entity);

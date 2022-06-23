@@ -1,4 +1,133 @@
-2022-05-02 20:48:21,216 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5000
-2022-05-02 20:48:21,224 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
-2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1
+2022-05-20 00:41:48,350 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 00:41:48,363 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 00:41:48,366 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 00:41:48,373 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 00:42:08,468 [11] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 00:42:08
+2022-05-20 00:42:09,153 [11] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 00:42:09
+2022-05-20 00:42:09,158 [11] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 00:46:46,382 [27] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 00:46:46
+2022-05-20 00:46:47,753 [27] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 00:46:47
+2022-05-20 00:46:47,758 [27] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 10:20:56,478 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:20:56,496 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:20:56,499 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:20:56,508 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:23:00,526 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:23:00,544 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:23:00,548 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:23:00,551 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:29:26,310 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:29:26,328 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:29:26,332 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:29:26,339 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:30:33,147 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 10:30:33
+2022-05-20 10:30:33,665 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 10:30:33
+2022-05-20 10:30:33,671 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 10:51:04,696 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:51:04,711 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:51:04,714 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:51:04,717 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:52:29,670 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 10:52:29
+2022-05-20 10:52:29,958 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 10:52:29
+2022-05-20 10:52:29,962 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 10:54:13,232 [34] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 10:54:13
+2022-05-20 10:54:13,701 [34] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 10:54:13
+2022-05-20 10:54:13,705 [34] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 10:57:27,886 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:57:27,903 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:57:27,906 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:57:27,909 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:57:48,891 [10] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 10:57:48
+2022-05-20 10:57:49,186 [10] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 10:57:49
+2022-05-20 10:57:49,193 [10] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 10:59:35,084 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 10:59:35,102 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 10:59:35,105 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 10:59:35,108 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 10:59:54,579 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 10:59:54
+2022-05-20 10:59:54,977 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.AggregateException: One or more errors occurred. (Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index'))
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at Tools.ListOperation.BrakeListOperation.BrakeReconize.GetBrake(List`1 brakelist, List`1 Acc_X_FM_list, List`1 speedlist, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\Tools\ListOperation\BrakeListOperation\BrakeReconize.cs:line 26
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 511
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 784
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 68错误发生在2022-05-20 10-59-54
+2022-05-20 11:02:51,463 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 11:02:51,475 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 11:02:51,477 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 11:02:51,484 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 11:03:12,426 [9] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 11:03:12
+2022-05-20 11:03:13,041 [9] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.AggregateException: One or more errors occurred. (Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index'))
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at Tools.ListOperation.BrakeListOperation.BrakeReconize.GetBrake(List`1 brakelist, List`1 Acc_X_FM_list, List`1 speedlist, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\Tools\ListOperation\BrakeListOperation\BrakeReconize.cs:line 26
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 511
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 784
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 68错误发生在2022-05-20 11-03-13
+2022-05-20 11:07:15,385 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 11:07:15,402 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 11:07:15,405 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 11:07:15,408 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 11:07:35,903 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 11:07:35
+2022-05-20 11:07:36,181 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.AggregateException: One or more errors occurred. (Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index'))
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at Tools.ListOperation.BrakeListOperation.BrakeReconize.GetBrake(List`1 brakelist, List`1 Acc_X_FM_list, List`1 speedlist, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\Tools\ListOperation\BrakeListOperation\BrakeReconize.cs:line 26
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 511
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 784
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 68错误发生在2022-05-20 11-07-36
+2022-05-20 11:18:24,228 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 11:18:24,244 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 11:18:24,247 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 11:18:24,279 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 11:19:10,993 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 11:19:10
+2022-05-20 11:19:11,475 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 11:19:11
+2022-05-20 11:19:11,479 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 14:01:46,153 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 14:01:46,203 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 14:01:46,208 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 14:01:46,211 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 14:02:33,767 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 14:02:33
+2022-05-20 14:02:35,373 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 14:02:35
+2022-05-20 14:02:35,395 [14] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 14:18:09,769 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 14:18:09,787 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 14:18:09,791 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 14:18:09,797 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-20 14:19:42,537 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-20 14:19:42
+2022-05-20 14:19:49,292 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-20 14:19:49
+2022-05-20 14:19:49,297 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-20 14:27:03,113 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-20 14:27:03,130 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-20 14:27:03,133 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-20 14:27:03,136 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

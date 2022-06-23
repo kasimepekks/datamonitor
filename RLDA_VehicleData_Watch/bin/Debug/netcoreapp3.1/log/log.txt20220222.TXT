@@ -1,0 +1,48 @@
+2022-02-22 13:10:36,200 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-02-22 13:10:36,217 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-02-22 13:10:36,220 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-02-22 13:10:36,223 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-02-22 15:13:17,013 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-02-22 15:13:17,029 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-02-22 15:13:17,032 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-02-22 15:13:17,039 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-02-22 15:14:44,356 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-02-22 15:14:44,374 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-02-22 15:14:44,383 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-02-22 15:14:44,387 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-02-22 15:22:44,557 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-02-22 15:22:44,569 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-02-22 15:22:44,573 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-02-22 15:22:44,576 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-02-22 15:22:50,286 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_13的input数据还没有上传完毕
+2022-02-22 15:22:50,291 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_27的input数据还没有上传完毕
+2022-02-22 15:22:50,294 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_17的input数据还没有上传完毕
+2022-02-22 15:22:50,297 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_20的input数据还没有上传完毕
+2022-02-22 15:22:50,301 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_13的result数据还没有上传完毕
+2022-02-22 15:22:50,304 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_27的result数据还没有上传完毕
+2022-02-22 15:22:50,308 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_25的result数据还没有上传完毕
+2022-02-22 15:22:50,311 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_26的result数据还没有上传完毕
+2022-02-22 15:22:50,314 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_29的result数据还没有上传完毕
+2022-02-22 15:22:50,318 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_10的result数据还没有上传完毕
+2022-02-22 15:22:50,321 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_13的result数据还没有上传完毕
+2022-02-22 15:22:50,327 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_14的result数据还没有上传完毕
+2022-02-22 15:22:50,331 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_15的result数据还没有上传完毕
+2022-02-22 15:22:50,334 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_16的result数据还没有上传完毕
+2022-02-22 15:22:50,339 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_17的result数据还没有上传完毕
+2022-02-22 15:22:50,343 [7] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_20的result数据还没有上传完毕
+2022-02-22 15:23:00,265 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_13的input数据还没有上传完毕
+2022-02-22 15:23:00,269 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_27的input数据还没有上传完毕
+2022-02-22 15:23:00,274 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_17的input数据还没有上传完毕
+2022-02-22 15:23:00,278 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_20的input数据还没有上传完毕
+2022-02-22 15:23:00,283 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_13的result数据还没有上传完毕
+2022-02-22 15:23:00,289 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为01_27的result数据还没有上传完毕
+2022-02-22 15:23:00,294 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_25的result数据还没有上传完毕
+2022-02-22 15:23:00,299 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_26的result数据还没有上传完毕
+2022-02-22 15:23:00,306 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为11_29的result数据还没有上传完毕
+2022-02-22 15:23:00,312 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_10的result数据还没有上传完毕
+2022-02-22 15:23:00,315 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_13的result数据还没有上传完毕
+2022-02-22 15:23:00,343 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_14的result数据还没有上传完毕
+2022-02-22 15:23:00,349 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_15的result数据还没有上传完毕
+2022-02-22 15:23:00,357 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_16的result数据还没有上传完毕
+2022-02-22 15:23:00,364 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_17的result数据还没有上传完毕
+2022-02-22 15:23:00,371 [15] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为12_20的result数据还没有上传完毕

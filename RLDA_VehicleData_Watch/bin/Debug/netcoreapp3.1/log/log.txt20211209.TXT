@@ -1,0 +1,70 @@
+2021-12-09 14:05:25,643 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 14:05:25,657 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 14:05:25,661 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 14:05:25,668 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 14:05:34,092 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 14:06:00,789 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46.csv已被监控发现
+2021-12-09 14:11:35,597 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 14:11:35,616 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 14:11:35,619 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 14:11:35,623 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 14:11:43,357 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 14:11:49,956 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 14:11:50,907 [13] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据
+2021-12-09 14:12:42,371 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21HOV054的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 14:13:07,684 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_12_06-15_40_19-758-F - 副本.csv已被监控发现
+2021-12-09 14:13:07,687 [21] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_12_06-15_40_19-758-F - 副本.csv已被监控发现
+2021-12-09 14:13:08,186 [19] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_12_06-15_40_19-758-F - 副本.csv已传送数据
+2021-12-09 14:13:08,214 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_12_06-15_40_19-758-F - 副本.csv已传送数据
+2021-12-09 14:23:05,867 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 14:23:05,882 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 14:23:05,889 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 14:23:05,891 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 14:23:13,843 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 14:23:44,107 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46.csv已被监控发现
+2021-12-09 14:23:45,069 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46.csv已传送数据
+2021-12-09 14:27:26,982 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 14:27:26,999 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 14:27:27,002 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 14:27:27,006 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 14:27:33,495 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 14:27:39,269 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 14:27:40,184 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据
+2021-12-09 14:37:21,860 [41] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - result\2021_12_08-07_38_20-6-F.csv已传送数据
+2021-12-09 15:13:40,721 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:13:40,739 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:13:40,743 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:13:40,752 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:13:50,093 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 15:14:06,276 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 15:14:07,225 [15] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据
+2021-12-09 15:19:10,230 [18] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本 - 副本.csv已被监控发现
+2021-12-09 15:22:34,124 [20] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本 - 副本.csv已传送数据
+2021-12-09 15:22:49,054 [41] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 15:22:50,508 [20] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据
+2021-12-09 15:30:44,173 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:30:44,203 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:30:44,213 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:30:44,216 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:30:58,394 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:30:58,411 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:30:58,414 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:30:58,418 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:31:53,785 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:31:53,809 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:31:53,812 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:31:53,816 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:33:42,707 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:33:42,735 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:33:42,740 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:33:42,751 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:33:51,551 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 15:34:17,484 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 15:34:18,429 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据
+2021-12-09 15:39:26,662 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-09 15:39:26,681 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-09 15:39:26,685 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-09 15:39:26,694 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-09 15:39:35,770 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-09 15:39:41,749 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已被监控发现
+2021-12-09 15:39:42,754 [7] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46 - 副本.csv已传送数据

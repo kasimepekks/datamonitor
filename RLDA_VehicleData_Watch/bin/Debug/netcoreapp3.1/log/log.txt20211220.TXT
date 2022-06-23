@@ -1,0 +1,96 @@
+2021-12-20 09:03:05,999 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:03:06,013 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:03:06,016 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:03:06,019 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:03:39,111 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminWR-LNlqYhD3pz0FiKU73jQ
+2021-12-20 09:11:03,222 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:11:03,238 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:11:03,243 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:11:03,250 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:11:13,985 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminwIZirmZEW4XMxEfuwLR9ZA
+2021-12-20 09:16:50,483 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:16:50,501 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:16:50,505 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:16:50,512 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:16:59,583 [8] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminbS-_ABmVqqG-D2dsjXULrQ
+2021-12-20 09:17:44,055 [12] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：bS-_ABmVqqG-D2dsjXULrQ
+2021-12-20 09:17:51,191 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Admini_2B0MXEqsAHd3S11hN_xQ
+2021-12-20 09:25:33,776 [40] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：i_2B0MXEqsAHd3S11hN_xQ
+2021-12-20 09:25:34,414 [33] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Adminz3evj7O6t56anycpb61-9Q
+2021-12-20 09:32:26,203 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:32:26,218 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:32:26,220 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:32:26,247 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:32:43,726 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminB8JgyYpcqitxVQ3MmjXbRA
+2021-12-20 09:38:54,530 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:38:54,546 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:38:54,549 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:38:54,552 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:39:02,361 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminU3lShSJWxZOz8RFhwVdOpw
+2021-12-20 09:42:16,067 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:42:16,082 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:42:16,085 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:42:16,088 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:42:24,486 [14] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminsOL8TZcl3EaXqo5yPEegyg
+2021-12-20 09:48:06,584 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:48:06,601 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:48:06,604 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:48:06,607 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:48:14,712 [12] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminxXMyoWufyeYcO2hfkH-Mzw
+2021-12-20 09:49:05,997 [14] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：xXMyoWufyeYcO2hfkH-Mzw
+2021-12-20 09:49:11,572 [40] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminO2elr4QABZjijjDamHaCLQ
+2021-12-20 09:51:00,772 [35] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：O2elr4QABZjijjDamHaCLQ
+2021-12-20 09:58:41,697 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 09:58:41,719 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 09:58:41,723 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 09:58:41,729 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 09:58:50,268 [11] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Admin4e4XjTLhvQRBhoCcnXYn-g
+2021-12-20 10:02:04,467 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 10:02:04,483 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 10:02:04,488 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 10:02:04,492 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 10:02:11,269 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminpivJZAFntwjGMTS209aA3Q
+2021-12-20 10:02:53,861 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：pivJZAFntwjGMTS209aA3Q
+2021-12-20 10:05:52,858 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 10:05:52,874 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 10:05:52,877 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 10:05:52,880 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 10:06:00,222 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminQH5hcE2RDsqrLwsqZx6CKg
+2021-12-20 10:06:15,448 [10] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：QH5hcE2RDsqrLwsqZx6CKg
+2021-12-20 11:02:39,027 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 11:02:39,038 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 11:02:39,042 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 11:02:39,047 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 11:02:53,691 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-20 11:02:53,774 [7] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminTQRAOgc0-F2kZfRR1s-BMQ
+2021-12-20 11:03:19,582 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-964-F - 副本.csv已被监控发现
+2021-12-20 11:03:20,208 [7] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-964-F - 副本.csv已传送数据
+2021-12-20 11:04:43,653 [6] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：TQRAOgc0-F2kZfRR1s-BMQ
+2021-12-20 13:51:25,765 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 13:51:25,781 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 13:51:25,783 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 13:51:25,790 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 13:51:39,420 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-20 13:51:39,491 [9] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdmingpJxbavvob3BM4RQ0JppnA
+2021-12-20 13:51:50,546 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-966-F - 副本.csv已被监控发现
+2021-12-20 13:51:51,256 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-966-F - 副本.csv已传送数据
+2021-12-20 13:52:12,627 [25] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：gpJxbavvob3BM4RQ0JppnA
+2021-12-20 14:29:35,628 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 14:29:35,644 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 14:29:35,647 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 14:29:35,655 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 14:29:55,208 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 14:29:55,223 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 14:29:55,226 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 14:29:55,232 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 15:03:04,075 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-20 15:03:04,087 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-20 15:03:04,090 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-20 15:03:04,121 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-20 15:03:23,264 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-20 15:03:23,371 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminV_3LA4cb1oW_fFL6wT0QMQ
+2021-12-20 15:03:28,416 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-966-F - 副本.csv已被监控发现
+2021-12-20 15:03:29,164 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_17-14_27_42-966-F - 副本.csv已传送数据
+2021-12-20 15:05:16,807 [6] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本.csv已被监控发现
+2021-12-20 15:05:17,645 [25] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本.csv已传送数据
+2021-12-20 15:19:17,115 [73] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：V_3LA4cb1oW_fFL6wT0QMQ

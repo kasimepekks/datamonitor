@@ -81,13 +81,6 @@
                 </li>
 
                 <li class="layui-nav-item">
-                    <a href="">数据计算</a>
-                    <dl class="layui-nav-child" id="dataimport">
-
-                    </dl>
-                </li>
-            
-                <li class="layui-nav-item">
                     <a href="">数据预测</a>
                     <dl class="layui-nav-child" id="dataprediction">
                       
@@ -101,7 +94,18 @@
 
                     </dl>
                 </li>
-                
+                <li class="layui-nav-item" >
+                    <a href="" id="dataimporta">数据导入</a>
+                    <dl class="layui-nav-child" id="dataimport">
+
+                    </dl>
+                </li>
+                <li class="layui-nav-item" >
+                    <a href="" id="datadeletea">数据删除</a>
+                    <dl class="layui-nav-child" id="datadelete">
+
+                    </dl>
+                </li>
             </ul>
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
@@ -130,21 +134,29 @@
 <script>
 
 
-        var element = document.getElementById('id');
-        var span = document.getElementById('user');
+    var element = document.getElementById('id');
+    var span = document.getElementById('user');
+    var hideorshow = document.getElementById('dataimporta');
+    var hideorshowfordelete = document.getElementById('datadeletea');
         if ("@ViewBag.User"=="Admin") {
             element.src ="/Pictures/Boss.png"
             span.textContent = "Admin";
+            hideorshow.style.display="block";
+            hideorshowfordelete.style.display="block";
         }
         else {
             element.src = "/Pictures/User.png";
             span.textContent = "User";
+            hideorshow.style.display = "none";
+            hideorshowfordelete.style.display = "none";
     }
 
 
     layui.use(['element'], function () {
         var $ = layui.jquery;
+        
         $.ajax({
+            //获取数据库里的车辆
             url: '@Url.Action("GetVehicleID", "Home")',
             dataType: 'json',
             type: 'post',
@@ -156,7 +168,7 @@
                     var vehicledl2 = document.getElementById("dataimport");
                     var vehicledl3 = document.getElementById("dataanalysis");
                     var vehicledl4 = document.getElementById("dataprediction");
-
+                    var vehicledl5=document.getElementById("datadelete");
                     //var dd1 = document.createElement("dd");
                     //var dd2 = document.createElement("dd");
                     //var dd3 = document.createElement("dd");
@@ -176,7 +188,7 @@
                         var dd2 = document.createElement("dd");
                         var dd3 = document.createElement("dd");
                         var dd4 = document.createElement("dd");
-                      
+                        var dd5 = document.createElement("dd");
 
                      
                         a1 = document.createElement('a');
@@ -184,7 +196,7 @@
 
                         a3 = document.createElement('a');
                         a4 = document.createElement('a');
-
+                        a5 = document.createElement('a');
                       
 
                      
@@ -208,20 +220,24 @@
                         a4.href = "/Html/PredictionHtml/Prediction.html?id=" + item;
                         a4.target = "/Html/PredictionHtml/Prediction.html?id=" + item;
 
+                        a5.href = "/Html/DeleteHtml/DeleteData.html?id=" + item;
+                        a5.target = "/Html/DeleteHtml/DeleteData.html?iid=" + item;
+
                         a1.innerText = item;
                         a2.innerText = item;
                         a3.innerText = item;
                         a4.innerText = item;
+                         a5.innerText = item;
                         dd1.appendChild(a1);
                         dd2.appendChild(a2);
                         dd3.appendChild(a3);
                         dd4.appendChild(a4);
-
+                         dd5.appendChild(a5);
                         vehicledl1.appendChild(dd1);
                         vehicledl2.appendChild(dd2);
                         vehicledl3.appendChild(dd3);
                         vehicledl4.appendChild(dd4);
-                     
+                     vehicledl5.appendChild(dd5);
                     }
 
                   

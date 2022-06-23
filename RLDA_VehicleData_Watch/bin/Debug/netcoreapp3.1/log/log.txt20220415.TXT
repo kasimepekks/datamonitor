@@ -1,0 +1,45 @@
+2022-04-15 22:26:53,772 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 22:26:53,786 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 22:26:53,789 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 22:26:53,795 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 22:31:59,447 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 22:31:59,466 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 22:31:59,471 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 22:31:59,480 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 22:35:32,885 [24] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据还没有上传完毕
+2022-04-15 22:35:32,890 [24] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-15 22:43:40,153 [38] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-15 22:43:40
+2022-04-15 22:43:40,817 [38] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-15 22:43:40
+2022-04-15 22:43:40,822 [38] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-15 23:15:40,453 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:15:40,469 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:15:40,473 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:15:40,477 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:16:29,588 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:16:29,606 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:16:29,611 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:16:29,615 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:21:28,735 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:21:28,758 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:21:28,763 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:21:28,774 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:30:01,309 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:30:01,351 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:30:01,358 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:30:01,364 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:36:18,899 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:36:18,918 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:36:18,922 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:36:18,935 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:41:10,625 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:41:10,646 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:41:10,651 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:41:10,660 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:43:03,128 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:43:03,145 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:43:03,148 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:43:03,151 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-15 23:58:43,386 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-15 23:58:43,406 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-15 23:58:43,409 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-15 23:58:43,418 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

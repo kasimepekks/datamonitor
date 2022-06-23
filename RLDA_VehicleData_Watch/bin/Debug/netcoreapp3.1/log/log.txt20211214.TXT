@@ -1,0 +1,60 @@
+2021-12-14 09:48:05,666 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 09:48:05,687 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 09:48:05,690 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 09:48:05,694 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 10:49:07,549 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 10:49:07,566 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 10:49:07,569 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 10:49:07,576 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 10:57:39,625 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 10:57:39,645 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 10:57:39,648 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 10:57:39,652 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 15:48:26,284 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 15:48:26,303 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 15:48:26,307 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 15:48:26,311 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 15:50:17,313 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 15:50:17,330 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 15:50:17,333 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 15:50:17,336 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 15:51:46,285 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 15:51:46,305 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 15:51:46,308 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 15:51:46,311 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 15:56:31,137 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 15:56:31,152 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 15:56:31,155 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 15:56:31,159 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 15:58:51,895 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 15:58:51,912 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 15:58:51,915 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 15:58:51,918 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 16:03:11,954 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 16:03:11,972 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 16:03:11,978 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 16:03:11,980 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 16:03:20,028 [6] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.InvalidOperationException: Incorrect Content-Type: 
+   at Microsoft.AspNetCore.Http.Features.FormFeature.ReadForm()
+   at Microsoft.AspNetCore.Http.DefaultHttpRequest.get_Form()
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 28
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-12-14 16:04:12,913 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 16:04:12,930 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 16:04:12,933 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 16:04:12,936 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 16:11:58,509 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 16:11:58,527 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 16:11:58,530 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 16:11:58,534 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 16:18:31,863 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 16:18:31,874 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 16:18:31,878 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 16:18:31,883 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-14 16:19:47,294 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-14 16:19:47,319 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-14 16:19:47,326 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-14 16:19:47,330 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

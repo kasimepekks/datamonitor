@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
@@ -37,8 +38,10 @@ namespace RLDA_VehicleData_Watch
        
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
-            
+            //Configuration = configuration;
+            Configuration = new ConfigurationBuilder()
+            .Add(new JsonConfigurationSource { Path = "appsettings.json", ReloadOnChange = true })
+            .Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -90,7 +93,7 @@ namespace RLDA_VehicleData_Watch
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             string MonitorRequired = Configuration["DataMonitor:MonitorRequired"];
-            string ImportRequired = Configuration["DataImport:ImportRequired"];
+            string ImportRequired = Configuration["DataImport:ImportRequiredAuto"];
 
             int result;
 
@@ -114,8 +117,8 @@ namespace RLDA_VehicleData_Watch
                                 .EverySeconds(result)
 
                                 .PreventOverlapping(i);
-                            }).OnError((ex) =>
-                               throw ex);
+                            }).OnError((ex) => { Console.WriteLine("Startup里的自动监控抛出了异常"+ex.Message); }
+                               );
                         }
                     }
                 }

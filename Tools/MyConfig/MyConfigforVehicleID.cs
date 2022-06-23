@@ -24,6 +24,15 @@ namespace Tools.MyConfig
         public  int ThrottleZeroStandard;
         public int ThrottleLastingPoints;
         public  int BumpMaxSpeed;
+        public string GPSImport;
+        public string BrakeImport;
+        public string ThrottleImport;
+        public string SpeedImport;
+        public string StatisticImport;
+        public string BumpImport;
+        public string SteeringImport;
+        public string WFTImport;
+        //public string IsFileCombined;
     }
     public static class MyConfigforVehicleID
     {
@@ -64,8 +73,18 @@ namespace Tools.MyConfig
                 vehicleIDPara.BumpMaxSpeed = Convert.ToInt32(configuration[vehicleid + ":BumpMaxSpeed"]);
                 vehicleIDPara.ThrottleZeroStandard=Convert.ToInt32(configuration[vehicleid + ":ThrottleZeroStandard"]);
                 vehicleIDPara.ThrottleLastingPoints = Convert.ToInt32(configuration[vehicleid + ":ThrottleLastingPoints"]);
+                vehicleIDPara.BrakeImport = configuration[vehicleid + ":BrakeImport"];
+                vehicleIDPara.BumpImport = configuration[vehicleid + ":BumpImport"];
+                vehicleIDPara.ThrottleImport = configuration[vehicleid + ":ThrottleImport"];
+                vehicleIDPara.GPSImport = configuration[vehicleid + ":GPSImport"];
+                vehicleIDPara.StatisticImport = configuration[vehicleid + ":StatisticImport"];
+                vehicleIDPara.SpeedImport = configuration[vehicleid + ":SpeedImport"];
+                vehicleIDPara.SteeringImport = configuration[vehicleid + ":SteeringImport"];
+                vehicleIDPara.WFTImport = configuration[vehicleid + ":WFTImport"];
+                //vehicleIDPara.IsFileCombined = configuration[vehicleid + ":IsFileCombined"];
             }
            
+
             return vehicleIDPara;
         }
     }

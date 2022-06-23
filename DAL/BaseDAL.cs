@@ -33,6 +33,27 @@ namespace DAL
             return true;
             //return DB.SaveChanges() > 0;
         }
+        /// <summary>
+        /// 删除所选的数据
+        /// </summary>
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
+        public bool DeleteAllEntity(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda)
+        {
+            var list=_DB.Set<T>().Where<T>(whereLambda);
+            if (list.Count() > 0)
+            {
+                _DB.Set<T>().RemoveRange(list);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+            
+            //return DB.SaveChanges() > 0;
+        }
         public bool EditEntity(T entity)
         {
             _DB.Entry<T>(entity).State = EntityState.Modified;

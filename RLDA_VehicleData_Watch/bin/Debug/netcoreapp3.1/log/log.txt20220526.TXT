@@ -1,0 +1,87 @@
+2022-05-26 17:09:09,370 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 17:09:09,383 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 17:09:09,386 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 17:09:09,388 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 17:13:34,212 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 17:13:34,232 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 17:13:34,235 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 17:13:34,239 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 17:15:32,432 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 17:15:32,443 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 17:15:32,446 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 17:15:32,449 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 17:26:21,861 [59] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.IO.IOException: The process cannot access the file 'D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\wwwroot\MYJS\Analysis.js' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.ServeStaticFile(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-26 17:34:02,841 [51] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.IO.IOException: The process cannot access the file 'D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\wwwroot\MYJS\Analysis.js' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.ServeStaticFile(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-26 17:34:58,282 [37] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.IO.IOException: The process cannot access the file 'D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\wwwroot\MYJS\Analysis.js' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.ServeStaticFile(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-26 17:36:25,946 [38] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.IO.IOException: The process cannot access the file 'D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\wwwroot\MYJS\Analysis.js' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at Microsoft.AspNetCore.Http.SendFileFallback.SendFileAsync(Stream destination, String filePath, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, String fileName, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.ServeStaticFile(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-05-26 21:50:53,425 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 21:50:53,450 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 21:50:53,450 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 21:50:53,451 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 21:51:08,005 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 21:51:08,041 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 21:51:08,047 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 21:51:08,053 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 21:51:34,338 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-26 21:51:34
+2022-05-26 21:51:35,636 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-26 21:51:35
+2022-05-26 21:51:35,640 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-26 21:52:23,950 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-26 21:52:23
+2022-05-26 21:52:24,480 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-26 21:52:24
+2022-05-26 21:52:24,484 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-26 21:52:48,043 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 21:52:48,059 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 21:52:48,061 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 21:52:48,063 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 21:53:06,262 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-26 21:53:06
+2022-05-26 21:53:07,153 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的input数据手动导入完成时间2022-05-26 21:53:07
+2022-05-26 21:53:07,157 [31] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_10的result数据还没有上传完毕
+2022-05-26 21:53:47,296 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 21:53:47,315 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 21:53:47,320 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 21:53:47,324 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 21:54:05,190 [24] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-26 21:54:05
+2022-05-26 21:55:03,167 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-26 21:55:03,183 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-26 21:55:03,185 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-26 21:55:03,187 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-26 21:55:19,307 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_10的input数据开始手动导入2022-05-26 21:55:19

@@ -1130,28 +1130,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\111\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj",
+      "projectUniqueName": "D:\\VS_Project\\SourceCode\\data-monitor\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\BLL.csproj",
-      "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\BLL\\obj\\",
+      "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\BLL\\BLL.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\VS_Project\\SourceCode\\data-monitor\\BLL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\111\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1164,14 +1156,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\DAL\\DAL.csproj"
+            "D:\\VS_Project\\SourceCode\\data-monitor\\DAL\\DAL.csproj": {
+              "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\DAL\\DAL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IBLL\\IBLL.csproj"
+            "D:\\VS_Project\\SourceCode\\data-monitor\\IBLL\\IBLL.csproj": {
+              "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\IBLL\\IBLL.csproj"
             },
-            "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
-              "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj"
+            "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj": {
+              "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj"
             }
           }
         }
@@ -1200,7 +1192,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

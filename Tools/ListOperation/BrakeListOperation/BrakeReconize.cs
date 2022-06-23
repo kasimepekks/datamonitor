@@ -22,8 +22,8 @@ namespace Tools.ListOperation.BrakeListOperation
             int start=0, end;//识别刹车开始点数和结束点数
             for (int i = 0; i < brakelist.Count-1; i++)
             {
-               
-                 if (brakelist[i] == 0 && brakelist[i + 1] > 0 && speedlist[i+1] > 10)
+                //Console.WriteLine(brakelist.Count+" "+ speedlist.Count);
+                 if (brakelist[i] == 0 && brakelist[i + 1] > 0 && speedlist[i+1] > 10)//这里brakelistcount数量大于speedlistcount，所以会溢出
                  {
                      start = i + 1;
                      //BrakeStartList.Add(i + 1);

@@ -1,0 +1,33 @@
+2022-05-28 10:58:34,412 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-28 10:58:34,430 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-28 10:58:34,434 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-28 10:58:34,436 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-05-28 10:58:55,075 [19] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SVV006的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2022-05-28 10:58:55,128 [5] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminNFAZkaERQEotaIrjZ5IRRg
+2022-05-28 10:59:26,442 [22] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：NFAZkaERQEotaIrjZ5IRRg
+2022-05-28 10:59:26,939 [37] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminFu4Vlzfngat7RymRQPaRVg
+2022-05-28 10:59:30,886 [17] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：Fu4Vlzfngat7RymRQPaRVg
+2022-05-28 10:59:32,703 [44] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Adminsb0Z9N1CKq2f8XTxFFPlwQ
+2022-05-28 11:00:54,539 [49] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：sb0Z9N1CKq2f8XTxFFPlwQ
+2022-05-28 11:00:56,548 [56] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminpZ75QYiR-Lb9Lb_pVVrxgQ
+2022-05-28 11:01:40,793 [59] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：pZ75QYiR-Lb9Lb_pVVrxgQ
+2022-05-28 11:01:42,589 [64] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminfPUZ0XYlHTrJ5Xz8q9r40g
+2022-05-28 11:02:39,897 [70] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：fPUZ0XYlHTrJ5Xz8q9r40g
+2022-05-28 11:02:42,638 [80] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminO9EddaGmeu4WRsQuauAW3g
+2022-05-28 11:04:01,556 [78] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2022_05_01-20_24_55-125-F.csv已被监控发现
+2022-05-28 11:04:02,239 [71] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2022_05_01-20_24_55-125-F.csv已传送数据
+2022-05-28 11:04:02,254 [78] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：O9EddaGmeu4WRsQuauAW3g
+2022-05-28 11:04:02,296 [77] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Adminmv70k2O02RJITBCKxoGhjw
+2022-05-28 11:04:38,726 [77] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：mv70k2O02RJITBCKxoGhjw
+2022-05-28 11:04:48,967 [70] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminDLzAqcXfq2asV43uwLlkMw
+2022-05-28 11:06:03,256 [62] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：DLzAqcXfq2asV43uwLlkMw
+2022-05-28 11:06:37,670 [57] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\05_10\2022_05_01-20_24_55-125-F.csv已被监控发现
+2022-05-28 11:06:37,762 [74] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\05_10\2022_05_01-20_24_55-125-F.csv已传送数据
+2022-05-28 11:07:39,971 [41] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminPZvGCbD0loI8UbjISe0hcw
+2022-05-28 11:08:47,744 [38] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：PZvGCbD0loI8UbjISe0hcw
+2022-05-28 11:09:05,377 [32] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-05-28 11:09:05
+2022-05-28 11:09:49,333 [32] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的input数据手动导入完成时间2022-05-28 11:09:49
+2022-05-28 11:09:49,337 [32] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的result数据还没有上传完毕
+2022-05-28 11:11:25,323 [33] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-05-28 11:11:25
+2022-05-28 11:11:25,976 [33] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的input数据手动导入完成时间2022-05-28 11:11:25
+2022-05-28 11:11:25,979 [33] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的result数据还没有上传完毕

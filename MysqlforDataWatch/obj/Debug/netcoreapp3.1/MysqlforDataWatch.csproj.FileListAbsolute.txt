@@ -25,3 +25,17 @@ C:\Users\111\source\repos\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1
 C:\Users\111\source\repos\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.genruntimeconfig.cache
 C:\Users\111\source\repos\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\mysqlconnection.json
 C:\Users\111\source\repos\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.csproj.AssemblyReference.cache
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\mysqlconnection.json
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\MysqlforDataWatch.deps.json
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\MysqlforDataWatch.runtimeconfig.json
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\MysqlforDataWatch.runtimeconfig.dev.json
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\MysqlforDataWatch.dll
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\bin\Debug\netcoreapp3.1\MysqlforDataWatch.pdb
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.csproj.AssemblyReference.cache
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.AssemblyInfoInputs.cache
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.AssemblyInfo.cs
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.csproj.CoreCompileInputs.cache
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.dll
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.pdb
+D:\VS_Project\SourceCode\data-monitor\MysqlforDataWatch\obj\Debug\netcoreapp3.1\MysqlforDataWatch.genruntimeconfig.cache

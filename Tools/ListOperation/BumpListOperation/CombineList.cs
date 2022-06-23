@@ -17,17 +17,12 @@ namespace Tools.ListOperation
         /// <returns></returns>
         public static List<double> CombineListMethod(List<double> ValueList,List<int> TimeList, VehicleIDPara vehicleIDPara, out List<int> OuttimeList)
         {
-            //for (int i = 0; i < ValueList.Count; i++)
-            //{
-            //    Console.WriteLine("LFZbump," + ValueList[i]);
-            //    Console.WriteLine("LFZbumpTIME," + TimeList[i]);
-               
-            //}
+            
             List<double> combinedlist = new List<double>();
             List<int> outtimelist = new List<int>();
             //在做合并之前，每一个list最后都添加一个数据，数据本身没有什么意义，只是为了循环里的if到最后能够肯定执行，否则最后的峰值会丢失，也无法合并
             ValueList.Add(0);
-            TimeList.Add(-vehicleIDPara.BumpTimeGap - 1);
+            TimeList.Add(-vehicleIDPara.BumpTimeGap - 1);//保证最后一个时刻与前一时刻相差超过vehicleIDPara.BumpTimeGap，进而能确保进行合并操作
             int t = 1;
             if (ValueList.Count > 1)
             {
@@ -35,6 +30,7 @@ namespace Tools.ListOperation
                 {
                     for (int j = i + 1; j < TimeList.Count; j++)
                     {
+                        //如果后一个数和前一个数相差不到5个点，则继续判断下一个数，直到超过BumpTimeGap才进行合并
                         if (Math.Abs(TimeList[j]- TimeList[i] )> vehicleIDPara.BumpTimeGap)
                         {
                             t = j - i;

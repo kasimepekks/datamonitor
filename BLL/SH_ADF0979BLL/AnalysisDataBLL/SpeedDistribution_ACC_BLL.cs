@@ -17,6 +17,7 @@ namespace BLL.SH_ADF0979BLL
         public SpeedDistribution_ACC_BLL(ISpeedDistribution_ACC_IDAL ISpeedDistribution_ACC_DAL)
         {
             this._ISpeedDistribution_ACC_DAL = ISpeedDistribution_ACC_DAL;
+            base.CurrentDal = ISpeedDistribution_ACC_DAL;//构造函数把实例传入给basebll里的currentdal
             //_DB = DB;
         }
         public override void SetCurrentDal()
@@ -119,6 +120,8 @@ namespace BLL.SH_ADF0979BLL
             list.Add((double)accumtmile);
             return list;
         }
+
+       
 
     }
 }

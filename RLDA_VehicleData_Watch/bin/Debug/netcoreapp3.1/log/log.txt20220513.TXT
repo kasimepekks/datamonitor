@@ -1,0 +1,4 @@
+2022-05-13 19:05:39,798 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-13 19:05:39,811 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-13 19:05:39,818 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-13 19:05:39,820 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

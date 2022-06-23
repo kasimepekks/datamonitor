@@ -37,12 +37,7 @@ namespace RLDA_VehicleData_Watch.Controllers
             
             return View();
         }
-        //[Authorize]
-        //public IActionResult Index()
-        //{
-        //    ViewBag.User = HttpContext.Session.GetString("UserID");
-        //    return View();
-        //}
+       
 
         [Authorize]
         public IActionResult VehicleSetup()
@@ -142,6 +137,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         {
            var vehicle= _db.Set<Vehicletable>().Where(a => a.Id == id).FirstOrDefault();
             _db.Entry<Vehicletable>(vehicle).State = EntityState.Deleted;
+            
             if (_db.SaveChanges() > 0)
             {
                 return Content("删除成功！");

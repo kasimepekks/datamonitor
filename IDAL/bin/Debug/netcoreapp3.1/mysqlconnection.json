@@ -1,0 +1,14 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+
+
+  "ConnectionStrings": {
+    "MySqlConnection": "server=localhost;user id=root;password=Mxz04122465;persistsecurityinfo=True;database=datawatch;SslMode=none;AllowLoadLocalInfile=true;Connect Timeout=120"
+  }
+}

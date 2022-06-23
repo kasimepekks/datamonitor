@@ -1,0 +1,36 @@
+2021-11-15 11:19:42,950 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 11:19:42,965 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 11:19:42,974 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 11:19:42,978 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 14:26:20,191 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 14:26:20,208 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 14:26:20,211 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 14:26:20,220 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 14:29:33,637 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 14:29:33,654 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 14:29:33,657 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 14:29:33,661 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 14:31:46,448 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 14:31:46,463 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 14:31:46,466 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 14:31:46,469 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 14:42:17,373 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 14:42:17,389 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 14:42:17,392 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 14:42:17,395 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 14:51:34,448 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 14:51:34,464 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 14:51:34,467 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 14:51:34,471 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 15:08:29,489 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 15:08:29,506 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 15:08:29,509 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 15:08:29,515 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 16:25:46,354 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 16:25:46,373 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 16:25:46,378 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 16:25:46,382 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-15 16:27:33,239 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-15 16:27:33,255 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-15 16:27:33,258 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-15 16:27:33,261 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

@@ -1,0 +1,53 @@
+2021-12-16 15:11:12,251 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:11:12,264 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:11:12,271 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:11:12,274 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:12:58,620 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:12:58,635 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:12:58,639 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:12:58,647 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:14:40,247 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:14:40,265 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:14:40,269 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:14:40,272 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:18:54,472 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:18:54,488 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:18:54,491 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:18:54,521 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:19:27,614 [15] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-16 15:19:33,714 [18] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-16 15:19:47,757 [7] WARN  Microsoft.AspNetCore.Session.SessionMiddleware - Error unprotecting the session cookie.
+System.Security.Cryptography.CryptographicException: The payload was invalid.
+   at Microsoft.AspNetCore.DataProtection.Cng.CbcAuthenticatedEncryptor.DecryptImpl(Byte* pbCiphertext, UInt32 cbCiphertext, Byte* pbAdditionalAuthenticatedData, UInt32 cbAdditionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.Cng.Internal.CngAuthenticatedEncryptorBase.Decrypt(ArraySegment`1 ciphertext, ArraySegment`1 additionalAuthenticatedData)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.DangerousUnprotect(Byte[] protectedData, Boolean ignoreRevocationErrors, Boolean& requiresMigration, Boolean& wasRevoked)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+   at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+2021-12-16 15:23:23,662 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:23:23,683 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:23:23,686 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:23:23,689 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:26:52,565 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:26:52,580 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:26:52,588 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:26:52,596 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:28:43,265 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-16 15:28:43,281 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-16 15:28:43,284 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-16 15:28:43,288 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-16 15:29:24,058 [8] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：P4b34Q7BiGhfZEDKLg6vug

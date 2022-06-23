@@ -1,0 +1,118 @@
+2021-11-18 09:47:58,208 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 09:47:58,224 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 09:47:58,228 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 09:47:58,231 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 09:55:23,638 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 09:55:23,655 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 09:55:23,658 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 09:55:23,666 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 09:56:44,935 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 09:56:44,953 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 09:56:44,956 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 09:56:44,964 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 09:56:57,026 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 09:56:57,044 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 09:56:57,048 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 09:56:57,055 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 09:57:20,683 [13] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28开始计算导入2021-11-18 09:57:20
+2021-11-18 09:57:20,837 [13] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\Taxi_EP22_2021\Original_Data\Input\04_28'.
+   at System.IO.FileSystem.CreateDirectory(String fullPath, Byte[] securityDescriptor)
+   at System.IO.DirectoryInfo.Create()
+   at Tools.FileOperator.Isfileexist(String filePath) in C:\Users\111\source\repos\data-monitor\Tools\FileOperation\FileOperator.cs:line 49
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 35
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 37
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 49错误发生在2021-11-18 09-57-20
+2021-11-18 09:58:14,794 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28开始计算导入2021-11-18 09:58:14
+2021-11-18 10:06:57,007 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - MySqlConnector.MySqlException (0x80004005): 1742 rows were copied to bumprecognition but only 0 were inserted.
+   at MySqlConnector.MySqlBulkCopy.WriteToServerAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlBulkCopy.cs:line 300
+   at MySqlConnector.MySqlBulkCopy.WriteToServer(DataTable dataTable) in /_/src/MySqlConnector/MySqlBulkCopy.cs:line 108
+   at System.Linq.MySQLBulkInsertExtensions.BulkInsert[TEntity](DbContext dbCtx, IEnumerable`1 items, MySqlTransaction transaction, CancellationToken cancellationToken)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 411
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 37
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 49错误发生在2021-11-18 10-06-57
+2021-11-18 11:34:27,365 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 11:34:27,383 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 11:34:27,386 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 11:34:27,392 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 11:34:35,578 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-11-18 11:34:35,801 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了损伤预测的页面
+2021-11-18 11:34:47,316 [9] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 11:34:47,426 [4] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 11:35:13,120 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28开始计算导入2021-11-18 11:35:13
+2021-11-18 11:44:06,059 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 391
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 37
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 52错误发生在2021-11-18 11-44-06
+2021-11-18 11:56:25,906 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 11:56:25,926 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 11:56:25,930 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 11:56:25,938 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 11:56:38,862 [14] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28开始计算导入2021-11-18 11:56:38
+2021-11-18 12:05:41,040 [14] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28里程统计完成时间2021-11-18 12:05:41
+2021-11-18 12:21:04,958 [14] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 04_28损伤计算完成时间2021-11-18 12:21:04
+2021-11-18 13:06:39,394 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 13:06:39,413 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 13:06:39,416 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 13:06:39,420 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 13:06:46,784 [12] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 13:06:47,017 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:23:30,464 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 15:23:30,480 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 15:23:30,483 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 15:23:30,488 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 15:23:38,898 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:23:39,131 [15] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:29:06,526 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 15:29:06,548 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 15:29:06,552 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 15:29:06,556 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 15:30:16,778 [20] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:30:16,901 [18] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:33:48,099 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 15:33:48,118 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 15:33:48,122 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 15:33:48,129 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 15:35:55,352 [16] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:35:55,693 [11] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:36:16,771 [46] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: 'AsyncEnumerableReader' reached the configured maximum size of the buffer when enumerating a value of type 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[System.Double]'. This limit is in place to prevent infinite streams of 'IAsyncEnumerable<>' from continuing indefinitely. If this is not a programming mistake, consider ways to reduce the collection size, or consider manually converting 'Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[System.Double]' into a list rather than increasing the limit.
+   at Microsoft.AspNetCore.Mvc.Infrastructure.AsyncEnumerableReader.ReadInternal[T](Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.AsyncEnumerableReader.ReadInternal[T](Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor.ExecuteAsync(ActionContext context, JsonResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor.ExecuteAsync(ActionContext context, JsonResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultFilters>g__Awaited|27_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-11-18 15:42:21,301 [65] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
+2021-11-18 15:42:21,301 [61] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
+2021-11-18 15:42:21,301 [67] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
+2021-11-18 15:42:21,301 [83] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
+2021-11-18 15:54:24,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 15:54:24,244 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 15:54:24,248 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 15:54:24,252 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 15:54:46,188 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:54:46,370 [8] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 15:58:57,118 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 15:58:57,137 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 15:58:57,140 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 15:58:57,148 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 16:01:48,554 [24] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 16:01:48,742 [34] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 16:09:49,057 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-18 16:09:49,074 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-18 16:09:49,078 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-18 16:09:49,085 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-18 16:11:15,005 [6] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-18 16:11:15,180 [17] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面

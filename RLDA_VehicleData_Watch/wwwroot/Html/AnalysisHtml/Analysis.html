@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>数据分析</title>
+    <script src="../../MYJS/CommonforAnalysis.js"></script>
+</head>
+<body>
+    <br />
+    <br />
+    <div class="Speedform">
+        <div class="layui-form">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">请选择范围</label>
+                    <div class="layui-input-inline">
+                        <input type="text" class="layui-input" id="startend" placeholder="开始 到 结束" autocomplete="off">
+                    </div>
+                </div>
+                <div class="layui-inline">
+
+                    <div class="layui-input-inline">
+                        <button class="layui-btn" id="SpeedAnalysis">分析</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-collapse">
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">车辆统计信息</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row ">
+                        <div id="mapwrapper" hidden="hidden" style="text-align:center">
+                            <button class="layui-btn" id="run">开始</button>
+                            <button class="layui-btn" id="stop">停止</button>
+                            <button class="layui-btn" id="pause">暂停</button>
+                            <button class="layui-btn" id="hide">隐藏</button>
+                            <button class="layui-btn" id="show">展示</button>
+                        </div>
+                        <br />
+                        <div id="mapcontainer" style="width: 100%;height: 500px;"></div>
+
+                    </div>
+                    <br />
+
+                    <div class="layui-row  layui-bg-cyan" id="textwrapper" hidden="hidden">
+                        <div class="layui-col-md3">
+                            <fieldset class="layui-elem-field">
+                                <legend>行驶时间</legend>
+                                <div class="layui-field-box">
+                                    <p2 id="time"></p2>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                        <div class="layui-col-md3">
+                            <fieldset class="layui-elem-field">
+                                <legend>所选日期里程</legend>
+                                <div class="layui-field-box">
+                                    <p2 id="currentmile"></p2>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                        <div class="layui-col-md3">
+                            <fieldset class="layui-elem-field">
+                                <legend>累积里程</legend>
+                                <div class="layui-field-box">
+                                    <p2 id="accummile"></p2>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                        <div class="layui-col-md3">
+                            <fieldset class="layui-elem-field">
+                                <legend>最高车速</legend>
+                                <div class="layui-field-box">
+                                    <p2 id="maxspeed"></p2>
+                                </div>
+                            </fieldset>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">速度里程分布统计</h2>
+            <div class="layui-colla-content layui-show">
+
+
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="columncontainer" style="width: 100%;height:400px;"></div>
+
+
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="barcontainer" style="width: 100%;height:400px;"></div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="speedperdaycolumncontainer" style="width: 100%;height:400px;"></div>
+
+
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="speedperhourcolumncontainer" style="width: 100%;height:400px;"></div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">制动分布统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-row">
+                            <div class="layui-col-md8">
+                                <div id="brakehistogramcontainer" style="width: 100%;height: 400px;">
+
+                                </div>
+                                <div id="brakewrapper" hidden="hidden" style="text-align:center">
+                                    <input type="range" max="50" min="3" id="brakebinnumber" onchange="document.getElementById('brakeshow').innerHTML=value">
+                                    <span id="brakeshow">22</span>
+
+                                    <button class="layui-btn" id="brakeplain">转换</button>
+
+                                </div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div id="brakepiecontainer" style="width: 100%;height:400px;"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">冲击分布统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-md8">
+                            <div id="bumphistogramcontainer" style="width: 100%;height: 400px;"></div>
+                            <div id="bumpwrapper" hidden="hidden" style="text-align:center">
+                                <input type="range" max="50" min="3" id="bumpbinnumber" onchange="document.getElementById('bumpshow').innerHTML=value">
+                                <span id="bumpshow">22</span>
+
+                                <button class="layui-btn" id="bumpplain">转换</button>
+
+                            </div>
+                        </div>
+                        <div class="layui-col-md4">
+                            <div id="bumppiecontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">油门分布统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="Accelerographhistogramcontainer" style="width: 100%;height:400px;"></div>
+                            <div id="Accelerographwrapper" hidden="hidden" style="text-align:center">
+                                <input type="range" max="50" min="3" id="Accelerographbinnumber" onchange="document.getElementById('Accelerographshow').innerHTML=value">
+                                <span id="Accelerographshow">22</span>
+                                <button class="layui-btn" id="Accelerographplain">转换</button>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="Throttleacchistogramcontainer" style="width: 100%;height:400px;"></div>
+                            <div id="Throttleaccwrapper" hidden="hidden" style="text-align:center">
+                                <input type="range" max="50" min="3" id="Throttleaccbinnumber" onchange="document.getElementById('Throttleaccshow').innerHTML=value">
+                                <span id="Throttleaccshow">22</span>
+                                <button class="layui-btn" id="Throttleaccplain">转换</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="Accelerographspeedcontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="Throttleaccspeedcontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="Throttlecolumncontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="Throttlepiecontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">转向分布统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="StrgWhlAnghistogramcontainer" style="width: 100%;height:400px;"></div>
+                            <div id="StrgWhlAngwrapper" hidden="hidden" style="text-align:center">
+                                <input type="range" max="50" min="3" id="StrgWhlAngbinnumber" onchange="document.getElementById('StrgWhlAngshow').innerHTML=value">
+                                <span id="StrgWhlAngshow">22</span>
+                                <button class="layui-btn" id="StrgWhlAngplain">转换</button>
+                            </div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="SteeringAcchistogramcontainer" style="width: 100%;height:400px;"></div>
+                            <div id="SteeringAccwrapper" hidden="hidden" style="text-align:center">
+                                <input type="range" max="50" min="3" id="SteeringAccbinnumber" onchange="document.getElementById('SteeringAccshow').innerHTML=value">
+                                <span id="SteeringAccshow">22</span>
+                                <button class="layui-btn" id="SteeringAccplain">转换</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="StrgWhlAngspeedcontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="SteeringAccspeedcontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="steeringpiecontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="steeringpienegcontainer" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">加速度和位移统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="WFTACCcolumncontainerMax" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="WFTACCcolumncontainerMin" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="STACCcolumncontainerMax" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="STACCcolumncontainerMin" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="STDIScolumncontainerMax" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="STDIScolumncontainerMin" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-colla-item">
+            <h2 class="layui-colla-title">轮心力统计</h2>
+            <div class="layui-colla-content layui-show">
+                <div class="layui-fluid">
+                    <div class="layui-row">
+                        <div id="WFTcolumncontainer" style="width: 100%;height:400px;"></div>
+                    </div>
+                    <div class="layui-row">
+                        <div class="layui-col-md6">
+                            <div id="WFTcolumncontainerMax" style="width: 100%;height:400px;"></div>
+                        </div>
+                        <div class="layui-col-md6">
+                            <div id="WFTcolumncontainerMin" style="width: 100%;height:400px;"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <script src="../../MYJS/Analysis.js"></script>
+
+</body>
+
+
+
+</html>

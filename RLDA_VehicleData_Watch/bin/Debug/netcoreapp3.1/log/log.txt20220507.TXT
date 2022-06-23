@@ -1,0 +1,34 @@
+2022-05-07 11:01:05,134 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-07 11:01:05,154 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-07 11:01:05,157 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-07 11:01:05,160 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-07 11:30:00,368 [101] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-07 11:30:00,375 [101] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-07 11:30:00,387 [101] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 12:00:00,341 [97] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 13:21:41,807 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-07 13:21:41,829 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-07 13:21:41,832 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-07 13:21:41,838 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-07 13:30:00,384 [62] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-07 13:30:00,389 [62] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-07 13:30:00,404 [62] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 14:00:00,374 [40] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 14:30:00,398 [34] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 15:00:00,361 [51] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 15:30:00,363 [37] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 17:19:45,960 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-07 17:19:46,000 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-07 17:19:46,004 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-07 17:19:46,008 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-07 17:30:00,551 [26] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 17:30:00,567 [55] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
+2022-05-07 17:30:00,654 [55] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-07 18:00:00,526 [203] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 18:30:00,544 [143] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 19:00:00,719 [144] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 19:30:00,719 [114] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 20:00:00,717 [165] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 20:30:00,714 [164] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 21:00:00,714 [102] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
+2022-05-07 21:30:00,716 [164] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979

@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title id="title"></title>
+    <style type="text/css">
+        body {
+            text-align: center
+        }
+    </style>
+
+    <script src="../../MYJS/CommonforDisplay.js"></script>
+
+
+</head>
+<body>
+    <!--<div id="allmap" style="width:800px;height:600px"></div>-->
+
+    <div class="layui-fluid">
+
+        <fieldset class="layui-elem-field">
+            <legend>行驶里程</legend>
+            <div class="layui-field-box">
+                <span id="distance" class="layui-bg-black" style="font-size:28px"></span>公里
+            </div>
+        </fieldset>
+
+        <div class="layui-row">
+
+            <div class="layui-col-md4">
+                <div id="speedchart" style="width: 80%;height:500px"></div>
+
+            </div>
+            <div class="layui-col-md8">
+                <div id="allmap" style="width: 100%;height:500px"></div>
+            </div>
+            <!--<div class="layui-col-md4">
+            <div id="brakechart" style="width: 80%;height:300px"></div>
+
+        </div>-->
+        </div>
+        <hr class="layui-border-black">
+        <div class="layui-row">
+            <div class="layui-col-md3">
+                <div id="WheelAccXcontainer" style="width: 100%;height:250px;"></div>
+
+
+            </div>
+            <div class="layui-col-md3">
+                <div id="WheelAccYcontainer" style="width: 100%;height:250px;"></div>
+
+
+            </div>
+            <div class="layui-col-md3">
+                <div id="WheelAccZcontainer" style="width: 100%;height:250px;"></div>
+
+
+            </div>
+
+            <div class="layui-col-md3">
+
+                <div id="DisDMP" style="width: 100%;height:250px;"></div>
+            </div>
+        </div>
+        <hr class="layui-border-black">
+        <div class="layui-row">
+            <div class="layui-col-md4">
+                <div id="STAccXcontainer" style="width: 100%;height:250px;"></div>
+
+            </div>
+            <div class="layui-col-md4">
+                <div id="STAccYcontainer" style="width: 100%;height:250px;"></div>
+
+
+            </div>
+            <div class="layui-col-md4">
+                <div id="STAccZcontainer" style="width: 100%;height:250px;"></div>
+
+            </div>
+
+
+        </div>
+        <hr class="layui-border-black">
+
+        <div class="layui-row">
+
+
+            <div class="layui-col-md2">
+
+                <div id="ACCFWHLMAX" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md2">
+
+                <div id="ACCFWHLMIN" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md2">
+
+                <div id="ACCFWHLRMS" style="width: 100%;height:250px;"></div>
+            </div>
+
+            <div class="layui-col-md2">
+
+                <div id="ACCFSTMAX" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md2">
+
+                <div id="ACCFSTMIN" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md2">
+
+                <div id="ACCFSTRMS" style="width: 100%;height:250px;"></div>
+            </div>
+        </div>
+
+        <hr class="layui-border-black">
+        <div class="layui-row">
+            <div class="layui-col-md4">
+
+                <div id="WFTFX" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md4">
+
+                <div id="WFTFY" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md4">
+
+                <div id="WFTFZ" style="width: 100%;height:250px;"></div>
+            </div>
+
+
+        </div>
+        <hr class="layui-border-black">
+        <div class="layui-row">
+            <div class="layui-col-md3">
+
+                <div id="WFTLFRFMAX" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md3">
+
+                <div id="WFTLRRRMAX" style="width: 100%;height:250px;"></div>
+            </div>
+            <div class="layui-col-md3">
+
+                <div id="WFTLFRFMIN" style="width: 100%;height:250px;"></div>
+            </div>
+
+            <div class="layui-col-md3">
+
+                <div id="WFTLRRRMIN" style="width: 100%;height:250px;"></div>
+            </div>
+           
+        </div>
+
+
+    </div>
+
+</body>
+
+
+
+</html>
+<script type="text/javascript">
+
+    var map;
+    var myIcon;
+    if (navigator.onLine) {
+    
+    var myIcon = new BMap.Icon('/Pictures/car.png',
+                    new BMap.Size(52, 26), {
+                    anchor: new BMap.Size(27, 13)
+                });
+    /* 百度地图API功能*/
+    map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(121.472644, 31.231706), 15);
+    map.enableScrollWheelZoom(true);
+    var top_right_navigation = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL }); //右上角，仅包含平移和缩放按钮
+    map.addControl(top_right_navigation);
+    // 定义一个控件类,即function
+    function ZoomControl() {
+        // 默认停靠位置和偏移量
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(10, 10);
+    }
+
+    // 通过JavaScript的prototype属性继承于BMap.Control
+    ZoomControl.prototype = new BMap.Control();
+
+    // 自定义控件必须实现自己的initialize方法,并且将控件的DOM元素返回
+    // 在本方法中创建个div元素作为控件的容器,并将其添加到地图容器中
+    ZoomControl.prototype.initialize = function (map) {
+        // 创建一个DOM元素
+        var div = document.createElement("div");
+        // 添加文字说明
+        div.appendChild(document.createTextNode("清除路线"));
+        div.style.cursor = "pointer";
+        div.style.padding = "7px 10px";
+        div.style.boxShadow = "0 2px 6px 0 rgba(27, 142, 236, 0.5)";
+        div.style.borderRadius = "5px";
+        div.style.backgroundColor = "white";
+        // 绑定事件,点击一次放大两级
+        div.onclick = function (e) {
+            var allOverlay = map.getOverlays();
+            for (var i = 0; i < allOverlay.length; i++) {
+                if (allOverlay[i].toString().indexOf("Polyline") > 0) {//删除折线
+                    map.removeOverlay(allOverlay[i]);
+                }
+            }
+
+
+        }
+        // 添加DOM元素到地图中
+        map.getContainer().appendChild(div);
+        // 将DOM元素返回
+        return div;
+    }
+    // 创建控件
+    var myZoomCtrl = new ZoomControl();
+    // 添加到地图当中
+    map.addControl(myZoomCtrl);
+    }
+</script>
+<script type="text/javascript" src="../../MYJS/DisplayAll.js"></script>

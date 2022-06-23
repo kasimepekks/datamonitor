@@ -1,0 +1,253 @@
+﻿
+@{
+    ViewData["Title"] = "车辆设置";
+    Layout = "_Layout_DisplayAll";
+}
+
+
+<table id="VehicleSetupTable" lay-filter="VehicleSetupTable" lay-even></table>
+
+
+@section Scripts{
+
+
+    <script type="text/html" id="toolbarDemo">
+        <div class="layui-btn-container">
+           
+           
+            <button class="layui-btn layui-btn-sm" lay-event="AddData">添加</button>
+            <button class="layui-btn layui-btn-sm" lay-event="ReloadData">刷新</button>
+        </div>
+    </script>
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="Singeldel">删除</a>
+    </script>
+
+    <script>
+        var user = "@ViewBag.User";
+
+        layui.use(['element', 'layer', 'table', 'form'], function () {
+            var element = layui.element;
+            var table = layui.table;
+            var $ = layui.jquery;
+            var bodyAdd;
+            var bodyEdit;
+            var tableIns = table.render(
+                {
+                    elem: '#VehicleSetupTable'
+                    , toolbar: '#toolbarDemo'
+                    , url: '@Url.Action("GetVehicleSetup", "Home")' //数据接口
+                    , limit: 30
+                    , even: true
+                    , page: true //开启分页
+
+                    , cols: [[ //表头
+
+                        { field: 'id', title: 'ID', sort: true }
+
+                        , { field: 'vehicleId', title: '车辆编号', sort: true }
+                        , { field: 'area', title: '区域', sort: true }
+                        , { field: 'country', title: '国家', sort: true }
+                        , { field: 'state', title: '状态', sort: true }
+                        , { field: 'remarks', title: '备注', sort: true }
+
+                        , { fixed: 'right', title: '操作', toolbar: '#barDemo' }
+                    ]]
+                });
+
+            table.on('tool(VehicleSetupTable)', function (obj) {
+                var data = obj.data;
+                if (user == "Admin") {
+                    if (obj.event === 'edit') {
+
+                        layer.open({
+                            type: 2,
+                            title: '编辑车辆信息',
+                            shadeClose: true,
+                            shade: 0.8,
+                            area: ['720px', '80%'],
+                            content: '@Url.Action("VehicleSetupTablePopUp", "PopUp")', //iframe的url
+                            btn: ['确认', '取消'],
+                            yes: function (index) {
+                                var vehicleidtext = bodyEdit.find('#vehicleid').val();
+                                var areatext = bodyEdit.find('#area').val();
+                                var id = data.id;//获得选中行的id值
+                                var countrytext = bodyEdit.find('#country').val();
+
+                                var remarkstext = bodyEdit.find('#remarks').val();
+
+                                var statetext = bodyEdit.find('#state').val();
+                                if (vehicleidtext != "" && areatext != "" && countrytext != "" && remarkstext != "" && statetext != "") {
+                                    $.ajax({
+                                        //请求方式
+                                        type: "POST",
+                                        //请求的媒体类型
+                                        //contentType: "application/json;charset=UTF-8",
+                                        //请求地址
+                                        url: '@Url.Action("AddorEditSingleVehicleData", "Home")',
+                                        //数据，json字符串
+                                        data: {
+                                            id: id,
+                                            vehicleidtext: vehicleidtext,
+                                            countrytext: countrytext,
+
+                                            statetext: statetext,
+                                            remarkstext: remarkstext,
+                                            areatext: areatext,
+
+                                            method: "edit"
+                                        },
+                                        //请求成功
+                                        success: function (result) {
+                                            layer.msg(result + "请刷新页面");
+                                        },
+                                        //请求失败，包含具体的错误信息
+                                        error: function (e) {
+                                            layer.msg(e);
+                                        }
+                                    });
+                                    layer.close(index);
+                                }
+                                else {
+                                    layer.msg('请填写必填项');
+                                    //console.log(abscheck);
+                                }
+
+
+                            },
+                            success: function (layero, index) {
+
+                                bodyEdit = layer.getChildFrame('body', index);
+
+                                bodyEdit.find('#vehicleid').val(data.vehicleId);
+                                bodyEdit.find('#area').val(data.area);
+                                bodyEdit.find('#country').val(data.country);
+                                bodyEdit.find('#state').val(data.state);
+                                bodyEdit.find('#remarks').val(data.remarks);
+
+                            }
+                        });
+
+                    }
+                    else if (obj.event === 'Singeldel') {
+
+                        layer.confirm('确定删除吗？', function (index) {
+                            $.ajax({
+                                //请求方式
+                                type: "POST",
+                                //请求的媒体类型
+                                //contentType: "application/json;charset=UTF-8",
+                                //请求地址
+                                url: '@Url.Action("DeleteSingleVehicleData", "Home")',
+                                //数据，json字符串
+                                data: {
+                                    id: data.id
+                                },
+                                //请求成功
+                                success: function (result) {
+                                    layer.msg(result + "请刷新页面");
+                                },
+                                //请求失败，包含具体的错误信息
+                                error: function (e) {
+                                    layer.msg(e);
+                                }
+                            });
+                            layer.close(index);
+                        });
+
+
+                    }
+                }
+                else {
+                    window.location.href = "/Home/Error";
+                }
+            });
+
+            table.on('toolbar(VehicleSetupTable)', function (obj) {
+                switch (obj.event) {
+
+                    case 'AddData':
+                        if (user == "Admin") {
+
+                            layer.open({
+                                type: 2,
+                                title: '添加项目信息',
+                                shadeClose: true,
+                                shade: 0.8,
+                                area: ['720px', '80%'],
+                                content: '@Url.Action("VehicleSetupTablePopUp", "PopUp")', //iframe的url
+                                btn: ['确认', '取消'],
+                                yes: function (index) {
+                                    //var body = layer.getChildFrame('body', index);
+                                    var vehicleidtext = bodyAdd.find('#vehicleid').val();
+                                    var areatext = bodyAdd.find('#area').val();
+                                    var countrytext = bodyAdd.find('#country').val();
+                                    var remarkstext = bodyAdd.find('#remarks').val();
+                                    var statetext = bodyAdd.find('#state').val();
+
+                                    if (vehicleidtext != "" && areatext != "" && countrytext != "" && remarkstext != "" && statetext != "") {
+                                        $.ajax({
+                                            //请求方式
+                                            type: "POST",
+                                            //请求的媒体类型
+                                            //contentType: "application/json;charset=UTF-8",
+                                            //请求地址
+                                            url: '@Url.Action("AddorEditSingleVehicleData", "Home")',
+                                            //数据，json字符串
+                                            data: {
+                                                vehicleidtext: vehicleidtext,
+                                                countrytext: countrytext,
+
+                                                statetext: statetext,
+                                                remarkstext: remarkstext,
+                                                areatext: areatext,
+
+
+                                                method: "add"
+                                            },
+                                            //请求成功
+                                            success: function (result) {
+                                                layer.msg(result + "请刷新页面");
+                                            },
+                                            //请求失败，包含具体的错误信息
+                                            error: function (e) {
+                                                layer.msg(e);
+                                            }
+                                        });
+                                        layer.close(index);
+                                    }
+                                    else {
+                                        layer.msg('请填写必填项');
+                                        //console.log(abscheck);
+                                    }
+                                },
+                                success: function (layero, index) {
+                                    bodyAdd = layer.getChildFrame('body', index);
+                                    iframeAdd = window[layero.find('iframe')[0]['name']];
+                                    bodyAdd.find('#legend').val("添加项目信息");
+                                }
+                            });
+                        }
+                        else {
+
+
+                            window.location.href = "/Home/Error";
+                        }
+
+                        break;
+                    case 'ReloadData':
+                        tableIns.reload({
+                            page: { curr: 1, limit: 30 },
+                            url: '@Url.Action("GetVehicleSetup", "Home")',
+                            method: 'post'
+                        });
+                        break;
+                };
+            });
+
+        })
+
+
+    </script>
+}

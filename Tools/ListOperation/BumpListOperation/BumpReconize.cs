@@ -24,6 +24,8 @@ namespace Tools.ListOperation
         {
             List<double> bumplist = new List<double>();
             List<int> bumptimelist = new List<int>();
+            //512/8=64
+            int currentsamplerate = MyConfigforVehicleID.SampleRate / vehicleIDPara.Reductiontimesforimport;
             int s1=0,s2 = 0;//RF和LR初始循环从哪里开始，如果还没有找到，则还是从0开始，如果已经找到了则从找到的后一位开始循环
             if (WFT_AZ_LFPeakList.Count > 0 && WFT_AZ_RFPeakList.Count > 0 && WFT_AZ_LRPeakList.Count > 0)
             {
@@ -41,11 +43,13 @@ namespace Tools.ListOperation
                             {
 
                                 //通过轴距，LF出现波峰的时刻的瞬时速度，采样率来计算左前和左后之间的点数差距，后面还要用平均速度来修正
-                                int ogappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * 512 / speedpeaklist[i]);
-                                int ogappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * 512 / speedpeaklist[i]);
+                                int ogappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * currentsamplerate / speedpeaklist[i]);
+                                int ogappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * currentsamplerate / speedpeaklist[i]);
                                 double t1 = 0,t2=0;
-                                if(WFT_AZ_LFPeakTimeList[i]+ ogappointsupper <= 5120)//这里必须要判断LF出现peak以后LR是否出现在下一个文件里，也就是说LF的peak出现的太晚导致LR的peak没有出现
-                                {
+                                                              
+                            
+                                //if(WFT_AZ_LFPeakTimeList[i]+ ogappointsupper <= (vehicleIDPara.Pointsperfile / vehicleIDPara.Reductiontimesforimport))//这里必须要判断LF出现peak以后LR是否出现在下一个文件里，也就是说LF的peak出现的太晚导致LR的peak没有出现,不考虑出现在下一个文件的peak
+                                //{
                                     for (int l = WFT_AZ_LFPeakTimeList[i]; l < WFT_AZ_LFPeakTimeList[i] + ogappointslower; l++)
                                     {
                                         t1 += speedlist[l];
@@ -54,8 +58,8 @@ namespace Tools.ListOperation
                                     {
                                         t2 += speedlist[l];
                                     }
-                                    int realgappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * 512 / (t1 / ogappointslower));
-                                    int realgappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * 512 / (t2 / ogappointsupper));
+                                    int realgappointslower = Convert.ToInt32(vehicleIDPara.Wheelbaselower * 3.6 * currentsamplerate / (t1 / ogappointslower));
+                                    int realgappointsupper = Convert.ToInt32(vehicleIDPara.Wheelbaseupper * 3.6 * currentsamplerate / (t2 / ogappointsupper));
 
                                     for (int k = s2; k < WFT_AZ_LRPeakTimeList.Count; k++)
                                     {
@@ -70,7 +74,7 @@ namespace Tools.ListOperation
                                         }
                                     }
 
-                                }
+                                //}
 
 
 

@@ -1,0 +1,6 @@
+2021-10-12 09:56:45,815 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-10-12 09:56:45,824 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-10-12 09:56:45,826 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-10-12 09:56:45,827 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-10-12 09:57:06,391 [19] INFO  Microsoft.Hosting.Lifetime - Application is shutting down...
+2021-10-12 09:57:06,411 [16] INFO  Coravel.Scheduling.HostedService.SchedulerHost - Coravel's Scheduling service is now stopped.

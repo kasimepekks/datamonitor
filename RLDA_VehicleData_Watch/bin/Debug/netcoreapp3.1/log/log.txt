@@ -1,166 +1,58 @@
-2022-05-08 09:32:26,382 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 09:32:26,398 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 09:32:26,406 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 09:32:26,409 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 10:00:00,327 [58] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
-2022-05-08 10:00:00,337 [58] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
-2022-05-08 10:00:00,350 [58] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
-2022-05-08 10:30:00,312 [48] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
-2022-05-08 11:00:00,301 [64] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
-2022-05-08 11:35:17,457 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 11:35:17,474 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 11:35:17,477 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 11:35:17,481 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 11:40:00,719 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 11:40:00,736 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 11:40:00,738 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 11:40:00,742 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 11:40:44,646 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 11:40:44,669 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 11:40:44,673 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 11:40:44,677 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 11:44:32,446 [25] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
-2022-05-08 11:44:32,526 [52] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
-2022-05-08 11:44:32,532 [55] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
-2022-05-08 11:44:32,539 [31] ERROR Microsoft.EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'datawatch' on server 'localhost'.
-2022-05-08 11:44:32,576 [50] ERROR Microsoft.EntityFrameworkCore.Database.Command - Failed executing DbCommand (73,441ms) [Parameters=[@__sd_0='?' (DbType = DateTime), @__ed_1='?' (DbType = DateTime), @__vehicleid_2='?' (Size = 64)], CommandType='Text', CommandTimeout='30']
-SELECT EXTRACT(hour FROM `s`.`datadate`) AS `Hour`, ((((((((((COALESCE(SUM(`s`.`0-10`), 0.0) + COALESCE(SUM(`s`.`100-110`), 0.0)) + COALESCE(SUM(`s`.`10-20`), 0.0)) + COALESCE(SUM(`s`.`110-120`), 0.0)) + COALESCE(SUM(`s`.`20-30`), 0.0)) + COALESCE(SUM(`s`.`30-40`), 0.0)) + COALESCE(SUM(`s`.`40-50`), 0.0)) + COALESCE(SUM(`s`.`50-60`), 0.0)) + COALESCE(SUM(`s`.`60-70`), 0.0)) + COALESCE(SUM(`s`.`70-80`), 0.0)) + COALESCE(SUM(`s`.`80-90`), 0.0)) + COALESCE(SUM(`s`.`90-100`), 0.0) AS `Distance`
-FROM `speeddistribution` AS `s`
-WHERE ((`s`.`datadate` >= @__sd_0) AND (`s`.`datadate` <= @__ed_1)) AND (`s`.`VehicleID` = @__vehicleid_2)
-GROUP BY EXTRACT(hour FROM `s`.`datadate`)
-2022-05-08 11:44:32,748 [50] ERROR Microsoft.EntityFrameworkCore.Query - An exception occurred while iterating over the results of a query for context type 'MysqlforDataWatch.datawatchContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
- ---> MySqlConnector.MySqlException (0x80004005): The Command Timeout expired before the operation completed.
-   at MySqlConnector.Protocol.Serialization.SocketByteHandler.DoReadBytesAsync(Memory`1 buffer) in /_/src/MySqlConnector/Protocol/Serialization/SocketByteHandler.cs:line 108
-   at MySqlConnector.Protocol.Serialization.BufferedByteReader.ReadBytesAsync(IByteHandler byteHandler, ArraySegment`1 buffer, Int32 totalBytesToRead, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/BufferedByteReader.cs:line 36
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<ReadPacketAsync>g__AddContinuation|1_0(ValueTask`1 headerBytes, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 412
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<DoReadPayloadAsync>g__AddContinuation|5_0(ValueTask`1 readPacketTask, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ArraySegmentHolder`1 previousPayloads, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 480
-   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 864
-   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
-   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 137
-   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 445
-   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
-   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
-   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 307
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+2022-06-03 12:26:34,720 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 12:26:34,734 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 12:26:34,741 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 12:26:34,744 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 12:27:21,936 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 12:27:21
+2022-06-03 12:30:54,177 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的input数据手动导入完成时间2022-06-03 12:30:54
+2022-06-03 12:30:54,263 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的result数据还没有上传完毕
+2022-06-03 12:31:17,195 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 12:31:17
+2022-06-03 12:41:24,665 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 12:41:24,681 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 12:41:24,687 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 12:41:24,689 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 12:43:25,528 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 12:43:25
+2022-06-03 12:47:37,184 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的input数据手动导入完成时间2022-06-03 12:47:37
+2022-06-03 12:47:37,533 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的result数据还没有上传完毕
+2022-06-03 12:47:51,651 [33] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 12:47:51
+2022-06-03 12:48:05,003 [33] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.AggregateException: One or more errors occurred. (The process cannot access the file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\05_01\2022_05_28-00_01_00-1-F.csv' because it is being used by another process.)
+ ---> System.IO.IOException: The process cannot access the file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\05_01\2022_05_28-00_01_00-1-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in D:\VS_Project\SourceCode\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 119
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in D:\VS_Project\SourceCode\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 45
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in D:\VS_Project\SourceCode\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 34
    --- End of inner exception stack trace ---
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
- ---> MySqlConnector.MySqlException (0x80004005): The Command Timeout expired before the operation completed.
-   at MySqlConnector.Protocol.Serialization.SocketByteHandler.DoReadBytesAsync(Memory`1 buffer) in /_/src/MySqlConnector/Protocol/Serialization/SocketByteHandler.cs:line 108
-   at MySqlConnector.Protocol.Serialization.BufferedByteReader.ReadBytesAsync(IByteHandler byteHandler, ArraySegment`1 buffer, Int32 totalBytesToRead, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/BufferedByteReader.cs:line 36
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<ReadPacketAsync>g__AddContinuation|1_0(ValueTask`1 headerBytes, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 412
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<DoReadPayloadAsync>g__AddContinuation|5_0(ValueTask`1 readPacketTask, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ArraySegmentHolder`1 previousPayloads, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 480
-   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 864
-   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 50
-   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 137
-   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 445
-   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
-   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 314
-   at MySqlConnector.MySqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 307
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(DbContext _, Boolean result, CancellationToken cancellationToken)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   --- End of inner exception stack trace ---
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-2022-05-08 11:44:32,755 [25] ERROR Microsoft.EntityFrameworkCore.Query - An exception occurred while iterating over the results of a query for context type 'MysqlforDataWatch.datawatchContext'.
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
- ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
- ---> MySqlConnector.MySqlException (0x80004005): The Command Timeout expired before the operation completed.
-   at MySqlConnector.Protocol.Serialization.BufferedByteReader.ReadBytesAsync(IByteHandler byteHandler, ArraySegment`1 buffer, Int32 totalBytesToRead, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/BufferedByteReader.cs:line 36
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<ReadPacketAsync>g__AddContinuation|1_0(ValueTask`1 headerBytes, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 412
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<DoReadPayloadAsync>g__AddContinuation|5_0(ValueTask`1 readPacketTask, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ArraySegmentHolder`1 previousPayloads, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 480
-   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 864
-   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 494
-   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 368
-   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 107
-   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 137
-   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 863
-   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 885
-   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 414
-   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 380
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   --- End of inner exception stack trace ---
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
-System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure()' to the 'UseMySql' call.
- ---> MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
- ---> MySqlConnector.MySqlException (0x80004005): The Command Timeout expired before the operation completed.
-   at MySqlConnector.Protocol.Serialization.BufferedByteReader.ReadBytesAsync(IByteHandler byteHandler, ArraySegment`1 buffer, Int32 totalBytesToRead, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/BufferedByteReader.cs:line 36
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<ReadPacketAsync>g__AddContinuation|1_0(ValueTask`1 headerBytes, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 412
-   at MySqlConnector.Protocol.Serialization.ProtocolUtility.<DoReadPayloadAsync>g__AddContinuation|5_0(ValueTask`1 readPacketTask, BufferedByteReader bufferedByteReader, IByteHandler byteHandler, Func`1 getNextSequenceNumber, ArraySegmentHolder`1 previousPayloads, ProtocolErrorBehavior protocolErrorBehavior, IOBehavior ioBehavior) in /_/src/MySqlConnector/Protocol/Serialization/ProtocolUtility.cs:line 480
-   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 864
-   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 494
-   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 368
-   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 107
-   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 137
-   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 863
-   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 885
-   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 414
-   at MySqlConnector.MySqlConnection.Open() in /_/src/MySqlConnector/MySqlConnection.cs:line 380
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlRelationalConnection.Open(Boolean errorsExpected)
-   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   --- End of inner exception stack trace ---
-   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
-2022-05-08 11:46:38,237 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 11:46:38,256 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 11:46:38,262 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 11:46:38,268 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 12:13:54,685 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 12:13:54,711 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 12:13:54,714 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 12:13:54,717 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 12:30:00,968 [143] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
-2022-05-08 12:30:00,978 [143] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
-2022-05-08 12:30:00,989 [143] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
-2022-05-08 16:14:02,826 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 16:14:02,886 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 16:14:02,892 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 16:14:02,897 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 17:14:18,079 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 17:14:18,094 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 17:14:18,098 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 17:14:18,101 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 17:55:19,154 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 17:55:19,183 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 17:55:19,186 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 17:55:19,189 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 17:55:47,008 [14] INFO  RLDA_VehicleData_Watch.Controllers.AnalysisController - AnalysisController中GPSAnalysis方法出现问题：Unable to cast object of type 'SelectListIterator`2[MysqlforDataWatch.Gpsrecord,<>f__AnonymousType3`3[System.Double,System.Double,System.Double]]' to type 'System.Linq.IQueryable'.出现时间：2022-05-08 17:55:47
-2022-05-08 17:56:21,695 [9] INFO  RLDA_VehicleData_Watch.Controllers.AnalysisController - AnalysisController中GPSAnalysis方法出现问题：Unable to cast object of type 'SelectListIterator`2[MysqlforDataWatch.Gpsrecord,<>f__AnonymousType3`3[System.Double,System.Double,System.Double]]' to type 'System.Linq.IQueryable'.出现时间：2022-05-08 17:56:21
-2022-05-08 18:10:20,503 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 18:10:20,526 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 18:10:20,532 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 18:10:20,546 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 21:52:56,917 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 21:52:56,956 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 21:52:56,959 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 21:52:56,988 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 22:44:13,721 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 22:44:13,741 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 22:44:13,744 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 22:44:13,751 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 22:48:21,321 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
-2022-05-08 22:48:21,336 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2022-05-08 22:48:21,340 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2022-05-08 22:48:21,343 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
-2022-05-08 23:00:00,938 [35] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - 车辆配置表中未填写此车辆号ADF0979
-2022-05-08 23:00:00,952 [36] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_14的input数据已有导入flag，不需要再次导入
-2022-05-08 23:00:00,955 [36] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 68错误发生在2022-06-03 12-48-05
+2022-06-03 12:48:15,059 [29] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 12:48:15
+2022-06-03 13:00:56,964 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 13:00:57,082 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 13:00:57,084 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 13:00:57,086 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 13:01:09,469 [17] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 13:01:09
+2022-06-03 13:09:38,686 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 13:09:38,727 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 13:09:38,729 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 13:09:38,731 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 13:10:07,628 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 13:10:07
+2022-06-03 13:18:52,569 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的input数据手动导入完成时间2022-06-03 13:18:52
+2022-06-03 13:18:52,577 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为05_01的result数据还没有上传完毕
+2022-06-03 13:19:05,684 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 13:19:05
+2022-06-03 13:23:37,931 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 13:23:38,038 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 13:23:38,040 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 13:23:38,043 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 13:23:56,791 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-06-03 13:23:56,811 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-06-03 13:23:56,813 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-06-03 13:23:56,822 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\VS_Project\SourceCode\data-monitor\RLDA_VehicleData_Watch
+2022-06-03 13:24:09,595 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 05_01的input数据开始手动导入2022-06-03 13:24:09

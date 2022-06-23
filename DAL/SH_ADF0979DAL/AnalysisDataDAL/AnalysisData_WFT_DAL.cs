@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Tools;
 using Tools.AddDamage;
+using Tools.ListOperation.WFTListOperation;
 using Tools.MyConfig;
 
 namespace DAL.SH_ADF0979DAL
@@ -21,7 +22,7 @@ namespace DAL.SH_ADF0979DAL
 
         }
        
-        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath,string vehicleid)
+        public async Task<bool> ReadandMergeWFTDataperHalfHour(string filepath,string vehicleid, VehicleIDPara vehicleIDPara)
         {
             FileInfo[] filelist = FileOperator.Isfileexist(filepath);//获得指定文件下的所有csv文件
             Encoding encoding = Encoding.Default;
@@ -105,50 +106,15 @@ namespace DAL.SH_ADF0979DAL
                             fs.Dispose();
                             if (aryLine != null && aryLine.Length > 0)
                             {
-
-                                for (int l = 0; l < columnCount - 1; l++)
+                                if (vehicleIDPara.WFTImport == "true")
                                 {
-
-                                    SatictisAnalysisdataWft entity = new SatictisAnalysisdataWft();
-
-                                    entity.Id = vehicleid + "-" + name + "-WFT-" + l.ToString();
-                                    entity.VehicleId = vehicleid;
-                                    entity.Filename = name;
-                                    entity.Datadate = Convert.ToDateTime(datetime);
-                                    entity.Chantitle = tableHead[l + 1];
-
-                                    //注意这里由于计算的列的格式是string类型，用max或min计算会出问题，所以必须先转换再求maxmin
-
-
-                                    entity.Max = dt.AsEnumerable().Max(s => Convert.ToDouble(s.Field<string>(tableHead[l + 1])));
-                                    entity.Min = dt.AsEnumerable().Min(s => Convert.ToDouble(s.Field<string>(tableHead[l + 1])));
-
-
-                                    List<double> damage = dt.AsEnumerable().Select(a => Convert.ToDouble(a.Field<string>(tableHead[l + 1]))).ToList();
-                                    entity.Damage = GetDamageFromList.GetDamage(damage);
-
-                                    List<string> lst = (from d in dt.AsEnumerable() select d.Field<string>(tableHead[l + 1])).ToList();
-                                    double t = 0;
-                                    int n = lst.Count;
-                                    foreach (var data in lst)
+                                    var wftlist = AddWFT.addwft(columnCount, tableHead, dt, vehicleid, name, datetime, vehicleIDPara);
+                                    if (wftlist .Count>0)
                                     {
-
-                                        t += Convert.ToDouble(data) * Convert.ToDouble(data);
+                                        List = List.Concat(wftlist).ToList();
                                     }
-
-
-                                    entity.Rms = System.Math.Sqrt(t / n);
-
-                                    entity.Range = entity.Max - entity.Min;
-
-
-
-                                    List.Add(entity);
-
-
                                 }
-
-
+                               
 
                             }
                         }
@@ -160,61 +126,24 @@ namespace DAL.SH_ADF0979DAL
 
                     }
 
-                    var ListperHalfHour = List.GroupBy(x => new
+
+                    var wftfinallist = WFTCombined.wftcombine(List, wftmysqllist, vehicleid);
+
+
+                    if (vehicleIDPara.WFTImport == "true")
                     {
-                        x.Chantitle,
-                        x.Datadate.Value.Year,
-                        x.Datadate.Value.Month,
-                        x.Datadate.Value.Day,
-                        x.Datadate.Value.Hour,
-                        x.Datadate.Value.Minute
-                    }
-                   ).Select(x => new
-                   {
-                       Id = x.Min(a => a.Id),
-                       VehicleID = vehicleid,
-                       Filename = x.Min(a => a.Filename),
-                       Datadate = x.Min(a => a.Datadate),
-                       x.Key.Chantitle,
-
-                       Max = x.Max(a => a.Max),
-                       Min = x.Min(a => a.Min),
-                       Range = x.Max(a => a.Max) - x.Min(a => a.Min),
-                       Rms = x.Sum(a => a.Rms) * Math.Sqrt(x.Count()),
-
-                       Damage = Math.Round((double)x.Sum(a => a.Damage), 0),
-
-                   }).OrderBy(b => b.Chantitle).ThenBy(b => b.Datadate).ToList();
-
-                    //var ListperHalfHourConvert= ListperHalfHour.OfType<ShAdf0979SatictisAnalysisdataAcc>().ToList();
-
-                    List<SatictisAnalysisdataWft> ListperHalfHourConvert = ListperHalfHour.Select(a => new SatictisAnalysisdataWft
-                    {
-                        Id = a.Id,
-                        VehicleId = a.VehicleID,
-                        Filename = a.Filename,
-                        Datadate = a.Datadate,
-                        Chantitle = a.Chantitle,
-                        Max = a.Max,
-                        Min = a.Min,
-                        Range = a.Range,
-                        Rms = a.Rms,
-                        Damage = a.Damage
-
-                    }).ToList();
-
-                    for (int i = ListperHalfHourConvert.Count - 1; i >= 0; i--)
-                    {
-                        if (wftmysqllist.Contains(ListperHalfHourConvert[i].Id))
+                        if (wftfinallist.Count>0)
                         {
-                            ListperHalfHourConvert.Remove(ListperHalfHourConvert[i]);
+                            _DB.BulkInsert(wftfinallist);
                         }
+                        Console.WriteLine("WFT数据有" + wftfinallist.Count + "条");
                     }
-
-
-                    _DB.BulkInsert(ListperHalfHourConvert);
-
-                    //this.CurrentDBSession.SaveChanges();
+                    else
+                    {
+                        Console.WriteLine("WFT没有开启导入");
+                    }
+                       
+                    
                     _DB.SaveChanges();
                     can = true;
 

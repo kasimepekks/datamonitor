@@ -1,0 +1,42 @@
+2022-05-22 16:48:04,724 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 16:48:04,744 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 16:48:04,748 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 16:48:04,751 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-22 16:49:08,691 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 16:49:08
+2022-05-22 16:49:25,570 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据手动导入完成时间2022-05-22 16:49:25
+2022-05-22 16:49:25,580 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的result数据还没有上传完毕
+2022-05-22 16:54:50,046 [41] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 16:54:50
+2022-05-22 16:55:50,525 [41] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据手动导入完成时间2022-05-22 16:55:50
+2022-05-22 16:55:50,535 [41] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的result数据还没有上传完毕
+2022-05-22 16:56:11,079 [38] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 16:56:11
+2022-05-22 16:59:55,880 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 16:59:55,897 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 16:59:55,900 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 16:59:55,904 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-22 17:00:14,869 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 17:00:14
+2022-05-22 17:05:54,102 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 17:05:54,117 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 17:05:54,120 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 17:05:54,127 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-22 17:06:12,320 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 17:06:12
+2022-05-22 17:06:38,170 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据手动导入完成时间2022-05-22 17:06:38
+2022-05-22 17:06:38,181 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的result数据还没有上传完毕
+2022-05-22 17:56:32,056 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 17:56:32,075 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 17:56:32,078 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 17:56:32,081 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-22 17:57:05,601 [15] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-22 18:03:21,999 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 18:03:22,014 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 18:03:22,017 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 18:03:22,021 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-05-22 18:04:31,630 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-05-22 18:04:31
+2022-05-22 18:04:37,546 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据手动导入完成时间2022-05-22 18:04:37
+2022-05-22 18:04:37,553 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的result数据开始手动导入2022-05-22 18:04:37
+2022-05-22 18:04:49,038 [16] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的result数据手动导入完成时间2022-05-22 18:04:49
+2022-05-22 18:06:26,017 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - E21SVV006日期为04_16的input数据已有导入flag，不需要再次导入
+2022-05-22 18:06:26,027 [18] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的result数据开始手动导入2022-05-22 18:06:26
+2022-05-22 19:35:40,372 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-05-22 19:35:40,391 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-22 19:35:40,395 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-05-22 19:35:40,397 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

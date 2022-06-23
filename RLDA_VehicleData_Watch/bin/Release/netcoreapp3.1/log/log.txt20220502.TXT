@@ -1,0 +1,4 @@
+2022-05-02 20:48:21,216 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://[::]:5000
+2022-05-02 20:48:21,224 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Production
+2022-05-02 20:48:21,226 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\bin\Release\netcoreapp3.1

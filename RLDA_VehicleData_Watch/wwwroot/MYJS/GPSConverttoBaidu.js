@@ -25,6 +25,7 @@
         var ys = [];
         var maxCnt = 20;//每次发送的最大个数
         var send = function () {
+            
             var url = xyUrl + "&x=" + xs.join(",") + "&y=" + ys.join(",") + "&callback=callback";
             //动态创建script标签
             load_script(url);

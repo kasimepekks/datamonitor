@@ -1,0 +1,63 @@
+2021-11-30 15:10:43,202 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-30 15:10:43,218 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-30 15:10:43,223 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-30 15:10:43,228 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-30 15:11:01,548 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:15:24,799 [23] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_29-21_43_31-1400-F.csv已被监控发现
+2021-11-30 15:15:50,503 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_29-21_43_36-1401-F.csv已被监控发现
+2021-11-30 15:16:13,157 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_29-21_43_41-1402-F.csv已被监控发现
+2021-11-30 15:17:20,840 [31] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_36-1401-F.csv已被监控发现
+2021-11-30 15:18:18,596 [11] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:18:48,551 [19] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_31-1400-F.csv已被监控发现
+2021-11-30 15:18:48,552 [25] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_31-1400-F.csv已被监控发现
+2021-11-30 15:20:52,177 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-30 15:20:52,193 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-30 15:20:52,197 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-30 15:20:52,200 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-30 15:20:59,228 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:21:16,421 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_36-1401-F.csv已被监控发现
+2021-11-30 15:21:34,626 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_41-1402-F.csv已被监控发现
+2021-11-30 15:21:55,447 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_46-1403-F.csv已被监控发现
+2021-11-30 15:22:47,718 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_51-1404-F.csv已被监控发现
+2021-11-30 15:23:20,748 [33] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:23:48,974 [34] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_56-1405-F.csv已被监控发现
+2021-11-30 15:23:48,977 [35] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_43_56-1405-F.csv已被监控发现
+2021-11-30 15:23:57,331 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:24:21,680 [34] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_01-1406-F.csv已被监控发现
+2021-11-30 15:24:21,687 [27] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_01-1406-F.csv已被监控发现
+2021-11-30 15:24:21,690 [26] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_01-1406-F.csv已被监控发现
+2021-11-30 15:26:31,991 [45] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_21-1410-F.csv已被监控发现
+2021-11-30 15:26:31,994 [47] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_21-1410-F.csv已被监控发现
+2021-11-30 15:26:31,999 [48] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_21-1410-F.csv已被监控发现
+2021-11-30 15:26:33,364 [49] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_06-1407-F.csv已被监控发现
+2021-11-30 15:26:33,372 [50] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_06-1407-F.csv已被监控发现
+2021-11-30 15:26:33,376 [48] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_06-1407-F.csv已被监控发现
+2021-11-30 15:26:34,656 [50] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_11-1408-F.csv已被监控发现
+2021-11-30 15:26:34,658 [48] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_11-1408-F.csv已被监控发现
+2021-11-30 15:26:34,671 [49] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_11-1408-F.csv已被监控发现
+2021-11-30 15:26:35,950 [50] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_16-1409-F.csv已被监控发现
+2021-11-30 15:26:35,958 [48] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_16-1409-F.csv已被监控发现
+2021-11-30 15:26:35,966 [49] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_16-1409-F.csv已被监控发现
+2021-11-30 15:29:25,462 [28] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_26-1411-F.csv已被监控发现
+2021-11-30 15:29:25,470 [30] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_26-1411-F.csv已被监控发现
+2021-11-30 15:29:25,472 [25] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_26-1411-F.csv已被监控发现
+2021-11-30 15:31:27,105 [14] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_31-1412-F.csv已被监控发现
+2021-11-30 15:31:27,108 [32] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_31-1412-F.csv已被监控发现
+2021-11-30 15:31:27,114 [15] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_31-1412-F.csv已被监控发现
+2021-11-30 15:31:58,142 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_36-1413-F.csv已被监控发现
+2021-11-30 15:31:58,152 [7] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_36-1413-F.csv已被监控发现
+2021-11-30 15:31:58,179 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_36-1413-F.csv已被监控发现
+2021-11-30 15:32:13,160 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_41-1414-F.csv已被监控发现
+2021-11-30 15:32:13,162 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_41-1414-F.csv已被监控发现
+2021-11-30 15:32:13,164 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_44_41-1414-F.csv已被监控发现
+2021-11-30 15:32:38,200 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_45_16-1421-F.csv已被监控发现
+2021-11-30 15:32:38,204 [11] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_45_16-1421-F.csv已被监控发现
+2021-11-30 15:32:38,213 [40] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_11_29-21_45_16-1421-F.csv已被监控发现
+2021-11-30 15:57:06,029 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-30 15:57:06,047 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-30 15:57:06,051 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-30 15:57:06,055 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-30 15:58:05,086 [27] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-30 15:58:15,188 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_29\2021_07_04-10_10_35-46.csv已被监控发现
+2021-11-30 15:58:34,297 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-46.csv已被监控发现
+2021-11-30 16:05:55,117 [42] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\11_25\2021_07_04-10_10_35-46.csv已被监控发现

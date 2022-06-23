@@ -1,0 +1,453 @@
+2021-11-29 09:26:21,065 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 09:26:21,082 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 09:26:21,085 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 09:26:21,088 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 09:31:19,022 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 09:31:19,039 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 09:31:19,042 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 09:31:19,046 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 10:14:20,146 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 10:14:20,164 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 10:14:20,167 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 10:14:20,174 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:32:54,498 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:32:54,512 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:32:54,515 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:32:54,523 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:34:32,425 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:34:32,439 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:34:32,443 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:34:32,449 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:35:59,528 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:35:59,545 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:35:59,548 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:35:59,552 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:36:52,474 [13] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 11:36:52,748 [4] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:52,806 [8] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:52,848 [6] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:52,908 [25] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:52,962 [28] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,005 [35] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,045 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,088 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,133 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,190 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,235 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,278 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,314 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,356 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,397 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,435 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,472 [32] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,506 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,541 [27] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,575 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,614 [32] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,653 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,691 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,724 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,759 [27] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,805 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,843 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,881 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,922 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:53,967 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,008 [32] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,046 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,080 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,119 [27] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,159 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,209 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,276 [27] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,326 [30] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,364 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,403 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,447 [21] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,487 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,528 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,572 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,611 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,657 [14] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,704 [33] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,743 [27] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,782 [21] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:36:54,828 [21] ERROR Microsoft.AspNetCore.SignalR.HubConnectionHandler - Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'groupName')
+   at Microsoft.AspNetCore.SignalR.DefaultHubLifetimeManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SignalR.Internal.GroupManager`1.AddToGroupAsync(String connectionId, String groupName, CancellationToken cancellationToken)
+   at RLDA_VehicleData_Watch.Models.MyHub.OnConnectedAsync() in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Models\MyHub.cs:line 24
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2021-11-29 11:37:11,239 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:37:11,252 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:37:11,255 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:37:11,263 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:37:18,317 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 11:37:52,432 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 11:38:11,299 [20] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-21.csv已被监控发现
+2021-11-29 11:38:11,302 [21] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-21.csv已被监控发现
+2021-11-29 11:50:14,405 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:50:14,420 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:50:14,423 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:50:14,431 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:50:45,260 [7] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 11:51:36,910 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 2021_11_25-14_33_32-327-F - 副本.csv已被监控发现
+2021-11-29 11:52:45,843 [23] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 2021_11_25-14_33_32-327-F - 副本.csv已被监控发现
+2021-11-29 11:55:34,342 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 11:55:34,367 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 11:55:34,371 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 11:55:34,379 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 11:56:51,781 [19] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 11:57:05,651 [16] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_25-14_33_32-327-F.csv已被监控发现
+2021-11-29 12:04:10,641 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-29 12:04:10,666 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-29 12:04:10,692 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-29 12:04:10,699 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-29 12:04:18,213 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21SIV161的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-11-29 12:04:28,084 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_25-14_33_32-327-F - 副本.csv已被监控发现
+2021-11-29 12:06:28,903 [28] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_11_25-14_33_32-327-F - 副本.csv已被监控发现

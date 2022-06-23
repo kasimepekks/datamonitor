@@ -1,0 +1,40 @@
+2021-12-22 11:18:03,571 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-22 11:18:03,621 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-22 11:18:03,627 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-22 11:18:03,631 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-22 11:18:13,019 [15] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-22 11:18:13,079 [10] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Admin96jZGoXRaK3VSIhgGyucpA
+2021-12-22 11:18:34,934 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本 (2).csv已被监控发现
+2021-12-22 11:19:13,840 [11] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：96jZGoXRaK3VSIhgGyucpA
+2021-12-22 11:19:13,879 [21] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminiNYkEZpfgPLd6dTirOz-Fw
+2021-12-22 11:19:33,233 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本.csv已被监控发现
+2021-12-22 11:20:45,586 [27] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：iNYkEZpfgPLd6dTirOz-Fw
+2021-12-22 11:20:45,625 [28] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Adminw6z01tOi3Z4pGy2Oq3LFQA
+2021-12-22 11:22:58,263 [30] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：w6z01tOi3Z4pGy2Oq3LFQA
+2021-12-22 11:22:58,282 [39] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Admint3UghYiWO-MGUeDzupBp6A
+2021-12-22 11:24:39,270 [46] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：t3UghYiWO-MGUeDzupBp6A
+2021-12-22 11:24:42,528 [49] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Adminbd8EY0Q6SXFYDevXghXJtg
+2021-12-22 11:25:16,549 [63] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：bd8EY0Q6SXFYDevXghXJtg
+2021-12-22 11:25:16,578 [55] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminvYLWW7zcg48Kddp_inZmVQ
+2021-12-22 11:27:19,894 [58] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：vYLWW7zcg48Kddp_inZmVQ
+2021-12-22 11:27:19,952 [10] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：Admin6UX5EZiIGmU17gB_A5cvxw
+2021-12-22 11:27:23,481 [65] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本 - 副本.csv已被监控发现
+2021-12-22 11:30:54,921 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-12-22 11:30:54,935 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-12-22 11:30:54,938 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-12-22 11:30:54,941 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-12-22 11:30:55,173 [9] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminWTX837iDrONMKr7MKcXtsA
+2021-12-22 11:30:56,196 [15] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：WTX837iDrONMKr7MKcXtsA
+2021-12-22 11:31:07,059 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-22 11:31:07,112 [9] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminMIBX5Xyg81GFflXOdZsuJg
+2021-12-22 11:31:11,670 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本.csv已被监控发现
+2021-12-22 11:31:12,634 [9] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_07_04-10_10_35-32-F - 副本.csv已传送数据
+2021-12-22 11:31:24,968 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：MIBX5Xyg81GFflXOdZsuJg
+2021-12-22 11:31:27,516 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2021-12-22 11:31:27,537 [20] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdminEaR99pBRpkRU8JgPmNO78w
+2021-12-22 11:31:31,612 [20] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了E21HOV054的监控页面D:/JianGuoYun/MVEG2110/IVHM_data
+2021-12-22 11:31:31,630 [12] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：AdmindYPg9As0Q2yGF0AkVoQ6mw
+2021-12-22 11:32:05,338 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_21-15_36_23-1881-F - 副本.csv已被监控发现
+2021-12-22 11:32:05,667 [5] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\12_20\2021_12_21-15_36_23-1881-F - 副本.csv已传送数据
+2021-12-22 11:32:14,265 [13] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：dYPg9As0Q2yGF0AkVoQ6mw
+2021-12-22 11:32:15,085 [13] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：EaR99pBRpkRU8JgPmNO78w

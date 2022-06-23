@@ -15,13 +15,22 @@
   },
 
   "E21SVV006": {
-    "Channels": "Time,Spd,AccZWhlLFN,AccZWhlRFN,AccZWhlLR,AccXSTLFN,AccYSTLF,BrkPdlDrvrAp,EPTAccelActu,StrgWhlAng,StrgWhlAngGr,Lat,Lon",
-    "Pointsperfile": "2560",//每个文件的点数
-    "Wheelbaselower": "2.4", //车辆的最小轴距，用于计算识别bump的参数
-    "Wheelbaseupper": "2.7", //车辆的最大轴距，用于计算识别bump的参数
+    "Channels": "Time,VehSpdAvg,AccZWhlRFN,AccZWhlRFN,AccZWhlRR,AccXSTLFN,AccYSTLF,BrkPdlDrvrAp,EPTAccelActu,StrgWhlAng,StrgWhlAngGr,Lat,Lon", //由于左前轮心加速度坏了，所以改用右前，不影响bump识别
+    "IsFileCombined": "true",//判断是否原始文件半小时进行合并过，只用于冲击识别，冲击识别需要判断是否合并过
+    "GPSImport": "true1", //是否需要导入GPS，主要用于某些没有导入成功的数据重新导入的时候其他已经导入成功的数据就不用在导入了，节省导入时间
+    "BrakeImport": "true1",
+    "ThrottleImport": "true1",
+    "SpeedImport": "true1",
+    "StatisticImport": "true",
+    "BumpImport": "true",
+    "SteeringImport": "true1",
+    "WFTImport": "true1",
+    "Pointsperfile": "2560", //每个文件的点数
+    "Wheelbaselower": "2.3", //车辆的最小轴距，用于计算识别bump的参数
+    "Wheelbaseupper": "2.8", //车辆的最大轴距，用于计算识别bump的参数
     "BmupZeroStandard": "10", //清零标准值，如果小于这个指的话都改为0
-    "BumpMaxSpeed": "40", //过bump的最大速度，高于这个速度的应该不算bump
-    "AccValueGap": "0.5", //加速度值间隔标准，比较两个加速度值是否小于此参数
+    "BumpMaxSpeed": "200", //过bump的最大速度，高于这个速度的应该不算bump,其实已经不算是bump了，而是分析冲击工况，所以速度无限制
+    "AccValueGap": "2", //加速度值间隔标准，比较两个加速度值是否小于此参数
     "AccTimeGap": "10", //加速度时间间隔标准，比较两个加速度的时刻点数是否小于此参数
     "BumpTimeGap": "5", //经过Bump的点数
     "BrakeZeroStandard": "150", //尽量不要改动，小于此值的数据都设为0
@@ -30,17 +39,27 @@
     "SteeringLastingPoints": "5", //转向持续点数
     "ThrottleZeroStandard": "5", //油门踏板清零标准值
     "ThrottleLastingPoints": "5", //油门持续点数
-    "Reductiontimesforimport": "20" //import重采样降低倍数,这里改了的话其他关于points的参数也得改，20代表只有128个点
+    "Reductiontimesforimport": "8" //import重采样降低倍数,这里改了的话其他关于points的参数也得改，20代表只有128个点
   },
 
 
   "ADF0979": {
     "Channels": "Time,Speed,AccZWhlLF,AccZWhlRF,AccZWhlLR,AccXFM,AccYFM,Brake,",
+    "IsFileCombined": "true", //判断是否原始文件半小时进行合并过，只用于冲击识别，冲击识别需要判断是否合并过
+
+    "GPSImport": "false",
+    "BrakeImport": "true",
+    "ThrottleImport": "false",
+    "SpeedImport": "true",
+    "StatisticImport": "true",
+    "BumpImport": "true",
+    "SteeringImport": "false",
+    "WFTImport": "true",
     "Pointsperfile": "5120", //每个文件的点数
     "Wheelbaselower": "2.4", //车辆的最小轴距，用于计算识别bump的参数
     "Wheelbaseupper": "2.7", //车辆的最大轴距，用于计算识别bump的参数
     "BmupZeroStandard": "10", //清零标准值，如果小于这个指的话都改为0
-    "BumpMaxSpeed": "40", //过bump的最大速度，高于这个速度的应该不算bump
+    "BumpMaxSpeed": "200", //过bump的最大速度，高于这个速度的应该不算bump
     "AccValueGap": "0.5", //加速度值间隔标准，比较两个加速度值是否小于此参数
     "AccTimeGap": "10", //加速度时间间隔标准，比较两个加速度的时刻点数是否小于此参数
     "BumpTimeGap": "100", //经过Bump的点数

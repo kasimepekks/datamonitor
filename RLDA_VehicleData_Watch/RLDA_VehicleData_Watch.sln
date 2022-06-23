@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RLDA_VehicleData_Watch", "RLDA_VehicleData_Watch.csproj", "{133FEF26-4B9D-4BB4-BCBC-9F95709EDA7A}"
 EndProject
@@ -16,8 +16,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IBLL", "..\IBLL\IBLL.csproj", "{F6378E99-026F-4A05-B1BB-D2F7A1E4B350}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "..\BLL\BLL.csproj", "{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionRecognition", "..\ConditionRecognition\ConditionRecognition.csproj", "{97149085-5182-4E2D-B77F-EB0D2CAB7A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +51,6 @@ Global
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{170AFB0B-649E-4EAE-9A62-35ADBE4D44AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97149085-5182-4E2D-B77F-EB0D2CAB7A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,106 @@
+2021-11-19 09:07:01,864 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 09:07:01,884 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 09:07:01,887 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 09:07:01,891 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 09:07:16,803 [10] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-19 09:07:16,971 [19] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-19 09:10:21,124 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 09:10:21,146 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 09:10:21,150 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 09:10:21,157 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 09:10:27,947 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-19 09:10:28,097 [7] INFO  RLDA_VehicleData_Watch.Controllers.ADF0979Controller - 启动了数据分析的页面
+2021-11-19 14:11:17,073 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 14:11:17,101 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 14:11:17,109 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 14:11:17,113 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 14:11:41,679 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:11:41
+2021-11-19 14:11:42,337 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at Tools.ListOperation.BrakeListOperation.BrakeReconize.GetBrake(List`1 brakelist, List`1 Acc_X_FM_list, List`1 speedlist) in C:\Users\111\source\repos\data-monitor\Tools\ListOperation\BrakeListOperation\BrakeReconize.cs:line 27
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 331
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 31
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 52错误发生在2021-11-19 14-11-42
+2021-11-19 14:16:06,929 [27] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:16:06
+2021-11-19 14:16:07,095 [27] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.IO.IOException: The process cannot access the file 'E:\Taxi_EP22_2021\Original_Data\Input\05_01\2021_05_01-09_28_37-273-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 99
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 31
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 52错误发生在2021-11-19 14-16-07
+2021-11-19 14:16:44,513 [35] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:16:44
+2021-11-19 14:16:44,652 [35] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.IO.IOException: The process cannot access the file 'E:\Taxi_EP22_2021\Original_Data\Input\05_01\2021_05_01-09_28_37-273-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 99
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 31
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 52错误发生在2021-11-19 14-16-44
+2021-11-19 14:17:37,642 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 14:17:37,666 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 14:17:37,670 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 14:17:37,673 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 14:17:55,993 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:17:55
+2021-11-19 14:17:56,238 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - System.IO.IOException: The process cannot access the file 'E:\Taxi_EP22_2021\Original_Data\Input\05_01\2021_05_01-09_28_37-273-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 99
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 31
+   at RLDA_VehicleData_Watch.Controllers.Base.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\Base\DataImportController.cs:line 52错误发生在2021-11-19 14-17-56
+2021-11-19 14:18:49,036 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 14:18:49,055 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 14:18:49,058 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 14:18:49,065 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 14:21:04,865 [18] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:21:04
+2021-11-19 14:26:12,993 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 14:26:13,010 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 14:26:13,013 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 14:26:13,021 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 14:26:25,192 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01开始计算导入2021-11-19 14:26:25
+2021-11-19 14:27:35,247 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01里程统计完成时间2021-11-19 14:27:35
+2021-11-19 14:29:25,990 [8] INFO  RLDA_VehicleData_Watch.Controllers.Base.DataImportController - 05_01损伤计算完成时间2021-11-19 14:29:25
+2021-11-19 15:13:28,586 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:13:28,603 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:13:28,606 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:13:28,612 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:15:15,254 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:15:15,272 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:15:15,275 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:15:15,282 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:28:25,853 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:28:25,877 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:28:25,884 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:28:25,886 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:33:06,961 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:33:06,979 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:33:06,982 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:33:06,988 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:33:17,015 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:33:17,031 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:33:17,034 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:33:17,040 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:34:53,939 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:34:53,959 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:34:53,962 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:34:53,965 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 15:42:24,686 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 15:42:24,705 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 15:42:24,708 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 15:42:24,717 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 16:15:25,275 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 16:15:25,299 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 16:15:25,302 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 16:15:25,305 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 16:28:30,685 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 16:28:30,702 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 16:28:30,705 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 16:28:30,711 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-19 16:28:58,944 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-19 16:28:58,967 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-19 16:28:58,969 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-19 16:28:58,972 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

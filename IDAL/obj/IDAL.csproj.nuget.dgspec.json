@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {}
+    "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj": {
+    "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj",
+        "projectUniqueName": "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj",
         "projectName": "IDAL",
-        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\IDAL.csproj",
-        "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\IDAL\\obj\\",
+        "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\IDAL.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\VS_Project\\SourceCode\\data-monitor\\IDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\111\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -34,11 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               },
-              "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj"
+              "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\Tools.csproj": {
+                "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\Tools.csproj"
               }
             }
           }
@@ -67,28 +61,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+    "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "projectUniqueName": "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
         "projectName": "MysqlforDataWatch",
-        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
-        "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\obj\\",
+        "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\111\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -147,28 +135,22 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj": {
+    "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
+        "projectUniqueName": "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\Tools.csproj",
-        "packagesPath": "C:\\Users\\111\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\111\\source\\repos\\data-monitor\\Tools\\obj\\",
+        "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\Tools.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\VS_Project\\SourceCode\\data-monitor\\Tools\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\111\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -181,8 +163,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
-                "projectPath": "C:\\Users\\111\\source\\repos\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
+              "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj": {
+                "projectPath": "D:\\VS_Project\\SourceCode\\data-monitor\\MysqlforDataWatch\\MysqlforDataWatch.csproj"
               }
             }
           }
@@ -225,7 +207,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

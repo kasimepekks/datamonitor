@@ -1,0 +1,22 @@
+2021-11-24 09:46:32,751 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-24 09:46:32,798 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-24 09:46:32,814 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-24 09:46:32,819 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-24 09:46:47,302 [12] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面
+2021-11-24 09:53:36,048 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-24 09:53:36,066 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-24 09:53:36,072 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-24 09:53:36,076 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-24 09:53:49,632 [14] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面
+2021-11-24 11:20:46,498 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-24 11:20:46,516 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-24 11:20:46,520 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-24 11:20:46,529 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2021-11-24 11:20:54,813 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面
+2021-11-24 11:21:17,314 [10] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-22-F.csv已被监控发现
+2021-11-24 11:22:27,756 [23] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-25.csv已被监控发现
+2021-11-24 11:22:29,393 [25] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2021_07_04-10_10_35-24-F.csv已被监控发现
+2021-11-24 16:24:07,352 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2021-11-24 16:24:07,398 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2021-11-24 16:24:07,401 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2021-11-24 16:24:07,430 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch

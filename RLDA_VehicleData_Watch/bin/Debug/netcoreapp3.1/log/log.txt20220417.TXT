@@ -1,0 +1,104 @@
+2022-04-17 18:35:30,965 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 18:35:30,979 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 18:35:30,982 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 18:35:30,985 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 18:36:25,610 [26] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - 启动了ADF0979的监控页面D:/JianGuoYun/我的坚果云/IVHM_data
+2022-04-17 18:36:25,698 [4] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已开始：UserELP4hKzP4DiUUNwGUjEWyA
+2022-04-17 18:36:42,218 [4] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2022_01_15-12_26_58-18-F.csv已被监控发现
+2022-04-17 18:36:42,846 [22] INFO  RLDA_VehicleData_Watch.Controllers.Base.FileWatchController - input\2022_01_15-12_26_58-18-F.csv已传送数据
+2022-04-17 18:37:13,546 [15] INFO  RLDA_VehicleData_Watch.Models.MyHub - 此Signalr链接ID已断开：ELP4hKzP4DiUUNwGUjEWyA
+2022-04-17 18:37:41,110 [21] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_16的input数据还没有上传完毕
+2022-04-17 18:38:08,498 [25] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-04-17 18:38:08
+2022-04-17 18:51:09,266 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 18:51:09,284 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 18:51:09,287 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 18:51:09,290 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 18:51:46,712 [11] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-04-17 18:51:46
+2022-04-17 18:54:08,907 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 18:54:08,924 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 18:54:08,927 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 18:54:08,935 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 18:54:35,731 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 18:54:35
+2022-04-17 18:54:36,246 [6] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-17 18:54:36
+2022-04-17 18:54:36,251 [6] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-17 18:57:11,044 [21] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据已有导入flag，不需要再次导入
+2022-04-17 18:57:25,093 [24] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 18:57:25
+2022-04-17 18:59:19,566 [22] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-17 18:59:19
+2022-04-17 18:59:19,577 [22] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-17 18:59:52,395 [12] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 18:59:52
+2022-04-17 19:09:56,638 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 19:09:56,654 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 19:09:56,657 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 19:09:56,666 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 19:10:11,999 [12] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 19:10:11
+2022-04-17 19:11:32,350 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-17 19:11:32
+2022-04-17 19:11:32,361 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-17 19:13:19,053 [12] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_16的input数据开始手动导入2022-04-17 19:13:19
+2022-04-17 19:14:18,218 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_16的input数据手动导入完成时间2022-04-17 19:14:18
+2022-04-17 19:14:18,227 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_16的result数据还没有上传完毕
+2022-04-17 19:30:00,127 [12] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为04_14的input数据已有导入flag，不需要再次导入
+2022-04-17 19:30:00,133 [12] INFO  RLDA_VehicleData_Watch.Models.MyInvocableforAutoDataImport - ADF0979日期为04_16的input数据已有导入flag，不需要再次导入
+2022-04-17 23:29:42,456 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 23:29:42,487 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 23:29:42,492 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 23:29:42,501 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 23:29:53,430 [5] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:29:53
+2022-04-17 23:41:52,797 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 23:41:52,812 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 23:41:52,816 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 23:41:52,823 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 23:42:08,623 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:42:08
+2022-04-17 23:42:09,161 [6] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-17 23:42:09
+2022-04-17 23:42:09,166 [6] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕
+2022-04-17 23:43:14,628 [21] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:43:14
+2022-04-17 23:43:41,388 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.IO.IOException: The process cannot access the file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\04_14\2022_01_15-12_30_06-42-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 103
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 41
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 65错误发生在2022-04-17 23-43-41
+2022-04-17 23:43:56,117 [20] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:43:56
+2022-04-17 23:46:26,670 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 23:46:26,687 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 23:46:26,691 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 23:46:26,699 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 23:46:37,344 [8] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:46:37
+2022-04-17 23:51:18,313 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 23:51:18,327 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 23:51:18,330 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 23:51:18,336 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 23:51:35,312 [11] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:51:35
+2022-04-17 23:51:42,180 [7] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - System.IO.IOException: The process cannot access the file 'D:\JianGuoYun\我的坚果云\IVHM_data\input\04_14\2022_01_15-12_30_06-42-F.csv' because it is being used by another process.
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.<>c__DisplayClass1_0.<ReadandMergeACCDataperHalfHour>b__0() in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 103
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at DAL.SH_ADF0979DAL.AnalysisData_ACC_DAL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\DAL\SH_ADF0979DAL\AnalysisDataDAL\AnalysisData_ACC_DAL.cs:line 41
+   at BLL.SH_ADF0979BLL.AnalysisData_ACC_BLL.ReadandMergeACCDataperHalfHour(String filepath, String vehicleid, VehicleIDPara vehicleIDPara) in C:\Users\111\source\repos\data-monitor\BLL\SH_ADF0979BLL\AnalysisDataBLL\AnalysisData_ACC_BLL.cs:line 33
+   at RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController.DataImport(String startdate, String enddate, String vehicleid) in C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch\Controllers\DataProcess\DataImportController.cs:line 65错误发生在2022-04-17 23-51-42
+2022-04-17 23:51:44,726 [15] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:51:44
+2022-04-17 23:53:54,813 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5000
+2022-04-17 23:53:54,828 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2022-04-17 23:53:54,831 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2022-04-17 23:53:54,837 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: C:\Users\111\source\repos\data-monitor\RLDA_VehicleData_Watch
+2022-04-17 23:54:06,731 [4] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - 04_14的input数据开始手动导入2022-04-17 23:54:06
+2022-04-17 23:54:34,558 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的input数据手动导入完成时间2022-04-17 23:54:34
+2022-04-17 23:54:34,567 [13] INFO  RLDA_VehicleData_Watch.Controllers.DataProcess.DataImportController - ADF0979日期为04_14的result数据还没有上传完毕

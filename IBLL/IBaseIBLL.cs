@@ -13,6 +13,7 @@ namespace IBLL
         IQueryable<T> LoadEntities
          (System.Linq.Expressions.Expression<Func<T, bool>> whereLambda);
         bool DeleteEntity(T entity);
+        bool DeleteAllEntity(System.Linq.Expressions.Expression<Func<T, bool>> whereLambda);
         bool EditEntity(T entity);
         bool AddEntity(T entity);
         //List<T> ReadOneCsvFileService(string filefullpath, string filename, out string name, out List<double> speed, out List<double> Brake, out List<double> Lat, out List<double> Lon);

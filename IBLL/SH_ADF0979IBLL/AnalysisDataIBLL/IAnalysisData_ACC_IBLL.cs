@@ -1,6 +1,7 @@
 ﻿using MysqlforDataWatch;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tools.MyConfig;
@@ -11,5 +12,6 @@ namespace IBLL.SH_ADF0979IBLL
     {
         //bool ReadFilesForAnalysisDataAcc(string filepath);
         Task<bool> ReadandMergeACCDataperHalfHour(string filepath, string vehicleid, VehicleIDPara vehicleIDPara);
+        Task<IQueryable> LoadACCandDisData(DateTime sd, DateTime ed, string vehicleid);
     }
 }
