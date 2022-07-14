@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,7 @@ using Pomelo.AspNetCore.TimedJob;
 
 using RLDA_VehicleData_Watch.Controllers;
 using RLDA_VehicleData_Watch.Models;
+using RLDA_VehicleData_Watch.Utility.Filter;
 using Tools.MyAutofacModule;
 
 namespace RLDA_VehicleData_Watch
@@ -54,13 +56,18 @@ namespace RLDA_VehicleData_Watch
             var serverVersion = new MySqlServerVersion(new Version(5, 7, 20));
             var FilePath = new FilePath();
             Configuration.Bind("FilePath", FilePath);
+            services.AddMemoryCache();
+            services.AddScoped<MemoryCache>();
             services.AddHttpContextAccessor();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(option => 
             option.LoginPath = new PathString("/Home/Login"));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddDbContext<datawatchContext>(options => options.UseMySql(connectionstring, serverVersion));
             services.AddScoped<DbContext, datawatchContext>();
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(typeof(CustomerExceptionFilterAtrribute));
+            });
             //¿çÓò
             //services.AddCors(option => option.AddPolicy("cors",
             //     policy => policy.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(_ => true)));

@@ -132,7 +132,7 @@ namespace DAL.SH_ADF0979DAL
                             //逐行读取CSV中的数
                             while ((strLine = sr.ReadLine()) != null)
                             {
-                                resample++;//每读取一行就加1，直到加到采样率标准就读取数据
+                               
                                 if (IsFirst == true)
                                 {
                                     tableHead = strLine.Split(',');
@@ -167,8 +167,9 @@ namespace DAL.SH_ADF0979DAL
                                 }
                                 else
                                 {
+                                    resample += 1;//每读取一行就加1，直到加到采样率标准就读取数据
                                     //判断是否等于采样率标准
-                                    if(resample== vehicleIDPara.Reductiontimesforimport)
+                                    if (resample== vehicleIDPara.Reductiontimesforimport)
                                     {
                                         aryLine = strLine.Split(',');
 
@@ -208,9 +209,11 @@ namespace DAL.SH_ADF0979DAL
                                             {
                                                 return;//如果有不匹配的通道名，直接跳出方法
                                             }
-                                            resample = 0;//重新计数
+                                            
 
                                         }
+
+                                        
                                         //由于统计值是用的datarow，不是用alllist，所以这里也要把StrgWhlAng作预处理
                                         DataRow dr = dt.NewRow();
                                         for (int j = 0; j < columnCount; j++)
@@ -253,6 +256,7 @@ namespace DAL.SH_ADF0979DAL
                                           
                                         }
                                         dt.Rows.Add(dr);
+                                        resample = 0;//重新计数
                                     }
 
                                 }

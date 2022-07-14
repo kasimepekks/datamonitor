@@ -35,22 +35,22 @@ namespace BLL.SH_ADF0979BLL
         public async Task<IQueryable> LoadWFTDamage(DateTime sd, DateTime ed, string vehicleid)
         {
            
-            var damagelist = await Task.Run(() => _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x =>
+            var damagelist = await Task.Run(() => _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).GroupBy(x =>
                  x.Chantitle).Select(x => new
                  {
                      chantitle = x.Key,
                      damage = x.Sum(a => a.Damage),
                      max = x.Max(a => a.Max),
                      min = x.Min(a => a.Min)
-                 }).Where(a => a.chantitle.Contains("WFTF")).OrderBy(b => b.chantitle));
-            return damagelist;
+                 }).Where(a => a.chantitle.Contains("WFTF")).ToList().OrderBy(b => b.chantitle));
+            return damagelist.AsQueryable();
         }
 
         public async Task<IQueryable> LoadWFTDamageCumulation(DateTime sd, DateTime ed,string vehicleid)
         {
             //这里不考虑按每一天进行合并，而是合并相同时间段的数据，不区分哪一天
             // _DB.SatictisAnalysisdataWft.AsNoTracking().Where(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1))
-            var damagelist = await Task.Run(() => _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1) && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x => new
+            var damagelist = await Task.Run(() => _AnalysisData_WFT_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed.AddDays(1) && a.VehicleId == vehicleid).GroupBy(x => new
             {
                 x.Chantitle,
                 x.Datadate.Value.Year,
@@ -63,9 +63,9 @@ namespace BLL.SH_ADF0979BLL
                 datetime = x.Key.Year.ToString() + "-" + x.Key.Month.ToString() + "-" + x.Key.Day.ToString(),
                 damage = Math.Round((double)x.Sum(a => a.Damage), 0),
 
-            }).Where(a => a.chantitle.Contains("WFTF")).OrderBy(b => b.chantitle).ThenBy(b => b.datetime));
+            }).Where(a => a.chantitle.Contains("WFTF")).ToList().OrderBy(b => b.chantitle).ThenBy(b => b.datetime));
 
-            return damagelist;
+            return damagelist.AsQueryable();
         }
     }
 }

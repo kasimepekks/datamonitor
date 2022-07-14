@@ -45,7 +45,11 @@ namespace RLDA_VehicleData_Watch.Controllers.Base
             _hubContext = hubContext;
             filewatcherneed = _configuration["DataMonitor:MonitorRequired"];
         }
-
+        /// <summary>
+        /// 判断是否需要filewatcher类，如不需要，直接return OK
+        /// </summary>
+        /// <param name="_vehicleID"></param>
+        /// <returns></returns>
         public IActionResult FileWatch(string _vehicleID)
         {
             if (filewatcherneed == "false")

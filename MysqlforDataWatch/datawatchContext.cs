@@ -88,11 +88,14 @@ namespace MysqlforDataWatch
 
             modelBuilder.Entity<Gpsrecord>(entity =>
             {
+                entity.HasKey(e => e.Key)
+                    .HasName("PRIMARY");
+
                 entity.ToTable("gpsrecord");
 
-                entity.Property(e => e.Id)
-                    .HasMaxLength(64)
-                    .HasColumnName("id");
+                entity.Property(e => e.Key)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("key");
 
                 entity.Property(e => e.Datadate)
                     .HasColumnType("datetime")
@@ -102,9 +105,14 @@ namespace MysqlforDataWatch
                     .HasMaxLength(64)
                     .HasColumnName("filename");
 
-                entity.Property(e => e.Lat).HasColumnType("double(64,5)");
+                entity.Property(e => e.Id)
+                    .IsRequired()
+                    .HasMaxLength(64)
+                    .HasColumnName("id");
 
-                entity.Property(e => e.Lon).HasColumnType("double(64,5)");
+                entity.Property(e => e.Lat).HasColumnType("double(64,10)");
+
+                entity.Property(e => e.Lon).HasColumnType("double(64,10)");
 
                 entity.Property(e => e.Speed).HasColumnType("double(64,0)");
 

@@ -441,6 +441,7 @@ layui.use(['element', 'layer', 'laydate', 'table', 'form'], function () {
                     vehicleid: a['id']
                 },
                 success: function (data) {
+                    /*console.log(data);*/
                     if (data.length != 0) {
                         var gpscount = data.length;
 
@@ -474,7 +475,7 @@ layui.use(['element', 'layer', 'laydate', 'table', 'form'], function () {
                             
                             var index=0;
                             var lushu;
-                            var k = 20;
+                            var k = 20;//表示多少个数据平均一下速度
                             var callbackindex = 0;
                             var totalspeed = 0;
                             for (var i = 0; i < gpscount; i++) {
@@ -509,39 +510,47 @@ layui.use(['element', 'layer', 'laydate', 'table', 'form'], function () {
                                     testpoint.push(new BMap.Point(xyResult[i]["x"], xyResult[i]["y"]));
                                 }
 
+                         
                                
-                                if (speedpoint[callbackindex] > 120) {
-                                        map.addOverlay(new BMap.Polyline(testpoint, {
-                                            strokeColor: "blue",
-                                            strokeWeight: 5,
-                                            strokeOpacity: 0.5
-                                        }));
+                                //if (speedpoint[callbackindex] > 120) {
+                                //        map.addOverlay(new BMap.Polyline(testpoint, {
+                                //            strokeColor: "blue",
+                                //            strokeWeight: 5,
+                                //            strokeOpacity: 0.5
+                                //        }));
 
-                                    }
-                                else if (speedpoint[callbackindex] > 80) {
-                                        map.addOverlay(new BMap.Polyline(testpoint, {
-                                            strokeColor: "blue",
-                                            strokeWeight: 5,
-                                            strokeOpacity: 0.5
-                                        }));
-                                    }
-                                else if (speedpoint[callbackindex] > 40) {
-                                        map.addOverlay(new BMap.Polyline(testpoint, {
-                                            strokeColor: "blue",
-                                            strokeWeight: 5,
-                                            strokeOpacity: 0.5
-                                        }));
-                                    }
-                                    else {
-                                        map.addOverlay(new BMap.Polyline(testpoint, {
-                                            strokeColor: "blue",
-                                            strokeWeight: 5,
-                                            strokeOpacity: 0.5
-                                        }));
-                                    }
+                                //    }
+                                //else if (speedpoint[callbackindex] > 80) {
+                                //        map.addOverlay(new BMap.Polyline(testpoint, {
+                                //            strokeColor: "blue",
+                                //            strokeWeight: 5,
+                                //            strokeOpacity: 0.5
+                                //        }));
+                                //    }
+                                //else if (speedpoint[callbackindex] > 40) {
+                                //        map.addOverlay(new BMap.Polyline(testpoint, {
+                                //            strokeColor: "blue",
+                                //            strokeWeight: 5,
+                                //            strokeOpacity: 0.5
+                                //        }));
+                                //    }
+                                //    else {
+                                //        map.addOverlay(new BMap.Polyline(testpoint, {
+                                //            strokeColor: "blue",
+                                //            strokeWeight: 5,
+                                //            strokeOpacity: 0.5
+                                //        }));
+                                //}
+
+                                map.addOverlay(new BMap.Polyline(testpoint, {
+                                    strokeColor: "blue",
+                                    strokeWeight: 5,
+                                    strokeOpacity: 0.5
+                                }));
+
                                 callbackindex = callbackindex + 1;
                                 
-                                testpoint = [];
+                                testpoint.length=0;
                                 map.setViewport(transPoint);
 
                                 marker = new BMap.Marker(transPoint[0], {
@@ -689,7 +698,7 @@ layui.use(['element', 'layer', 'laydate', 'table', 'form'], function () {
                             
                             BMap.Convertor.transMore(allPoint, 0, callback);
 
-                            
+                          
                             
                         }
                                              

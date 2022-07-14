@@ -30,7 +30,10 @@ namespace BLL.SH_ADF0979BLL
             //这里必须要转成list，否则会有内存溢出的问题
             var list=gpsdistributionlist.ToList();
             var maxspeedrecord = list.OrderByDescending(a => a.Speed).FirstOrDefault();
-            int listcount = list.Count()/ reducetimes;
+            int listcount = 0;
+            listcount = list.Count() > reducetimes ? list.Count() / reducetimes:  1;
+         
+            //int listcount = list.Count()/ reducetimes;
 
             List<Gpsrecord> newlist = new List<Gpsrecord>();
 

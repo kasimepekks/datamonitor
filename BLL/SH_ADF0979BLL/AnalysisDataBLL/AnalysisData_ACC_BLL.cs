@@ -43,15 +43,15 @@ namespace BLL.SH_ADF0979BLL
         public async Task<IQueryable> LoadACCandDisData(DateTime sd, DateTime ed, string vehicleid)
         {
 
-            var accanddislist = await Task.Run(() => _AnalysisData_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).AsNoTracking().GroupBy(x =>
+            var accanddislist = await Task.Run(() => _AnalysisData_ACC_DAL.LoadEntities(a => a.Datadate >= sd && a.Datadate <= ed && a.VehicleId == vehicleid).GroupBy(x =>
                  x.Chantitle).Select(x => new
                  {
                      chantitle = x.Key,
                      
                      max = x.Max(a => a.Max),
                      min = x.Min(a => a.Min)
-                 }).Where(a => a.chantitle.Contains("Acc")|| a.chantitle.Contains("Dis")).OrderBy(b => b.chantitle));
-            return accanddislist;
+                 }).Where(a => a.chantitle.Contains("Acc")|| a.chantitle.Contains("Dis")).ToList().OrderBy(b => b.chantitle));
+            return accanddislist.AsQueryable();
         }
 
     }

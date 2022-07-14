@@ -25,7 +25,7 @@ namespace RLDA_VehicleData_Watch.Models
 
         public override  Task OnConnectedAsync()
         {
-            _logger.LogInformation("此Signalr链接ID已开始：{0}", Context.User.Identity.Name + this.Context.ConnectionId);
+            //_logger.LogInformation("此Signalr链接ID已开始：{0}", Context.User.Identity.Name + this.Context.ConnectionId);
             if (user != null)
             {
                 if (!user.Contains(Context.User.Identity.Name + Context.ConnectionId))
@@ -48,7 +48,7 @@ namespace RLDA_VehicleData_Watch.Models
         public override Task OnDisconnectedAsync(Exception exception)
         {
             Groups.RemoveFromGroupAsync(Context.ConnectionId, Context.User.Identity.Name + Context.ConnectionId);
-            _logger.LogInformation("此Signalr链接ID已断开：{0}", this.Context.ConnectionId);
+            //_logger.LogInformation("此Signalr链接ID已断开：{0}", this.Context.ConnectionId);
             return base.OnDisconnectedAsync(exception);
         }
     }

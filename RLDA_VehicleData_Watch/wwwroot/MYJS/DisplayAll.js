@@ -84,7 +84,7 @@ layui.use(['element', 'layer', 'table', 'form'], function () {
                     }
 
                     else {
-                        lushu.goPath(testPoint)
+                        lushu.goPath(routpath)
                     }
                     
 

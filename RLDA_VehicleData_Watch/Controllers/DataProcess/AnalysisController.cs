@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using IBLL.SH_ADF0979IBLL;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MysqlforDataWatch;
@@ -30,6 +31,8 @@ namespace RLDA_VehicleData_Watch.Controllers
         private readonly IThrottleDistribution_IBLL _IThrottleDistribution_Service;
         private readonly ISteeringDistribution_IBLL _ISteeringDistribution_Service;
 
+        private readonly IMemoryCache _memoryCache;//内存缓存
+
         private readonly IGPSRecord_IBLL _IGPSRecord_Service;
 
         private readonly IConfiguration _configuration;
@@ -37,7 +40,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         private readonly string AnalysisVehicleID;
         private readonly int reducetimeforgps;
         //private double Distance = 0;
-        public AnalysisController(IAnalysisData_WFT_IBLL IAnalysisData_WFT_Service, IAnalysisData_ACC_IBLL IAnalysisData_ACC_Service, ISpeedDistribution_ACC_IBLL ISpeedDistribution_ACC_Service,IBrakeDistribution_IBLL IBrakeDistribution_Service, IBumpDistribution_IBLL IBumpDistribution_Service, ISteeringDistribution_IBLL ISteeringDistribution_Service, IGPSRecord_IBLL IGPSRecord_Service, IConfiguration configuration, IThrottleDistribution_IBLL IThrottleDistribution_Service, ILogger<AnalysisController> logger)
+        public AnalysisController(IAnalysisData_WFT_IBLL IAnalysisData_WFT_Service, IAnalysisData_ACC_IBLL IAnalysisData_ACC_Service, ISpeedDistribution_ACC_IBLL ISpeedDistribution_ACC_Service,IBrakeDistribution_IBLL IBrakeDistribution_Service, IBumpDistribution_IBLL IBumpDistribution_Service, ISteeringDistribution_IBLL ISteeringDistribution_Service, IGPSRecord_IBLL IGPSRecord_Service, IConfiguration configuration, IThrottleDistribution_IBLL IThrottleDistribution_Service, ILogger<AnalysisController> logger,IMemoryCache memoryCache)
         {
             //_IAnalysisData_ACC_Service = IAnalysisData_ACC_Service;
             _IAnalysisData_WFT_Service = IAnalysisData_WFT_Service;
@@ -50,6 +53,7 @@ namespace RLDA_VehicleData_Watch.Controllers
             _IGPSRecord_Service = IGPSRecord_Service;
             _configuration = configuration;
             this._logger = logger;
+            _memoryCache = memoryCache;
             //_DB = db;
             AnalysisRequired = _configuration["DataAnalysis:AnalysisRequired"];
             AnalysisVehicleID = _configuration["DataAnalysis:AnalysisVehicleID"];
@@ -58,41 +62,47 @@ namespace RLDA_VehicleData_Watch.Controllers
        
        
         /// <summary>
-        /// 根据所选的时间范围来传给前端速度的总体分布
+        /// 根据所选的时间范围来传给前端速度的总体分布(利用内存缓存来优化，注意第一次不能查询数据库的时候不能asnotracking(),且查询结果必须先toList(),否则会报数据库错误
         /// </summary>
         /// <param name="startdate"></param>
         /// <param name="enddate"></param>
         /// <returns></returns>
         public async Task<IActionResult> SpeedAnalysis(string startdate,string enddate, string vehicleid)
         {
-            try
-            {
-                if (AnalysisRequired == "true")
+            
+                var speedcash = await _memoryCache.GetOrCreateAsync<IQueryable>("SpeedAnalysis" + startdate + enddate + vehicleid, async value =>
                 {
-                    if (AnalysisVehicleID.Contains(vehicleid))
+                    if (AnalysisRequired == "true")
                     {
-                        var sd = Convert.ToDateTime(startdate);
-                        var ed = Convert.ToDateTime(enddate);
-                        var SpeedList = await _ISpeedDistribution_ACC_Service.LoadSpeedDistribution(sd, ed, vehicleid);
-                        var json = Json(SpeedList);//这里speedlist是iquerable匿名类型，不知为什么无法传给前端layui表格，所以只能直接传json数据
-                        return json;
+                        if (AnalysisVehicleID.Contains(vehicleid))
+                        {
+                            var sd = Convert.ToDateTime(startdate);
+                            var ed = Convert.ToDateTime(enddate);
+                            var SpeedList = await _ISpeedDistribution_ACC_Service.LoadSpeedDistribution(sd, ed, vehicleid);
+                            //var json = Json(SpeedList);//这里speedlist是iquerable匿名类型，不知为什么无法传给前端layui表格，所以只能直接传json数据
+                            return SpeedList;
+                        }
+                        else
+                        {
+                            return null;
+                        }
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
+
+                });
+                if (speedcash != null)
+                {
+                    return Json(speedcash);
                 }
                 else
                 {
                     return Json("No");
                 }
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogInformation("AnalysisController中SpeedAnalysis方法出现问题："+ex.Message+ "出现时间："+ DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-                return Json("No");
-            }
+                    
+           
            
         }
         /// <summary>
@@ -103,7 +113,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         /// <returns></returns>
         public async Task<IActionResult> SpeedPerDayAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var speedcash = await _memoryCache.GetOrCreateAsync<JsonResult>("SpeedPerDayAnalysis" + startdate + enddate + vehicleid, async value =>
             {
                 if (AnalysisRequired == "true")
                 {
@@ -116,24 +126,28 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+
+            });
+            if (speedcash != null)
             {
-                _logger.LogInformation("AnalysisController中SpeedPerDayAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-
-                return Json("No");
-
+                return speedcash;
             }
-            
+            else
+            {
+                return Json("No");
+            }
 
-           
+
+
+
+
         }
         /// <summary>
         /// 根据所选的时间范围来传给前端每时的里程分布
@@ -143,8 +157,8 @@ namespace RLDA_VehicleData_Watch.Controllers
         /// <returns></returns>
         public async Task<IActionResult> SpeedPerHourAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
-            {
+            var speedcash = await _memoryCache.GetOrCreateAsync<JsonResult>("SpeedPerHourAnalysis" + startdate + enddate + vehicleid, async value => {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -156,29 +170,36 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
 
-            }
-            catch (Exception ex)
-            {
-                _logger.LogInformation("AnalysisController中SpeedPerHourAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 
+            });
+
+            if (speedcash != null)
+            {
+                return speedcash;
+            }
+            else
+            {
                 return Json("No");
             }
-           
-           
+
+
+
+
         }
 
         public async Task<IActionResult> WFTDamageAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var wftcash = await _memoryCache.GetOrCreateAsync<JsonResult>("WFTDamageAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -190,29 +211,32 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogInformation("AnalysisController中WFTDamageAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            });
 
+            if (wftcash != null)
+            {
+                return wftcash;
+            }
+            else
+            {
                 return Json("No");
             }
-         
 
-          
+
         }
 
         public async Task<IActionResult> ACCandDisAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var acccash = await _memoryCache.GetOrCreateAsync<JsonResult>("ACCandDisAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -224,28 +248,31 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogInformation("AnalysisController中ACCandDisAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            });
 
+            if (acccash != null)
+            {
+                return acccash;
+            }
+            else
+            {
                 return Json("No");
             }
-
 
 
         }
         public async Task<IActionResult> BrakeDistributionAnalysis(string startdate, string enddate,string vehicleid)
         {
-            try
+            var brakecash = await _memoryCache.GetOrCreateAsync<JsonResult>("BrakeDistributionAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -257,23 +284,25 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (brakecash != null)
             {
-                _logger.LogInformation("AnalysisController中BrakeDistributionAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-
+                return brakecash;
+            }
+            else
+            {
                 return Json("No");
             }
-          
 
-           
+
+
         }
         public async Task<IActionResult> BrakeCountAnalysis(string startdate, string enddate, string vehicleid)
         {
@@ -312,8 +341,9 @@ namespace RLDA_VehicleData_Watch.Controllers
 
         public async Task<IActionResult> BumpDistributionAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var bumpcash = await _memoryCache.GetOrCreateAsync<JsonResult>("BumpDistributionAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -325,23 +355,26 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (bumpcash != null)
             {
-                _logger.LogInformation("AnalysisController中BumpDistributionAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
-
+                return bumpcash;
+            }
+            else
+            {
                 return Json("No");
             }
-            
 
-           
+
+
+
         }
         public async Task<IActionResult> BumpCountAnalysis(string startdate, string enddate, string vehicleid)
         {
@@ -372,15 +405,16 @@ namespace RLDA_VehicleData_Watch.Controllers
 
                 return Json("No");
             }
-           
 
            
+
         }
 
         public async Task<IActionResult> ThrottleAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var throttlecash = await _memoryCache.GetOrCreateAsync<JsonResult>("ThrottleAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -388,24 +422,26 @@ namespace RLDA_VehicleData_Watch.Controllers
                         var sd = Convert.ToDateTime(startdate);
                         var ed = Convert.ToDateTime(enddate);
                         var ThrottleList = await _IThrottleDistribution_Service.LoadThrottleDistribution(sd, ed, vehicleid);
-                        
+
                         var json = Json(ThrottleList);//这里speedlist是iquerable匿名类型，不知为什么无法传给前端layui表格，所以只能直接传json数据
                         return json;
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (throttlecash != null)
             {
-
-                _logger.LogInformation("AnalysisController中ThrottleAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                return throttlecash;
+            }
+            else
+            {
                 return Json("No");
             }
 
@@ -413,8 +449,9 @@ namespace RLDA_VehicleData_Watch.Controllers
 
         public async Task<IActionResult> SteeringAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var steeringcash = await _memoryCache.GetOrCreateAsync<JsonResult>("SteeringAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -427,18 +464,20 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (steeringcash != null)
             {
-
-                _logger.LogInformation("AnalysisController中SteeringAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                return steeringcash;
+            }
+            else
+            {
                 return Json("No");
             }
 
@@ -446,8 +485,9 @@ namespace RLDA_VehicleData_Watch.Controllers
 
         public async Task<IActionResult> GPSAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var GPScash = await _memoryCache.GetOrCreateAsync<JsonResult>("GPSAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -464,18 +504,20 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (GPScash != null)
             {
-
-                _logger.LogInformation("AnalysisController中GPSAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                return GPScash;
+            }
+            else
+            {
                 return Json("No");
             }
 
@@ -483,8 +525,9 @@ namespace RLDA_VehicleData_Watch.Controllers
 
         public async Task<IActionResult> TextperDayAnalysis(string startdate, string enddate, string vehicleid)
         {
-            try
+            var textcash = await _memoryCache.GetOrCreateAsync<JsonResult>("TextperDayAnalysis" + startdate + enddate + vehicleid, async value =>
             {
+
                 if (AnalysisRequired == "true")
                 {
                     if (AnalysisVehicleID.Contains(vehicleid))
@@ -498,18 +541,20 @@ namespace RLDA_VehicleData_Watch.Controllers
                     }
                     else
                     {
-                        return Json("No");
+                        return null;
                     }
                 }
                 else
                 {
-                    return Json("No");
+                    return null;
                 }
-            }
-            catch (Exception ex)
+            });
+            if (textcash != null)
             {
-
-                _logger.LogInformation("AnalysisController中TextperDayAnalysis方法出现问题：" + ex.Message + "出现时间：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                return textcash;
+            }
+            else
+            {
                 return Json("No");
             }
 

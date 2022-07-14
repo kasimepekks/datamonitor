@@ -1,5 +1,6 @@
 ﻿using IBLL.SH_ADF0979IBLL;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,20 +19,22 @@ namespace RLDA_VehicleData_Watch.Controllers.DataProcess
         private readonly IAnalysisData_ACC_IBLL _IAnalysisData_ACC_Service;
         private readonly IAnalysisData_WFT_IBLL _IAnalysisData_WFT_Service;
         private readonly IConfiguration _configuration;
+        private readonly MemoryCache _memoryCache;//内存缓存
+
         private static string inputpath;
         private static string resultpath;
 
         private static string importenable;
         private static string vehilceimport;
 
-        public DataImportController(IAnalysisData_ACC_IBLL IAnalysisData_ACC_Service, IAnalysisData_WFT_IBLL IAnalysisData_WFT_Service, ILogger<DataImportController> logger, IConfiguration configuration)
+        public DataImportController(IAnalysisData_ACC_IBLL IAnalysisData_ACC_Service, IAnalysisData_WFT_IBLL IAnalysisData_WFT_Service, ILogger<DataImportController> logger, IConfiguration configuration, MemoryCache memoryCache)
         {
             _IAnalysisData_ACC_Service = IAnalysisData_ACC_Service;
             _IAnalysisData_WFT_Service = IAnalysisData_WFT_Service;
             _logger = logger;
             _configuration = configuration;
-
-            importenable= _configuration["DataImport:ImportRequired"];
+            _memoryCache= memoryCache;
+            importenable = _configuration["DataImport:ImportRequired"];
             vehilceimport = _configuration["DataImport:ImportVehicleID"];
         }
         public async Task<string> DataImport(string startdate, string enddate,string vehicleid)
@@ -164,7 +167,7 @@ namespace RLDA_VehicleData_Watch.Controllers.DataProcess
                                     }
 
                                 }
-
+                                _memoryCache.Compact(1.0);//一旦有新的数据导入到数据库中，就执行一次内存重置，防止还用之前的缓存来展示数据
                             }
                             catch (Exception ex)
                             {

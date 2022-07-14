@@ -109,7 +109,7 @@ namespace Tools.GPSCal
         }
         
         /// <summary>
-        /// 经纬度数据降采样
+        /// 经纬度数据降采样,第一次降采样
         /// </summary>
         /// <param name="originallist"></param>
         /// <returns></returns>
@@ -119,7 +119,7 @@ namespace Tools.GPSCal
             List<double> result = new List<double>();
             for (int i = 0; i < originallist.Count; i++)
             {
-                resamplecount++;
+                resamplecount += 1;
                 if(resamplecount== MyConfigforVehicleID.ReductiontimesforGPS)
                 {
                     result.Add(originallist[i]);

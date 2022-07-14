@@ -17,12 +17,12 @@
   "E21SVV006": {
     "Channels": "Time,VehSpdAvg,AccZWhlRFN,AccZWhlRFN,AccZWhlRR,AccXSTLFN,AccYSTLF,BrkPdlDrvrAp,EPTAccelActu,StrgWhlAng,StrgWhlAngGr,Lat,Lon", //由于左前轮心加速度坏了，所以改用右前，不影响bump识别
     "IsFileCombined": "true",//判断是否原始文件半小时进行合并过，只用于冲击识别，冲击识别需要判断是否合并过
-    "GPSImport": "true1", //是否需要导入GPS，主要用于某些没有导入成功的数据重新导入的时候其他已经导入成功的数据就不用在导入了，节省导入时间
+    "GPSImport": "true", //是否需要导入GPS，主要用于某些没有导入成功的数据重新导入的时候其他已经导入成功的数据就不用在导入了，节省导入时间
     "BrakeImport": "true1",
     "ThrottleImport": "true1",
     "SpeedImport": "true1",
     "StatisticImport": "true1",
-    "BumpImport": "true",
+    "BumpImport": "true1",
     "SteeringImport": "true1",
     "WFTImport": "true1",
     "Pointsperfile": "2560", //每个文件的点数

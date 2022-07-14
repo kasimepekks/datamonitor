@@ -17,6 +17,7 @@ namespace RLDA_VehicleData_Watch.Controllers
         [HttpPost]
         public IActionResult Login(string user, string key)
         {
+         
             var LoginStr = "";
             var md5key = MD5.Sign(key, "utf-8");
             SysAuthority sys_Authority = LoginClass.Login(user, md5key);
